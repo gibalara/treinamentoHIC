@@ -182,6 +182,8 @@ Toda lição segue cinco blocos fixos e toda trilha fecha com um marco avaliado 
 - Cada lição responde a uma pergunta: o que isso me permite fazer agora?
 
 * Título diz o resultado; o termo técnico vai entre parênteses ou no corpo da lição
+* Todo termo técnico é explicado no primeiro uso em cada lição, em até uma linha
+* Toda remissão a outro bloco ou lição diz onde o conteúdo está
 
 ## T0 · Pré-voo: primeira vitória
 
