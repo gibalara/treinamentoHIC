@@ -1,4 +1,4 @@
-# CLAUDE.md — Formação HIC
+# CLAUDE.md — O HIC do Futuro
 
 Regras deste repositório. Valem para qualquer mudança.
 

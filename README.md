@@ -1,6 +1,6 @@
-# Formação HIC
+# O HIC do Futuro
 
-A Formação HIC prepara profissionais seniores para idealizar, construir, integrar e auditar produtos com IA sozinhos, do problema validado ao agente em produção.
+O HIC do Futuro prepara profissionais seniores para idealizar, construir, integrar e auditar produtos com IA sozinhos, do problema validado ao agente em produção.
 
 **Objetivo:** formar HICs (High-Value Individual Contributors) capazes de entregar sozinhos o que antes exigia uma equipe.
 
