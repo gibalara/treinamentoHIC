@@ -192,11 +192,11 @@ Na primeira hora, o aluno já tem o Claude trabalhando no próprio e-mail, agend
 | 0.1 | Claude trabalhando no seu e-mail, agenda e drive (conectores) | Conectar um conector amplamente usado (Google Workspace, Microsoft 365, Notion ou Slack) e executar uma tarefa real do trabalho | Tarefa + tempo economizado | 30 min |
 | 0.2 | Um entregável pronto a partir dos seus dados (skills oficiais) | Usar as skills oficiais da Anthropic (Word, PowerPoint, Excel, PDF) para transformar dados do conector num entregável real | Entregável gerado | 45 min |
 | 0.3 | Seu plano de jornada: o que construir, quanto custa e em que ritmo | Tour do método da formação; criar a planilha de registro | Planilha criada | 30 min |
-| 0.4 | Claude Code em ação (no Claude Desktop) | Abrir o Claude Code na aba de código do Claude Desktop, selecionar a pasta do repositório e executar a primeira tarefa real: um utilitário pessoal | Checklist + utilitário funcionando | 90 min |
-| 0.5 | Letramento expresso: git e leitura de código (terminal como referência) | Só o necessário para não travar: commit, retorno de versão e explicação reversa pelo Claude Code; terminal, caminhos e comandos ficam como referência para quando forem necessários | Primeiro commit + quiz de erros | 75 min |
-| 0.6 | Engenharia de contexto | Prompt como especificação; montar o Project da formação com instruções e contexto | Antes/depois de um prompt real + Project | 60 min |
-| 0.7 | Claude Cowork: escalar o próprio trabalho | Automatizar uma tarefa recorrente própria | Tempo antes/depois | 60 min |
-| 0.8 | Tutor HIC | Instalar o Project Tutor HIC e testá-lo com uma dúvida real | Dúvida resolvida | 15 min |
+| 0.4 | Seu primeiro utilitário construído pelo Claude (Claude Code no Desktop) | Abrir o Claude Code na aba de código do Claude Desktop, selecionar a pasta do repositório e executar a primeira tarefa real: um utilitário pessoal | Checklist + utilitário funcionando | 90 min |
+| 0.5 | Salvar, voltar versões e entender o código gerado (git e leitura de código) | Só o necessário para não travar: commit, retorno de versão e explicação reversa pelo Claude Code; terminal, caminhos e comandos ficam como referência para quando forem necessários | Primeiro commit + quiz de erros | 75 min |
+| 0.6 | Pedidos que viram especificação (engenharia de contexto) | Prompt como especificação; montar o Project da formação com instruções e contexto | Antes/depois de um prompt real + Project | 60 min |
+| 0.7 | Uma tarefa recorrente automatizada (Claude Cowork) | Automatizar uma tarefa recorrente própria | Tempo antes/depois | 60 min |
+| 0.8 | Ajuda quando você travar (Tutor HIC) | Instalar o Project Tutor HIC e testá-lo com uma dúvida real | Dúvida resolvida | 15 min |
 
 **Rubrica do marco T0**
 
