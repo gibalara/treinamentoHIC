@@ -15,8 +15,8 @@ Claude conectado ao próprio e-mail, agenda ou drive, gerando um entregável rea
 - 0.1 · Primeira vitória: conectores
 - 0.2 · Skills oficiais em ação
 - 0.3 · O que você vai construir
-- 0.4 · Claude Code em ação
-- 0.5 · Letramento expresso: terminal, git e leitura de código
+- 0.4 · Claude Code em ação (no Claude Desktop)
+- 0.5 · Letramento expresso: git e leitura de código (terminal como referência)
 - 0.6 · Engenharia de contexto
 - 0.7 · Claude Cowork: escalar o próprio trabalho
 - 0.8 · Tutor HIC
