@@ -1,4 +1,4 @@
-# Formação HIC — Ementa Consolidada
+# O HIC do Futuro — Ementa Consolidada
 
 Oct 30, 2026 · @Gilberto Laranjeira
 
@@ -6,7 +6,7 @@ Oct 30, 2026 · @Gilberto Laranjeira
 
 ## Visão geral
 
-A Formação HIC prepara profissionais seniores para idealizar, construir, integrar e auditar produtos com IA sozinhos, do problema validado ao agente em produção.
+O HIC do Futuro prepara profissionais seniores para idealizar, construir, integrar e auditar produtos com IA sozinhos, do problema validado ao agente em produção.
 
 | Tema | Definição |
 | --- | --- |
@@ -18,7 +18,7 @@ A Formação HIC prepara profissionais seniores para idealizar, construir, integ
 | Carga de referência | 4–6 h por semana |
 | Primeiro uso | Formação do próprio autor (aluno zero), antes de implantação em empresas |
 
-**Posicionamento:** do protótipo à produção confiável. Os cursos de mercado ensinam o profissional não técnico a construir; a Formação HIC ensina a construir algo avaliado, seguro, multiusuário e sustentado por um sistema reutilizável de skills e conectores.
+**Posicionamento:** do protótipo à produção confiável. Os cursos de mercado ensinam o profissional não técnico a construir; o HIC do Futuro ensina a construir algo avaliado, seguro, multiusuário e sustentado por um sistema reutilizável de skills e conectores.
 
 **Diferenciais frente ao mercado:** rigor de produção para quem não é dev; skills, curadoria e MCP como ativo de carreira; governança e LGPD em português.
 
