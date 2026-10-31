@@ -36,7 +36,7 @@ Sete regras valem para todas as trilhas e não são negociáveis no desenho das 
 8. **Valor antes da teoria:** cada trilha abre com uma vitória concreta em menos de uma hora, usando conectores e skills amplamente adotados; o conceito vem depois, para explicar o que o aluno já viu funcionar.
 9. **Nível sênior:** o aluno é tratado como especialista no próprio domínio. Fundamentos técnicos entram sob demanda, como referência, não como aula expositiva.
 
-10) **Exemplo resolvido antes da prática:** o Diário de Bordo é o produto de referência do curso e evolui em todas as trilhas. Cada demonstração aplica o conteúdo a ele; depois, o aluno aplica ao próprio projeto. Nas trilhas T0 e T1, o Diário de Bordo ainda não existe; as demonstrações usam um exemplo de trabalho real e genérico de um profissional sênior. O Diário de Bordo passa a ser o produto de referência a partir da T2a.
+10) **Exemplo resolvido antes da prática:** o Diário de Bordo é o produto de referência do curso e evolui em todas as trilhas. Cada demonstração aplica o conteúdo a ele; depois, o aluno aplica ao próprio projeto. Nas trilhas T0 e T1, o Diário de Bordo ainda não existe; as demonstrações usam um exemplo de trabalho real e genérico de um profissional sênior. O Diário de Bordo passa a ser o produto de referência a partir da T2a. Cada demonstração é autossuficiente; a continuidade entre lições acontece apenas na Prática.
 
 **Mitigações didáticas fixas**
 
