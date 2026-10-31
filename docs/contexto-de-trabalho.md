@@ -19,6 +19,7 @@
 - Nas trilhas T0 e T1, as demonstrações usam exemplos genéricos de trabalho real; o Diário de Bordo só entra a partir da T2a.
 - Cada Demonstração é autossuficiente; a continuidade entre lições acontece apenas na Prática.
 - Escrevemos as trilhas em lotes pequenos; eu curso cada lote e trago correções antes do próximo.
+- Todo termo técnico é explicado no primeiro uso em cada lição; toda remissão diz onde o conteúdo está. O aluno sênior não é desenvolvedor.
 
 ## Situação atual
 - Estrutura do repositório criada; ementa em docs/ementa.md; insumos da T0 em trilhas/T0/insumos/.
