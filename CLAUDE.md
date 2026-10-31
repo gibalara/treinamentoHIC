@@ -54,3 +54,10 @@ Toda lição segue `templates/licao.md`, com os cinco blocos fixos: Por quê, De
 | `trilhas/` | Uma pasta por trilha (T0 a T6 e transversal) |
 | `rubricas/` | Uma rubrica por marco |
 | `tutor/` | Base de conhecimento do Tutor HIC |
+| `scripts/` | Script de geração do `curso.html` |
+
+## HTML de leitura
+
+Para atualizar o HTML de leitura, rode o script de geração do curso.html: `node scripts/gerar-curso.js`.
+
+O `curso.html` é gerado a partir das trilhas e fica fora do git.
