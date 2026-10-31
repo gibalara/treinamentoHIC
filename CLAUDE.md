@@ -43,6 +43,8 @@ Toda lição segue `templates/licao.md`, com os cinco blocos fixos: Por quê, De
 - Se um trecho não muda o que o aluno faz, sai.
 - Cada lição responde a uma pergunta: o que isso me permite fazer agora?
 - Título diz o resultado; o termo técnico vai entre parênteses ou no corpo da lição.
+- Todo termo técnico é explicado no primeiro uso em cada lição, em até uma linha.
+- Toda remissão a outro bloco ou lição diz onde o conteúdo está.
 
 ## Commits
 
