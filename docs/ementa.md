@@ -2,7 +2,7 @@
 
 Oct 30, 2026 · @Gilberto Laranjeira
 
-**Registro histórico do desenho.** A fonte única de verdade do curso é `docs/ementa.md` no repositório `formacao-hic`. Alterações posteriores são feitas apenas lá.
+**Fonte única de verdade do curso.** Mudanças começam por este arquivo; os demais arquivos do repositório são atualizados depois.
 
 ## Visão geral
 
