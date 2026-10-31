@@ -2,6 +2,8 @@
 
 Oct 30, 2026 · @Gilberto Laranjeira
 
+**Registro histórico do desenho.** A fonte única de verdade do curso é `docs/ementa.md` no repositório `formacao-hic`. Alterações posteriores são feitas apenas lá.
+
 ## Visão geral
 
 A Formação HIC prepara profissionais seniores para idealizar, construir, integrar e auditar produtos com IA sozinhos, do problema validado ao agente em produção.
@@ -52,7 +54,7 @@ O caminho padrão usa o ecossistema Claude como eixo, com Supabase, Vercel e n8n
 | --- | --- | --- |
 | Especificação e pesquisa | Claude (Projects, Skills) | — |
 | Protótipo visual | Artifacts, Claude Design | v0, Bolt, Lovable |
-| Construção | Claude Code | Cursor, Codex |
+| Construção | Claude Code no Claude Desktop (terminal como alternativa) | Cursor, Codex |
 | Versionamento | GitHub | — |
 | Banco, autenticação, vetores | Supabase (Postgres, RLS, pgvector) | Firebase |
 | Deploy | Vercel | — |
@@ -74,7 +76,7 @@ São oito trilhas, cerca de 100–140 horas na estimativa base; com margem de 30
 
 | Trilha | Foco | Marco | Esforço | Badge |
 | --- | --- | --- | --- | --- |
-| T0 Pré-voo | Setup, terminal, git, leitura de código, prompt, fundamentos do Claude, Cowork | Ambiente validado + primeiro commit | 6–8 h | Pré-voo |
+| T0 Pré-voo | Conectores, skills, Claude Code no Desktop, git, leitura de código, contexto, Cowork | Ambiente validado + primeiro commit | 6–8 h | Pré-voo |
 | T1 Arquiteto de Produto | Problema, validação, spec, priorização, protótipo | `SPEC.md` + projeto elegível | 6–8 h | Arquiteto |
 | T2 Builder | T2a ensaio guiado (Diário de Bordo) + T2b MVP próprio | MVP no ar, testado por usuário real | 16–24 h | Builder |
 | T3 Sistemas Reutilizáveis | Skills, curadoria, MCP, subagentes, hooks, plugins | Kit HIC instalável | 18–24 h | Sistemas |
@@ -190,8 +192,8 @@ Na primeira hora, o aluno já tem o Claude trabalhando no próprio e-mail, agend
 | 0.1 | Primeira vitória: conectores | Conectar um conector amplamente usado (Google Workspace, Microsoft 365, Notion ou Slack) e executar uma tarefa real do trabalho | Tarefa + tempo economizado | 30 min |
 | 0.2 | Skills oficiais em ação | Usar as skills oficiais da Anthropic (Word, PowerPoint, Excel, PDF) para transformar dados do conector num entregável real | Entregável gerado | 45 min |
 | 0.3 | O que você vai construir | Tour do produto final de referência e do método da formação; criar a planilha de registro | Planilha criada | 30 min |
-| 0.4 | Claude Code em ação | Setup expresso pelo checklist + primeira tarefa real: um utilitário pessoal construído pelo Claude Code | Checklist + utilitário funcionando | 90 min |
-| 0.5 | Letramento expresso: terminal, git e leitura de código | Só o necessário para não travar: comandos essenciais, commit, retorno de versão e explicação reversa; o resto fica como referência | Primeiro commit + quiz de erros | 75 min |
+| 0.4 | Claude Code em ação (no Claude Desktop) | Abrir o Claude Code na aba de código do Claude Desktop, selecionar a pasta do repositório e executar a primeira tarefa real: um utilitário pessoal | Checklist + utilitário funcionando | 90 min |
+| 0.5 | Letramento expresso: git e leitura de código (terminal como referência) | Só o necessário para não travar: commit, retorno de versão e explicação reversa pelo Claude Code; terminal, caminhos e comandos ficam como referência para quando forem necessários | Primeiro commit + quiz de erros | 75 min |
 | 0.6 | Engenharia de contexto | Prompt como especificação; montar o Project da formação com instruções e contexto | Antes/depois de um prompt real + Project | 60 min |
 | 0.7 | Claude Cowork: escalar o próprio trabalho | Automatizar uma tarefa recorrente própria | Tempo antes/depois | 60 min |
 | 0.8 | Tutor HIC | Instalar o Project Tutor HIC e testá-lo com uma dúvida real | Dúvida resolvida | 15 min |
@@ -588,10 +590,10 @@ Quatro ativos de uso direto, citados ao longo das trilhas.
 
 - [ ] Conta no Claude com acesso ao Claude Code
 - [ ] Contas no GitHub, Supabase e Vercel
-- [ ] Node e git instalados e verificados no terminal
+- [ ] Git instalado (exigido pelo Claude Code); Node instalado (necessário a partir da T2)
 - [ ] Editor instalado (para leitura)
-- [ ] Claude Code instalado e autenticado
-- [ ] Teste final: Claude Code criou um arquivo numa pasta do aluno
+- [ ] Claude Desktop instalado, com a aba de código funcionando
+- [ ] Teste final: o Claude Code, no Desktop, criou um arquivo na pasta do repositório
 
 ### Critérios de escolha de ferramenta de usuários sintéticos (T1 e T2b)
 
