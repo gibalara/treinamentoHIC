@@ -22,10 +22,11 @@
 
 ## Situação atual
 - Estrutura do repositório criada; ementa em docs/ementa.md; insumos da T0 em trilhas/T0/insumos/.
-- Lições 0.1 a 0.3 escritas e cursadas; correções em andamento.
+- Lições 0.1 a 0.3 escritas e cursadas; correções aplicadas.
+- Lote 2 (lições 0.4 a 0.8) escrito; aguardando o aluno zero cursar.
 - Tutor HIC: Project no Claude com instruções e a ementa no Contexto (atualizar quando a ementa mudar).
 
 ## Próximos passos
-1. Concluir as correções das lições 0.1 a 0.3.
-2. Escrever o lote 2 da T0 (lições 0.4 a 0.8) já com as regras acima.
-3. Eu curso o lote 2; depois fechamos o marco da T0.
+1. Eu curso o lote 2 (lições 0.4 a 0.8) e trago correções.
+2. Resolver as lacunas do lote 2: conteúdo do Project da formação (0.6) e forma de entrega do Tutor HIC (0.8).
+3. Fechar o marco da T0.
