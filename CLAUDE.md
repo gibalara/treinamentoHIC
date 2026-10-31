@@ -17,6 +17,7 @@ Toda lição segue `templates/licao.md`, com os cinco blocos fixos: Por quê, De
 
 - Texto para conceito e consulta.
 - Demonstração em passos numerados, aplicada ao Diário de Bordo (produto de referência).
+- Exceção: nas trilhas T0 e T1, o Diário de Bordo ainda não existe; as demonstrações usam um exemplo de trabalho real e genérico de um profissional sênior. O Diário de Bordo passa a ser o produto de referência a partir da T2a.
 - Link externo (vídeo ou artigo) só quando acelera o entendimento.
 - Links priorizam documentação oficial e são revisados a cada trimestre.
 - Prática sempre no projeto do aluno, nunca em exercício genérico.
