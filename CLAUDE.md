@@ -1,5 +1,7 @@
 # CLAUDE.md — O HIC do Futuro
 
+Antes de qualquer tarefa, leia docs/contexto-de-trabalho.md e docs/ementa.md.
+
 Regras deste repositório. Valem para qualquer mudança.
 
 ## Fonte de verdade
