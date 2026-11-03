@@ -14,29 +14,29 @@ Um agente agendado concluindo uma tarefa sem o aluno presente.
 
 ### A · Fundamentos
 
-- A1 · Agente vs. fluxo fixo
-- A2 · Níveis de autonomia
-- A3 · Especificação do agente
+- A1 · Decidir se o seu caso pede um agente (agente vs. fluxo fixo)
+- A2 · Quanto o agente pode fazer sozinho, ação por ação (níveis de autonomia)
+- A3 · O agente descrito antes de existir (especificação do agente)
 
 ### B · Construção
 
-- B1 · Ferramentas com permissões mínimas
-- B2 · Ciclo com limites de passos, custo e tempo
-- B3 · Aprovação humana (fila no painel)
-- B4 · Registro de execuções
-- B5 · Interruptor de emergência
+- B1 · O agente só alcança o que precisa (ferramentas com permissões mínimas)
+- B2 · Um agente que para antes de sair do controle (ciclo com limites de passos, custo e tempo)
+- B3 · Nada sai do produto sem aceite humano (aprovação humana na fila do painel)
+- B4 · Saber tudo o que o agente fez (registro de execuções)
+- B5 · Desligar o agente na hora (interruptor de emergência)
 
 ### C · Escala de agentes
 
-- C1 · Multiagentes (orquestrador + especialista)
+- C1 · Dividir o trabalho do agente só quando compensa (multiagentes: orquestrador + especialista)
 - C2 · Agentes que trabalham sem você (agendamento sem duplicação)
-- C3 · Canais (opcional, visão genérica)
+- C3 · Conversar com o agente pelo canal que a equipe já usa (canais, opcional)
 
 ### D · Qualidade e segurança
 
-- D1 · Evals de agente (15 cenários de trajetória)
-- D2 · Segurança de agentes
-- D3 · Fechamento do agente
+- D1 · Provar que o agente se comporta nos casos críticos (evals de agente: 15 cenários de trajetória)
+- D2 · Fechar as brechas do agente antes da produção (segurança de agentes)
+- D3 · Agente em produção, com relatório de 1 página (fechamento do agente)
 
 ## Marco
 

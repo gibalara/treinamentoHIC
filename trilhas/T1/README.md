@@ -12,17 +12,17 @@ Uma ideia vaga virando especificação e protótipo clicável em minutos.
 
 ## Lições
 
-- 1.1 · Problema antes da solução
-- 1.2a · Pré-validação com usuários sintéticos
-- 1.2b · Validação com usuários reais
-- 1.2c · Síntese com IA
-- 1.3 · Pesquisa assistida por IA
-- 1.4 · Proposta de valor e métrica
-- 1.5 · Do problema ao requisito
-- 1.6 · Spec-Driven Development
-- 1.7 · Priorização e etapas verificáveis
-- 1.8 · Protótipo descartável
-- 1.9 · Elegibilidade do projeto
+- 1.1 · Problemas do seu nicho que valem um produto (ficha de problema)
+- 1.2a · Hipótese testada antes de falar com pessoas (usuários sintéticos)
+- 1.2b · Problema confirmado por 3 pessoas reais (validação com usuários)
+- 1.2c · Seguir, ajustar ou trocar o problema (síntese com IA)
+- 1.3 · As alternativas que seu usuário já tem, comparadas (pesquisa assistida por IA)
+- 1.4 · Seu produto em uma frase e um número (proposta de valor e métrica)
+- 1.5 · Funcionalidades com critério de pronto testável (requisitos e critérios de aceite)
+- 1.6 · Seu produto especificado para o Claude Code construir (Spec-Driven Development)
+- 1.7 · O que entra agora e o que fica para depois (TASKS.md e BACKLOG.md)
+- 1.8 · Fluxo principal testado por 1 usuário antes de construir (protótipo descartável)
+- 1.9 · Seu projeto aprovado para as próximas trilhas (checklist de elegibilidade)
 
 ## Marco
 
