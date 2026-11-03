@@ -17,11 +17,12 @@ Toda execução é registrada, inclusive as que falham, param por limite ou são
 
 Exemplo: o registro do agente semanal do Diário de Bordo.
 
-1. Peça ao Claude Code: "Crie o registro de execuções do agente: início, fim, organização, status, motivo da parada, trajetória, custo e itens criados na fila."
+1. Peça ao Claude Code: "Crie o registro de execuções do agente. Campos: início, fim, organização, status, motivo da parada, trajetória, custo, itens na fila."
 2. Peça: "Grave o registro no início da execução e atualize no fim. Uma execução que quebra no meio também deve aparecer."
 3. Peça: "Mostre as execuções no painel administrativo, só da organização de quem está vendo."
 4. Peça: "Crie um modo de teste que simula falha de uma ferramenta."
-5. Na organização Turma Teste, com dados fictícios, dispare 3 execuções: uma normal, uma com limite de passos baixo e uma com falha simulada.
+5. Peça: "Rode o agente semanal 3 vezes na Turma Teste: normal, com limite de 2 passos e com falha simulada."
+   Turma Teste tem só dados fictícios.
 6. Confira no painel: 3 execuções, com status "concluída", "parada por limite" e "erro".
 7. Abra a trajetória da execução normal e leia cada passo.
 8. Entre como admin de outra organização. Confira que as execuções da Turma Teste não aparecem.
@@ -30,22 +31,23 @@ Exemplo: o registro do agente semanal do Diário de Bordo.
 ## Prática
 
 1. Abra seu projeto no Claude Code.
-2. Peça o registro de execuções com os campos da Referência.
+2. Peça o registro de execuções (veja "Campos do registro", na Referência). Antes, use o pedido "Reaproveitar", também na Referência.
 3. Peça a gravação no início e a atualização no fim.
 4. Peça a tela de execuções no seu painel administrativo, filtrada por organização.
-5. Dispare 3 execuções de teste: normal, parada por limite e falha simulada.
+5. Peça 3 execuções de teste numa organização com dados fictícios: normal, parada por limite e falha simulada.
 6. Confira: execuções disparadas = execuções no painel.
 7. Tire um print do painel e peça um commit.
 
 ## Checagem
 
-Entrega: print do painel com as 3 execuções de teste (concluída, parada por limite, erro) e a trajetória de uma delas aberta.
+Entrega: print do painel com as 3 execuções de teste (concluída, parada por limite, erro) e uma trajetória aberta.
 
 ## Referência
 
 **Termos**
 
 - Agente: programa em que a IA escolhe os próximos passos e usa ferramentas até cumprir um objetivo
+- Ferramenta (tool): função do produto que o agente pode chamar
 - Execução: uma rodada completa do agente, do início à parada
 - Trajetória: sequência de passos e ferramentas usadas numa execução
 - Painel administrativo: tela de gestão criada na lição B2 da T5

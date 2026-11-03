@@ -22,12 +22,13 @@ Exemplo: as ferramentas do agente semanal do Diário de Bordo.
    - `ler_registros_da_semana`: só lê, só alunos da organização da execução
    - `ler_datas_alvo`: só lê, mesma restrição
    - `gravar_sugestao`: escreve só no campo de sugestão do aluno (nível 3)
-   - `preparar_alerta_gestor`: cria um item pendente na fila; não envia (nível 2)
+   - `preparar_alerta_gestor`: grava um item pendente; não envia (nível 2). A tela da fila vem na lição B3 da T6.
 3. Confira o que não existe: nenhuma ferramenta envia e-mail, remove aluno ou lê outra organização.
 4. Peça: "Implemente estas ferramentas no servidor. A organização vem da execução, nunca do texto gerado pelo modelo."
+   Modelo: a IA da API Anthropic que conduz o agente.
 5. Peça a explicação reversa: "Explique as ferramentas do ponto de vista de arquitetura e risco."
 6. Peça: "Crie um teste: ler_registros_da_semana com uma organização diferente da execução deve ser bloqueada."
-7. Rode o teste e confira o bloqueio.
+7. Peça: "Rode o teste e mostre o resultado." Deu certo se a chamada foi bloqueada.
 8. Salve a lista na seção do agente do `SPEC.md` e peça um commit (versão salva no git).
 
 [LINK A CURAR: documentação oficial da Anthropic sobre uso de ferramentas (tool use) na API]
@@ -36,10 +37,10 @@ Exemplo: as ferramentas do agente semanal do Diário de Bordo.
 
 1. Abra seu projeto no Claude Code.
 2. Peça a lista de ferramentas a partir da seção do agente, criada na lição A3 da T6.
-3. Confira cada ferramenta com os critérios de permissão mínima (veja "Critérios", na Referência).
+3. Confira cada ferramenta com os critérios (veja "Critérios de permissão mínima", na Referência).
 4. Quebre ou corte toda ferramenta que falhar num critério.
 5. Peça a implementação no servidor e a explicação reversa.
-6. Peça e rode o teste de bloqueio de outra organização.
+6. Peça o teste de bloqueio de outra organização (passo 6 da Demonstração) e peça para rodá-lo.
 7. Salve a lista no `SPEC.md` e peça um commit.
 
 ## Checagem
@@ -52,7 +53,8 @@ Entrega: lista de ferramentas na seção do agente do `SPEC.md`, com nível, esc
 
 - Agente: programa em que a IA escolhe os próximos passos e usa ferramentas até cumprir um objetivo
 - Ferramenta (tool): função do produto que o agente pode chamar
-- Uso de ferramentas (tool use): recurso da API Anthropic em que o modelo pede ao seu código para rodar uma função
+- Uso de ferramentas (tool use): recurso da API Anthropic: o modelo pede ao seu código que rode uma função
+- Modelo: a IA da API Anthropic que decide os passos do agente
 - Servidor: parte do produto que roda fora do navegador do usuário
 - Escopo: o conjunto de dados que a ferramenta alcança
 - Execução: uma rodada completa do agente, do início à parada

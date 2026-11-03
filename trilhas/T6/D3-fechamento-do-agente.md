@@ -9,9 +9,9 @@
 
 Agente é um programa em que a IA escolhe passos e usa ferramentas. Ele só entra em produção com os cinco eliminatórios provados. Prova é evidência, não afirmação.
 
-O relatório de 1 página reúne matriz, limites, aprovação, interruptor, evals e registros. Ele também alimenta o dossiê de governança da lição X7 da trilha Transversal.
+O relatório de 1 página reúne matriz, limites, aprovação, interruptor, evals e registros. Ele também alimenta o dossiê de governança (documento de riscos e controles do produto), na lição X7 da trilha Transversal.
 
-Aqui o agendamento sai da organização de teste e passa a rodar em produção.
+Aqui o agendamento sai da organização de teste e passa a rodar em produção (versão usada por usuários reais).
 
 ## Demonstração
 
@@ -19,19 +19,19 @@ Exemplo: o fechamento do agente semanal do Diário de Bordo.
 
 1. Confira os cinco eliminatórios com a tabela "Como verificar os eliminatórios", na Referência.
 2. Para cada um, abra a evidência: fila, prints de parada, teste do interruptor, resultado dos evals, painel de execuções.
-3. Só com os cinco atendidos, ative o agendamento para as organizações reais.
+3. Só com os cinco atendidos, peça: "Ative o agendamento do agente semanal para as organizações reais." [VERIFICAR NA INTERFACE: agendador escolhido na lição C2 da T6]
 4. Acompanhe a primeira execução de produção no registro de execuções e na fila.
-5. Peça ao Claude Code: "Gere o relatório de 1 página do agente com o template abaixo. Use só evidências do repositório e do painel." Cole o template.
+5. Peça ao Claude Code: "Gere o relatório de 1 página do agente com o template abaixo. Use só evidências do repositório e do painel." Cole o template (veja "Template do relatório", na Referência).
 6. Confira cada número do relatório contra a fonte.
 7. Peça um commit (versão salva no git) do relatório.
-8. Rode o Avaliador HIC (skill do curso que aplica a rubrica) no repositório. [LACUNA: forma de entrega e execução do Avaliador HIC]
+8. Rode o Avaliador HIC (skill do curso que aplica a rubrica; lição 0.3 da T0) no repositório. [LACUNA: forma de entrega e execução do Avaliador HIC]
 
 ## Prática
 
-1. Confira os cinco eliminatórios do seu agente com a tabela da Referência.
-2. Corrija o que faltar na lição indicada antes de seguir.
-3. Ative o agendamento em produção e acompanhe a primeira execução.
-4. Peça o relatório de 1 página com o template.
+1. Confira os cinco eliminatórios do seu agente (veja "Como verificar os eliminatórios", na Referência).
+2. Corrija o que faltar na lição da coluna "Lição" dessa tabela antes de seguir.
+3. Peça a ativação do agendamento em produção. Acompanhe a primeira execução no registro de execuções e na fila. [VERIFICAR NA INTERFACE]
+4. Peça o relatório de 1 página com o pedido do passo 5 da Demonstração.
 5. Confira cada número contra a fonte.
 6. Peça um commit do relatório.
 7. Rode o Avaliador HIC e corrija o que ele apontar.
@@ -47,7 +47,9 @@ Entrega: relatório de 1 página no repositório, com evidência para cada crit�
 - Agente: programa em que a IA escolhe os próximos passos e usa ferramentas até cumprir um objetivo
 - Eliminatório: critério que reprova o marco se não for atendido
 - Evals: testes que medem se a IA se comporta como esperado
-- Avaliador HIC: skill do curso que lê as evidências e aplica a rubrica do marco
+- Avaliador HIC: skill do curso que lê as evidências e aplica a rubrica do marco (lição 0.3 da T0)
+- Produção: versão do produto usada por usuários reais
+- Rubrica do marco T6: arquivo `rubricas/T6.md` do curso
 - Commit: versão salva no git
 
 **Como verificar os eliminatórios**

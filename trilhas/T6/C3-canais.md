@@ -15,11 +15,11 @@ Por isso, toda conexão exige cinco controles, listados na Referência. As regra
 
 ## Demonstração
 
-Exemplo: o Diário de Bordo ligado ao canal de mensagens usado pela turma.
+Exemplo: o Diário de Bordo ligado ao Slack, canal de mensagens usado pela turma.
 
-1. Escolha o canal com o critério da Referência.
-2. Leia, na documentação oficial do canal, como verificar se uma mensagem veio mesmo dele.
-3. Peça ao Claude Code: "Crie um adaptador para [canal] que chama o mesmo agente do Diário. Não crie outro agente."
+1. Confira o Slack contra o "Critério de escolha do canal", na Referência.
+2. Leia, na documentação oficial do Slack, como verificar se uma mensagem veio mesmo dele. [VERIFICAR NA DOCUMENTAÇÃO OFICIAL DO CANAL]
+3. Peça ao Claude Code: "Crie um adaptador para o Slack que chama o mesmo agente do Diário. Não crie outro agente."
 4. Peça: "Verifique a autenticidade de cada mensagem recebida. Sem verificação, descarte e registre."
 5. Peça: "Vincule a conta do canal a um usuário do Diário. Sem vínculo, responda só como fazer o vínculo."
 6. Peça: "Guarde os segredos do canal em variáveis de ambiente, nunca no código."
@@ -34,16 +34,16 @@ Exemplo: o Diário de Bordo ligado ao canal de mensagens usado pela turma.
 ## Prática
 
 1. Decida se o canal faz sentido para o seu produto. Se não, registre o motivo na seção 8 do `SPEC.md` e pule.
-2. Escolha o canal com o critério da Referência.
+2. Escolha o canal com o "Critério de escolha do canal", na Referência. Exemplos: Slack, Teams, WhatsApp, e-mail.
 3. Leia a documentação oficial do canal sobre verificação de autenticidade. [VERIFICAR NA DOCUMENTAÇÃO OFICIAL DO CANAL]
-4. Peça o adaptador com os cinco controles.
-5. Faça os três testes da Demonstração numa organização de teste.
+4. Peça o adaptador com os cinco controles (veja "Os cinco controles", na Referência). Adapte os pedidos dos passos 3 a 7 da Demonstração.
+5. Faça os três testes dos passos 8 a 10 da Demonstração numa organização com dados fictícios.
 6. Tire print da conversa e do registro com o usuário identificado.
 7. Peça um commit.
 
 ## Checagem
 
-Entrega: print de uma conversa no canal com usuário identificado e do registro correspondente; ou o motivo de não usar canal, na seção 8 do `SPEC.md`.
+Entrega: print de uma conversa no canal com usuário identificado e do registro dela. Sem canal: o motivo na seção 8 do `SPEC.md`.
 
 ## Referência
 
@@ -54,6 +54,7 @@ Entrega: print de uma conversa no canal com usuário identificado e do registro 
 - Adaptador: peça que traduz a mensagem do canal para o agente e a resposta de volta
 - Verificação de autenticidade: prova de que a mensagem veio mesmo do canal
 - Vínculo de identidade: ligação entre a conta do canal e um usuário do produto
+- Segredo: chave ou senha que dá acesso ao canal
 - Variável de ambiente: configuração guardada fora do código, como as chaves
 - Servidor: parte do produto que roda fora do navegador do usuário
 

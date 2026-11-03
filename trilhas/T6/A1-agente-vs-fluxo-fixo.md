@@ -7,9 +7,9 @@
 
 ## Por quê
 
-Fluxo fixo (sequência de passos definida antes, sempre igual) é barato, previsível e fácil de testar. Agente (programa em que a IA escolhe os próximos passos e usa ferramentas até cumprir um objetivo) custa mais e erra de formas novas.
+Fluxo fixo (sequência de passos definida antes, sempre igual) é barato, previsível e fácil de testar. Agente é um programa em que a IA escolhe os passos e usa ferramentas até cumprir um objetivo. Custa mais e erra de formas novas.
 
-Agente só compensa quando o caminho muda a cada caso e exige julgamento. Se a regra cabe num fluxograma, use fluxo fixo, no n8n ou em código.
+Agente só compensa quando o caminho muda a cada caso e exige julgamento. Se a regra cabe num fluxograma, use fluxo fixo, no n8n (ferramenta de automação da T5) ou em código.
 
 Esta lição decide se o seu projeto pede um agente, antes de qualquer construção.
 
@@ -17,16 +17,16 @@ Esta lição decide se o seu projeto pede um agente, antes de qualquer construç
 
 Exemplo: o Diário de Bordo de referência já tem o agente semanal pronto. Primeiro, o resultado; depois, a decisão que o justificou.
 
-1. Abra o painel administrativo do Diário de Bordo (tela de gestão da organização) na organização "Turma Teste", com dados fictícios.
+1. Abra o painel administrativo do Diário de Bordo (tela de gestão da lição B2 da T5). Escolha a organização "Turma Teste", com dados fictícios.
 2. Abra a última execução (uma rodada completa do agente) do agente semanal. Ela rodou agendada, sem ninguém presente.
-3. Confira o que o agente fez sozinho: analisou as travas da semana e gravou uma sugestão de próximo passo para cada aluno.
+3. Confira o que o agente fez sozinho: analisou as travas e gravou o próximo passo de cada aluno.
 4. Confira o que ficou esperando: um alerta ao gestor na fila de aprovação, ainda não enviado.
-5. Agora a decisão. Liste as tarefas candidatas: (a) lembrete a quem não registrou nada na semana; (b) análise das travas com sugestão de próximo passo.
+5. Agora a decisão. Liste as tarefas candidatas: (a) lembrete a quem não registrou na semana; (b) análise das travas com próximo passo.
 6. Aplique o teste das três perguntas a cada tarefa (veja "Teste agente ou fluxo fixo", na Referência).
 7. Tarefa (a): regra fixa, "sem registro em 7 dias, envia lembrete". Resultado: fluxo fixo no n8n.
 8. Tarefa (b): ler o texto livre das travas, julgar a causa e escolher o próximo passo. Resultado: agente.
 9. Registre no `SPEC.md` (arquivo de especificação do projeto), seção 8, a decisão e o motivo.
-10. Peça ao Claude Code: "Faça um commit com a mensagem 'Registra decisão do agente semanal'." Commit é uma versão salva no git.
+10. Peça ao Claude Code: "Faça um commit com a mensagem 'Registra decisão do agente semanal'." Commit: versão salva no git.
 
 [LINK A CURAR: guia oficial da Anthropic sobre quando usar agentes e quando usar fluxos fixos]
 
@@ -43,7 +43,7 @@ Exemplo: o Diário de Bordo de referência já tem o agente semanal pronto. Prim
 
 ## Checagem
 
-Entrega: decisão registrada na seção 8 do `SPEC.md`, com a tarefa do agente, as tarefas em fluxo fixo e o motivo de cada escolha.
+Entrega: decisão na seção 8 do `SPEC.md`, com a tarefa do agente, as tarefas em fluxo fixo e os motivos.
 
 ## Referência
 
@@ -54,6 +54,7 @@ Entrega: decisão registrada na seção 8 do `SPEC.md`, com a tarefa do agente, 
 - Execução: uma rodada completa do agente, do início à parada
 - `SPEC.md`: especificação do projeto, criada na lição 1.6 da T1; seção 8 = "Decisões tomadas"
 - Commit: versão salva no git
+- n8n: ferramenta de automação entre sistemas, apresentada no bloco C da T5
 
 **Teste agente ou fluxo fixo**
 

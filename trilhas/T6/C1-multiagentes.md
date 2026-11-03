@@ -7,9 +7,9 @@
 
 ## Por quê
 
-Um agente (programa em que a IA escolhe passos e usa ferramentas) com muitas ferramentas e muito contexto erra mais e é difícil de testar.
+Agente é um programa em que a IA escolhe passos e usa ferramentas. Com muitas ferramentas e muito contexto (o texto que o modelo recebe de uma vez), ele erra mais.
 
-Dividir em orquestrador (agente que reparte a tarefa e decide) e especialista (agente com papel e ferramentas restritos) isola contexto e permissões. Mas aumenta custo, tempo e pontos de falha.
+Orquestrador é o agente que reparte a tarefa e decide. Especialista é o agente com papel e ferramentas restritos. Dividir assim isola contexto e permissões, mas aumenta custo, tempo e pontos de falha.
 
 Divida só quando uma parte pede papel ou contexto separado. Manter um agente só também é decisão válida, desde que registrada.
 
@@ -25,7 +25,7 @@ Exemplo: o agente semanal do Diário de Bordo numa turma de teste com 20 alunos 
 6. Proposta: o especialista "analista de travas" lê os registros de um aluno e devolve o diagnóstico. Só tem ferramentas de leitura.
 7. O orquestrador recebe os diagnósticos e decide. Só ele grava sugestões e prepara alertas para a fila.
 8. Peça: "Implemente a divisão. Limites, registro e interruptor valem para orquestrador e especialista."
-9. Rode na Turma Teste e compare passos, custo e tempo com o agente único.
+9. Peça: "Rode o agente semanal dividido na Turma Teste." Compare passos, custo e tempo com o agente único.
 10. Decida pelos números. Se não houver ganho, mantenha o agente único.
 11. Registre no `SPEC.md` (arquivo de especificação), seção 8: decisão, motivo e números. Peça um commit.
 
@@ -35,10 +35,10 @@ Exemplo: o agente semanal do Diário de Bordo numa turma de teste com 20 alunos 
 
 1. Abra no painel a trajetória de uma execução do seu agente.
 2. Anote passos, custo e tempo.
-3. Procure os sinais para dividir.
-4. Peça ao Claude Code a proposta e a comparação.
-5. Se dividir: peça a implementação e refaça os testes das lições B2, B3 e B5 da T6.
-6. Compare os números com o agente único.
+3. Procure os sinais para dividir (veja "Sinais para dividir", na Referência).
+4. Peça ao Claude Code a proposta e a comparação, adaptando o pedido do passo 5 da Demonstração.
+5. Se dividir: peça a implementação e refaça os testes das lições B2, B3, B4 e B5 da T6.
+6. Se dividir: compare os números com o agente único.
 7. Registre a decisão na seção 8 do `SPEC.md`, com motivo e números.
 8. Peça um commit.
 
@@ -51,6 +51,7 @@ Entrega: decisão sobre multiagentes na seção 8 do `SPEC.md`, com motivo e a c
 **Termos**
 
 - Agente: programa em que a IA escolhe os próximos passos e usa ferramentas até cumprir um objetivo
+- Contexto: todo o texto que o modelo recebe de uma vez (instruções, dados, resultados)
 - Multiagentes: mais de um agente dividindo a mesma tarefa
 - Orquestrador: agente que reparte a tarefa, chama especialistas e decide as ações
 - Especialista: agente com um papel e poucas ferramentas, chamado pelo orquestrador

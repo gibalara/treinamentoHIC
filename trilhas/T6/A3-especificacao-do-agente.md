@@ -15,21 +15,22 @@ A seção do agente no `SPEC.md` fixa objetivo, gatilho, ferramentas, limites, a
 
 Exemplo: a seção do agente semanal do Diário de Bordo.
 
-1. Peça ao Claude Code: "Leia o SPEC.md e a matriz de autonomia da seção 6. Proponha a seção do agente com o template abaixo." Cole o template (veja "Template da seção do agente", na Referência).
-2. Confira o objetivo: "Uma vez por semana, analisar as travas de cada aluno e sugerir o próximo passo."
-3. Confira o gatilho: agendado, semanal, uma execução por organização (turma ou empresa isolada no produto).
-4. Confira as entradas: registros da semana e datas-alvo, só da organização da execução.
-5. Confira as ferramentas (funções do produto que o agente pode chamar): cada uma com o nível da matriz.
-6. Confira os limites: passos, custo e tempo máximos. Os valores são definidos na lição B2 da T6.
-7. Confira a aprovação: o alerta ao gestor fica na fila do painel até o admin da organização decidir.
-8. Confira as paradas: objetivo cumprido, limite atingido, interruptor desligado ou informação insuficiente.
-9. Confira o "nunca faz": remover aluno, enviar sem aprovação, ler outra organização.
-10. Corrija o que discordar e peça um commit (versão salva no git).
+1. No Diário de Bordo, a matriz de autonomia já está na seção 6 do `SPEC.md` (arquivo de especificação).
+2. Peça ao Claude Code: "Leia o SPEC.md e a matriz de autonomia da seção 6. Proponha a seção do agente com o template abaixo." Cole o template (veja "Template da seção do agente", na Referência).
+3. Confira o objetivo: "Uma vez por semana, analisar as travas de cada aluno e sugerir o próximo passo."
+4. Confira o gatilho: agendado, semanal, uma execução por organização (turma ou empresa isolada no produto).
+5. Confira as entradas: registros da semana e datas-alvo, só da organização da execução.
+6. Confira as ferramentas (funções do produto que o agente pode chamar): cada uma com o nível da matriz.
+7. Confira os limites: passos, custo e tempo máximos. Os valores são definidos na lição B2 da T6.
+8. Confira a aprovação: o alerta ao gestor fica na fila de aprovação do painel até o admin da organização decidir.
+9. Confira as paradas: objetivo cumprido, limite atingido, interruptor desligado ou informação insuficiente. Interruptor de emergência: chave que desliga o agente na hora (lição B5 da T6).
+10. Confira o "nunca faz": remover aluno, enviar sem aprovação, ler outra organização.
+11. Corrija o que discordar e peça um commit (versão salva no git).
 
 ## Prática
 
 1. Abra o `SPEC.md` do seu projeto no Claude Code.
-2. Peça a proposta da seção do agente com o template, a partir da decisão da lição A1 e da matriz da lição A2 da T6.
+2. Peça a proposta da seção do agente com o template. Base: decisão da lição A1 e matriz da lição A2 da T6.
 3. Confira cada campo contra a matriz. Nenhuma ação de nível 2 pode virar ação direta.
 4. Preencha o "nunca faz" com as ações de nível 1 e os riscos do seu nicho.
 5. Deixe os valores de limite como "a definir na B2 da T6".
@@ -48,6 +49,8 @@ Entrega: seção do agente no `SPEC.md`, com os 10 campos do template preenchido
 - Gatilho: o que inicia uma execução (horário agendado, evento ou pedido)
 - Execução: uma rodada completa do agente, do início à parada
 - Organização: cliente, área ou turma isolada no produto (T5)
+- Trajetória: sequência de passos e ferramentas usadas numa execução
+- Interruptor de emergência: chave que desliga o agente na hora (lição B5 da T6)
 - Commit: versão salva no git
 
 **Template da seção do agente**
