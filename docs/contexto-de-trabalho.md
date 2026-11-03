@@ -25,9 +25,12 @@
 - Estrutura do repositório criada; ementa em docs/ementa.md; insumos da T0 em trilhas/T0/insumos/.
 - Lições 0.1 a 0.3 escritas e cursadas; correções aplicadas.
 - Lote 2 (lições 0.4 a 0.8) escrito; aguardando o aluno zero cursar.
+- T1 a T6 e transversal escritas em rascunho e revisadas (novembro de 2026); cabeçalho "Status: rascunho, ainda não cursado pelo aluno zero". Exceção pontual à regra de lotes, a pedido do autor.
+- Decisões e ativos que faltam: docs/decisoes-pendentes.md.
 - Tutor HIC: Project no Claude com instruções e a ementa no Contexto (atualizar quando a ementa mudar).
 
 ## Próximos passos
 1. Eu curso o lote 2 (lições 0.4 a 0.8) e trago correções.
 2. Resolver as lacunas do lote 2: conteúdo do Project da formação (0.6) e forma de entrega do Tutor HIC (0.8).
 3. Fechar o marco da T0.
+4. Decidir os itens de docs/decisoes-pendentes.md, começando pelos ativos que bloqueiam a T1 (skill de especificação, Avaliador HIC, ferramenta de usuários sintéticos).
