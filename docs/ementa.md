@@ -221,17 +221,17 @@ A T1 usa uma skill de especificação fornecida pelo curso; o aluno aprende a cr
 
 | # | Lição | Prática | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| 1.1 | Problema antes da solução | Mapear 2–3 problemas do nicho | Ficha de problema | 45 min |
-| 1.2a | Pré-validação com usuários sintéticos | Testar a hipótese numa ferramenta externa; Claude ajuda a montar hipóteses e personas | Relatório da ferramenta + perguntas para usuários reais | 45 min |
-| 1.2b | Validação com usuários reais | Pelo menos 3 conversas, com roteiro refinado | Resumo das conversas | 60 min + conversas |
-| 1.2c | Síntese com IA | Claude cruza hipóteses, relatório sintético e conversas | Decisão: seguir, ajustar ou trocar | 30 min |
-| 1.3 | Pesquisa assistida por IA | Mapa de 3–5 alternativas existentes | Tabela comparativa | 45 min |
-| 1.4 | Proposta de valor e métrica | Escrever proposta e métrica principal | Proposta + métrica | 30 min |
-| 1.5 | Do problema ao requisito | Requisitos com critérios de aceite | Requisitos | 60 min |
-| 1.6 | Spec-Driven Development | Gerar o `SPEC.md` com a skill do curso | `SPEC.md` v1 | 60 min |
-| 1.7 | Priorização e etapas verificáveis | Criar `TASKS.md` e `BACKLOG.md` | Arquivos commitados | 45 min |
-| 1.8 | Protótipo descartável | Prototipar o fluxo principal e testar com 1 usuário | Link ou print + ajustes | 60 min |
-| 1.9 | Elegibilidade do projeto | Aplicar o checklist ao projeto | Checklist aprovado | 30 min |
+| 1.1 | Problemas do seu nicho que valem um produto (ficha de problema) | Mapear 2–3 problemas do nicho | Ficha de problema | 45 min |
+| 1.2a | Hipótese testada antes de falar com pessoas (usuários sintéticos) | Testar a hipótese numa ferramenta externa; Claude ajuda a montar hipóteses e personas | Relatório da ferramenta + perguntas para usuários reais | 45 min |
+| 1.2b | Problema confirmado por 3 pessoas reais (validação com usuários) | Pelo menos 3 conversas, com roteiro refinado | Resumo das conversas | 60 min + conversas |
+| 1.2c | Seguir, ajustar ou trocar o problema (síntese com IA) | Claude cruza hipóteses, relatório sintético e conversas | Decisão: seguir, ajustar ou trocar | 30 min |
+| 1.3 | As alternativas que seu usuário já tem, comparadas (pesquisa assistida por IA) | Mapa de 3–5 alternativas existentes | Tabela comparativa | 45 min |
+| 1.4 | Seu produto em uma frase e um número (proposta de valor e métrica) | Escrever proposta e métrica principal | Proposta + métrica | 30 min |
+| 1.5 | Funcionalidades com critério de pronto testável (requisitos e critérios de aceite) | Requisitos com critérios de aceite | Requisitos | 60 min |
+| 1.6 | Seu produto especificado para o Claude Code construir (Spec-Driven Development) | Gerar o `SPEC.md` com a skill do curso | `SPEC.md` v1 | 60 min |
+| 1.7 | O que entra agora e o que fica para depois (TASKS.md e BACKLOG.md) | Criar `TASKS.md` e `BACKLOG.md` | Arquivos commitados | 45 min |
+| 1.8 | Fluxo principal testado por 1 usuário antes de construir (protótipo descartável) | Prototipar o fluxo principal e testar com 1 usuário | Link ou print + ajustes | 60 min |
+| 1.9 | Seu projeto aprovado para as próximas trilhas (checklist de elegibilidade) | Aplicar o checklist ao projeto | Checklist aprovado | 30 min |
 
 As lições 1.3 a 1.5 podem ser feitas em paralelo enquanto as conversas da 1.2b acontecem.
 
@@ -261,14 +261,14 @@ App pessoal em que o aluno registra a própria jornada: login, registros por li�
 
 | # | Lição | Prática | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| 2a.1 | Do `SPEC.md` ao plano | Gerar e revisar o plano no modo de planejamento | Plano commitado | 45 min |
-| 2a.2 | `CLAUDE.md` e regras | Criar o `CLAUDE.md` com regras de segurança | Arquivo commitado | 45 min |
-| 2a.3 | Primeira tela | Construir a tela de registro | Commit da tela | 60 min |
-| 2a.4 | Banco de dados | Criar a tabela e importar a planilha da T0/T1 | Registros anteriores visíveis | 75 min |
-| 2a.5 | Autenticação e permissões | Login + isolamento entre usuários | Teste com duas contas | 75 min |
-| 2a.6 | Debugging guiado | Resolver o erro proposital com o protocolo | Registro no `CLAUDE.md` | 45 min |
-| 2a.7 | Painel | Indicadores de tempo, lições e travas | Tela do painel | 60 min |
-| 2a.8 | Deploy | Publicar na Vercel com variáveis de ambiente | URL pública | 45 min |
+| 2a.1 | Um plano de construção revisado antes do código (modo Plano) | Gerar e revisar o plano no modo de planejamento | Plano commitado | 45 min |
+| 2a.2 | Regras que o Claude Code segue em toda sessão (`CLAUDE.md`) | Criar o `CLAUDE.md` com regras de segurança | Arquivo commitado | 45 min |
+| 2a.3 | A tela de registro da sua jornada funcionando (primeira tela) | Construir a tela de registro | Commit da tela | 60 min |
+| 2a.4 | Seus registros da T0 e da T1 guardados no app (banco de dados no Supabase) | Criar a tabela e importar a planilha da T0/T1 | Registros anteriores visíveis | 75 min |
+| 2a.5 | Login e cada usuário vendo só os próprios registros (autenticação e permissões) | Login + isolamento entre usuários | Teste com duas contas | 75 min |
+| 2a.6 | Um erro resolvido com método e registrado para não voltar (protocolo de debugging) | Resolver o erro proposital com o protocolo | Registro no `CLAUDE.md` | 45 min |
+| 2a.7 | Seu avanço no curso em números numa tela (painel) | Indicadores de tempo, lições e travas | Tela do painel | 60 min |
+| 2a.8 | Seu Diário no ar, com endereço público e segredos protegidos (deploy na Vercel) | Publicar na Vercel com variáveis de ambiente | URL pública | 45 min |
 
 **Rubrica do marco T2a:** eliminatórios são app publicado, login operante, isolamento entre usuários e segredos fora do código. Não eliminatórios: importação dos registros, um commit por ciclo, `CLAUDE.md` atualizado.
 
@@ -278,16 +278,16 @@ Sem passo a passo e sem feature de IA (que entra na T4). O aluno conduz; a liç�
 
 | # | Lição | Prática | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| 2b.1 | Plano do MVP | Plano a partir do `TASKS.md` | Plano commitado | 45 min |
-| 2b.2 | `CLAUDE.md` do projeto | Adaptar o da T2a | Arquivo commitado | 30 min |
-| 2b.3 | Modelo de dados | Modelar e criar as tabelas | Diagrama + tabelas | 60 min |
-| 2b.4 | Ciclos de construção | Construir as funcionalidades, com checkpoint a cada bloco | Commits por funcionalidade | 4–6 h |
-| 2b.5 | Testes automatizados | Testes a partir dos critérios de aceite | Testes passando | 75 min |
-| 2b.6 | Revisão de segurança | Rodar a revisão e corrigir | Relatório + correções | 45 min |
-| 2b.7 | Deploy em produção | Publicar o MVP | URL pública | 45 min |
-| 2b.8 | Usabilidade com agentes externos | Ferramenta externa testa; Claude prioriza fricções | Relatório + tarefas | 60 min |
-| 2b.9 | Teste com usuário real | Testar com 1 usuário da validação da T1 | Resumo do teste | 45 min + teste |
-| 2b.10 | Fechamento do MVP | Notas da versão e backlog | Arquivos atualizados | 30 min |
+| 2b.1 | O caminho do seu MVP em etapas verificáveis (plano do MVP) | Plano a partir do `TASKS.md` | Plano commitado | 45 min |
+| 2b.2 | Regras que o Claude Code segue no seu projeto (`CLAUDE.md`) | Adaptar o da T2a | Arquivo commitado | 30 min |
+| 2b.3 | As tabelas que guardam os dados do seu produto (modelo de dados) | Modelar e criar as tabelas | Diagrama + tabelas | 60 min |
+| 2b.4 | Funcionalidades construídas uma a uma, com ponto seguro de volta (ciclos de construção) | Construir as funcionalidades, com checkpoint a cada bloco | Commits por funcionalidade | 4–6 h |
+| 2b.5 | Critérios de aceite conferidos sozinhos a cada mudança (testes automatizados) | Testes a partir dos critérios de aceite | Testes passando | 75 min |
+| 2b.6 | Brechas encontradas e corrigidas antes de publicar (revisão de segurança) | Rodar a revisão e corrigir | Relatório + correções | 45 min |
+| 2b.7 | Seu MVP no ar, com endereço público (deploy em produção) | Publicar o MVP | URL pública | 45 min |
+| 2b.8 | Fricções de uso encontradas antes do usuário real (usabilidade com agentes externos) | Ferramenta externa testa; Claude prioriza fricções | Relatório + tarefas | 60 min |
+| 2b.9 | Seu MVP nas mãos de quem tem o problema (teste com usuário real) | Testar com 1 usuário da validação da T1 | Resumo do teste | 45 min + teste |
+| 2b.10 | Versão 1 fechada e próximo passo definido (notas da versão e backlog) | Notas da versão e backlog | Arquivos atualizados | 30 min |
 
 **Rubrica do marco T2b**
 
@@ -312,26 +312,26 @@ O método do aluno vira ativos reutilizáveis (skills, conectores, subagentes, h
 
 | Bloco | # | Lição | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| A · Skills | A1 | Fundamentos de skills | Quiz de acionamento | 45 min |
-| A · Skills | A2 | Descrições que acionam | Antes/depois | 45 min |
-| A · Skills | A3 | Skill de método | Skill + tarefa real | 90 min |
-| A · Skills | A4 | Skill do projeto | Skill + funcionalidade gerada | 60 min |
-| A · Skills | A5 | Mapa do ecossistema de mercado | Mapa de fontes | 30 min |
-| A · Skills | A6 | Ler skills de terceiros | Ficha de 3 skills | 45 min |
-| A · Skills | A7 | Rubrica de avaliação (casos: Claude Octopus e Multi-Agent Debate) | 5 avaliações | 60 min |
-| A · Skills | A8 | Teste controlado e adaptação | Antes/depois + skill adaptada | 75 min |
-| A · Skills | A9 | Governança de skills na empresa | Política de 1 página | 30 min |
-| B · Conectores e MCP | B1 | Conectores nativos e permissões | 2 conexões + tarefa | 60 min |
-| B · Conectores e MCP | B2 | MCP: o padrão por trás | Mapa de oportunidades | 45 min |
+| A · Skills | A1 | Um fluxo de construção melhor em minutos (fundamentos de skills) | Quiz de acionamento | 45 min |
+| A · Skills | A2 | Skills que entram em ação na hora certa (descrições de acionamento) | Antes/depois | 45 min |
+| A · Skills | A3 | Seu método de trabalho reutilizável pelo Claude (skill de método) | Skill + tarefa real | 90 min |
+| A · Skills | A4 | O Claude seguindo os padrões do seu produto (skill do projeto) | Skill + funcionalidade gerada | 60 min |
+| A · Skills | A5 | Onde procurar skills prontas (mapa do ecossistema) | Mapa de fontes | 30 min |
+| A · Skills | A6 | Saber o que uma skill faz antes de instalar (leitura de skills de terceiros) | Ficha de 3 skills | 45 min |
+| A · Skills | A7 | Decidir se uma skill de terceiro entra (rubrica de avaliação; casos: Claude Octopus e Multi-Agent Debate) | 5 avaliações | 60 min |
+| A · Skills | A8 | Provar que a skill ajuda e ajustá-la ao seu jeito (teste controlado e adaptação) | Antes/depois + skill adaptada | 75 min |
+| A · Skills | A9 | Regras para uso de skills na empresa (governança de skills) | Política de 1 página | 30 min |
+| B · Conectores e MCP | B1 | Claude nas suas ferramentas, com o acesso mínimo (conectores nativos e permissões) | 2 conexões + tarefa | 60 min |
+| B · Conectores e MCP | B2 | Onde ligar o Claude aos seus sistemas (MCP) | Mapa de oportunidades | 45 min |
 | B · Conectores e MCP | B3 | Claude consultando os dados do seu produto (servidor MCP) | Claude consultando o projeto | 2–2,5 h |
-| B · Conectores e MCP | B4 | Segurança em MCP | Checklist + correções | 45 min |
-| C · Automação | C1 | Subagentes | 2 subagentes em uso | 90 min |
-| C · Automação | C2 | Comandos personalizados | 2 comandos | 45 min |
-| C · Automação | C3 | Verificações automáticas (hooks) | 2 hooks + teste de bloqueio | 60 min |
-| C · Automação | C4 | Riscos da automação | Checklist | 30 min |
-| D · Empacotamento | D1 | Plugins | Plugin instalado em projeto vazio | 75 min |
-| D · Empacotamento | D2 | Orquestração: quando usar cada peça | 5 decisões justificadas | 45 min |
-| D · Empacotamento | D3 | Kit HIC | README publicado | 45 min |
+| B · Conectores e MCP | B4 | Servidor MCP sem segredos expostos e com acesso mínimo (segurança em MCP) | Checklist + correções | 45 min |
+| C · Automação | C1 | Revisores especializados trabalhando por você (subagentes) | 2 subagentes em uso | 90 min |
+| C · Automação | C2 | Sequências repetidas num único atalho (comandos personalizados) | 2 comandos | 45 min |
+| C · Automação | C3 | Verificações que acontecem sempre, sem você pedir (hooks) | 2 hooks + teste de bloqueio | 60 min |
+| C · Automação | C4 | Automação que não sai do controle (riscos da automação) | Checklist | 30 min |
+| D · Empacotamento | D1 | Suas peças instaláveis em qualquer projeto (plugins) | Plugin instalado em projeto vazio | 75 min |
+| D · Empacotamento | D2 | Escolher a peça certa para cada necessidade (orquestração) | 5 decisões justificadas | 45 min |
+| D · Empacotamento | D3 | Seu método empacotado e documentado (Kit HIC) | README publicado | 45 min |
 
 **Rubrica de skills de terceiros:** procedência, segurança (eliminatório), manutenção, licença, aderência e ganho medido.
 
@@ -360,24 +360,24 @@ A feature de IA entra no produto medida, protegida e economicamente viável, em 
 
 | Bloco | # | Lição | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| A · Fundamentos | A1 | Onde a IA agrega valor | `SPEC.md` atualizado | 45 min |
-| A · Fundamentos | A2 | Evals desde o dia zero (20 casos-ouro) | Planilha + meta | 90 min |
-| A · Fundamentos | A3 | Prototipar o prompt antes de integrar | Prompt v1 + resultado | 60 min |
-| A · Fundamentos | A4 | API Anthropic no servidor | Feature + chave só no servidor | 75 min |
-| B · Construção | B1 | Geração e classificação com saída estruturada | Validação de formato | 75 min |
+| A · Fundamentos | A1 | A tarefa de IA certa para o seu produto (onde a IA agrega valor) | `SPEC.md` atualizado | 45 min |
+| A · Fundamentos | A2 | Saber se a IA acerta antes de construí-la (evals com 20 casos-ouro) | Planilha + meta | 90 min |
+| A · Fundamentos | A3 | Um prompt aprovado nos casos-ouro antes de entrar no app (prototipar o prompt) | Prompt v1 + resultado | 60 min |
+| A · Fundamentos | A4 | A IA dentro do seu app, com a chave protegida (API Anthropic no servidor) | Feature + chave só no servidor | 75 min |
+| B · Construção | B1 | Respostas que o app consegue ler (geração e classificação com saída estruturada) | Validação de formato | 75 min |
 | B · Construção | B2 | Respostas com base nos seus documentos (RAG, degrau 1) | Respostas com citação | 60 min |
 | B · Construção | B3 | Selecionar os documentos certos (RAG, degrau 2) | Comparação nos casos-ouro | 75 min |
-| B · Construção | B4 | Busca por significado (RAG, degrau 3, só se necessário) | Decisão de degrau justificada | 2–3 h |
-| B · Construção | B5 | Citação e rastreabilidade | Citação verificada | 45 min |
-| C · Proteção | C1 | Guardrails de entrada | Casos maliciosos passando | 75 min |
-| C · Proteção | C2 | Guardrails de saída | Casos fora do escopo passando | 60 min |
-| C · Proteção | C3 | Limites de uso por usuário | Teste de limite | 45 min |
-| D · Qualidade e economia | D1 | Avaliação automática com IA como juiz, calibrada em 20 casos contra o aluno | Taxa de concordância | 90 min |
+| B · Construção | B4 | Achar o trecho certo mesmo com outras palavras (busca por significado, RAG degrau 3, só se necessário) | Decisão de degrau justificada | 2–3 h |
+| B · Construção | B5 | Toda resposta com fonte conferível (citação e rastreabilidade) | Citação verificada | 45 min |
+| C · Proteção | C1 | Barrar pedidos maliciosos antes da IA (guardrails de entrada) | Casos maliciosos passando | 75 min |
+| C · Proteção | C2 | Conferir a resposta antes de mostrar (guardrails de saída) | Casos fora do escopo passando | 60 min |
+| C · Proteção | C3 | Nenhum usuário esgota seu orçamento (limites de uso por usuário) | Teste de limite | 45 min |
+| D · Qualidade e economia | D1 | Corrigir os evals automaticamente (IA como juiz, calibrada contra você) | Taxa de concordância | 90 min |
 | D · Qualidade e economia | D2 | Descobrir por que a IA erra (análise de erros) | Falhas por categoria + novos casos | 75 min |
-| D · Qualidade e economia | D3 | Escolha de modelo: custo × latência × qualidade | Tabela comparativa | 60 min |
+| D · Qualidade e economia | D3 | Escolher o modelo pelos dados (custo × latência × qualidade) | Tabela comparativa | 60 min |
 | D · Qualidade e economia | D4 | Melhorar sem quebrar (versionamento e regressão, inclusive na troca de modelo) | Evals automáticos antes de mudanças | 60 min |
-| D · Qualidade e economia | D5 | Custo por usuário | Planilha de custo | 45 min |
-| D · Qualidade e economia | D6 | Fechamento da feature | Relatório de 1 página | 30 min |
+| D · Qualidade e economia | D5 | Quanto cada usuário custa em IA (custo por usuário) | Planilha de custo | 45 min |
+| D · Qualidade e economia | D6 | A feature de IA comprovada em 1 página (fechamento da feature) | Relatório de 1 página | 30 min |
 
 **Composição dos 20 casos-ouro:** 8 típicos, 5 difíceis, 4 fora do escopo, 3 maliciosos. Meta geral definida pelo aluno (referência: 85%); fora do escopo e maliciosos: 100%.
 
@@ -410,22 +410,22 @@ O MVP passa a atender várias organizações (clientes, áreas ou departamentos)
 
 | Bloco | # | Lição | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| A · Multi-organização | A1 | Atender vários clientes no mesmo produto | Diagrama + decisão | 45 min |
-| A · Multi-organização | A2 | Migração segura (backup → teste → produção) | Migração sem perda | 2 h |
-| A · Multi-organização | A3 | Convites e membros | Fluxo testado | 75 min |
-| A · Multi-organização | A4 | IA isolada por organização (RAG filtrado) | Evals de acesso cruzado: 100% | 60 min |
-| A · Multi-organização | A5 | Teste de isolamento | Relatório do roteiro | 60 min |
-| B · Papéis e admin | B1 | Papéis e permissões no servidor e no banco | Teste de bloqueio | 75 min |
-| B · Papéis e admin | B2 | Painel administrativo (organizações, usuários, uso e custo de IA) | Painel | 90 min |
-| B · Papéis e admin | B3 | Trilha de auditoria | Registros consultáveis | 45 min |
-| C · n8n | C1 | Fundamentos do n8n | Fluxo de teste | 45 min |
+| A · Multi-organização | A1 | Atender vários clientes no mesmo produto (multi-organização) | Diagrama + decisão | 45 min |
+| A · Multi-organização | A2 | Mudar o banco sem perder dados (migração segura: backup → teste → produção) | Migração sem perda | 2 h |
+| A · Multi-organização | A3 | Convidar e remover pessoas de uma organização (convites e membros) | Fluxo testado | 75 min |
+| A · Multi-organização | A4 | IA que só usa os dados da própria organização (RAG filtrado) | Evals de acesso cruzado: 100% | 60 min |
+| A · Multi-organização | A5 | Provar que uma organização não vê dados de outra (teste de isolamento) | Relatório do roteiro | 60 min |
+| B · Papéis e admin | B1 | Cada papel só faz o que pode (permissões no servidor e no banco) | Teste de bloqueio | 75 min |
+| B · Papéis e admin | B2 | Ver organizações, usuários e custo de IA num só lugar (painel administrativo) | Painel | 90 min |
+| B · Papéis e admin | B3 | Saber quem fez o quê e quando (trilha de auditoria) | Registros consultáveis | 45 min |
+| C · n8n | C1 | Seu primeiro fluxo automático entre sistemas (n8n) | Fluxo de teste | 45 min |
 | C · n8n | C2 | Evento do produto → ação externa (webhook autenticado) | Fluxo + segredo | 60 min |
 | C · n8n | C3 | Relatório agendado por organização | Relatório recebido | 60 min |
-| C · n8n | C4 | Segurança no n8n | Checklist | 30 min |
+| C · n8n | C4 | Fluxos do n8n sem brechas (segurança no n8n) | Checklist | 30 min |
 | D · Operação | D1 | Ver o que acontece em produção (observabilidade) | Erros e chamadas consultáveis | 60 min |
-| D · Operação | D2 | Monitoramento e alertas (fora do ar, erros, custo, qualidade) | Alerta disparado | 60 min |
-| D · Operação | D3 | Backup e recuperação | Restauração testada | 45 min |
-| D · Operação | D4 | Pagamentos (opcional, modo de teste) | Assinatura de teste | 2 h |
+| D · Operação | D2 | Ser avisado quando o produto cai, erra ou gasta demais (monitoramento e alertas) | Alerta disparado | 60 min |
+| D · Operação | D3 | Recuperar os dados depois de um desastre (backup e recuperação) | Restauração testada | 45 min |
+| D · Operação | D4 | Cobrar assinatura por organização em modo de teste (pagamentos, opcional) | Assinatura de teste | 2 h |
 
 **Roteiro do teste de isolamento (A5):** nenhuma tela, requisição alterada, resposta de IA, arquivo, exportação ou relatório da Org A expõe dados da Org B; usuário removido perde acesso imediatamente.
 
@@ -463,20 +463,20 @@ Regra: toda ação com efeito fora do produto começa no nível 2.
 
 | Bloco | # | Lição | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| A · Fundamentos | A1 | Agente vs. fluxo fixo | Decisão no `SPEC.md` | 45 min |
-| A · Fundamentos | A2 | Níveis de autonomia | Matriz preenchida | 45 min |
-| A · Fundamentos | A3 | Especificação do agente | Seção do agente | 60 min |
-| B · Construção | B1 | Ferramentas com permissões mínimas | Lista de ferramentas | 90 min |
-| B · Construção | B2 | Ciclo com limites de passos, custo e tempo | Parada por limite | 90 min |
-| B · Construção | B3 | Aprovação humana (fila no painel) | Aprovação e rejeição registradas | 75 min |
-| B · Construção | B4 | Registro de execuções | Execuções no painel | 45 min |
-| B · Construção | B5 | Interruptor de emergência | Teste de desligamento | 30 min |
-| C · Escala de agentes | C1 | Multiagentes (orquestrador + especialista) | Decisão justificada | 90 min |
+| A · Fundamentos | A1 | Decidir se o seu caso pede um agente (agente vs. fluxo fixo) | Decisão no `SPEC.md` | 45 min |
+| A · Fundamentos | A2 | Quanto o agente pode fazer sozinho, ação por ação (níveis de autonomia) | Matriz preenchida | 45 min |
+| A · Fundamentos | A3 | O agente descrito antes de existir (especificação do agente) | Seção do agente | 60 min |
+| B · Construção | B1 | O agente só alcança o que precisa (ferramentas com permissões mínimas) | Lista de ferramentas | 90 min |
+| B · Construção | B2 | Um agente que para antes de sair do controle (ciclo com limites de passos, custo e tempo) | Parada por limite | 90 min |
+| B · Construção | B3 | Nada sai do produto sem aceite humano (aprovação humana na fila do painel) | Aprovação e rejeição registradas | 75 min |
+| B · Construção | B4 | Saber tudo o que o agente fez (registro de execuções) | Execuções no painel | 45 min |
+| B · Construção | B5 | Desligar o agente na hora (interruptor de emergência) | Teste de desligamento | 30 min |
+| C · Escala de agentes | C1 | Dividir o trabalho do agente só quando compensa (multiagentes: orquestrador + especialista) | Decisão justificada | 90 min |
 | C · Escala de agentes | C2 | Agentes que trabalham sem você (agendamento sem duplicação) | Execução sem duplicação | 75 min |
-| C · Escala de agentes | C3 | Canais (opcional, visão genérica) | Conversa com usuário identificado | 45–60 min |
-| D · Qualidade e segurança | D1 | Evals de agente (15 cenários de trajetória) | Script + resultado | 2 h |
-| D · Qualidade e segurança | D2 | Segurança de agentes | Checklist + correções | 75 min |
-| D · Qualidade e segurança | D3 | Fechamento do agente | Relatório de 1 página | 30 min |
+| C · Escala de agentes | C3 | Conversar com o agente pelo canal que a equipe já usa (canais, opcional) | Conversa com usuário identificado | 45–60 min |
+| D · Qualidade e segurança | D1 | Provar que o agente se comporta nos casos críticos (evals de agente: 15 cenários de trajetória) | Script + resultado | 2 h |
+| D · Qualidade e segurança | D2 | Fechar as brechas do agente antes da produção (segurança de agentes) | Checklist + correções | 75 min |
+| D · Qualidade e segurança | D3 | Agente em produção, com relatório de 1 página (fechamento do agente) | Relatório de 1 página | 30 min |
 
 **Canais (C3):** o agente é um só e os canais (Slack, Teams, WhatsApp, e-mail) são portas de entrada via adaptador. Toda conexão precisa de verificação de autenticidade, vínculo de identidade, tradução da mensagem, aprovação com verificação de papel e segredos protegidos. Regras de cada plataforma mudam com frequência; consultar a documentação oficial antes de construir.
 
@@ -504,16 +504,16 @@ A capacidade técnica vira valor de mercado: posicionamento, decisão do que con
 
 | # | Lição | Liberada após | Evidência | Tempo |
 | --- | --- | --- | --- | --- |
-| X1 | Posicionamento do HIC | T1 | Posicionamento em 1 parágrafo | 45 min |
-| X2 | Quando não construir | T1 | Matriz comprar / configurar / construir | 45 min |
-| X3 | LGPD em produtos com IA | T2b | Mapa de dados + política de privacidade v1 | 75 min |
-| X4 | Métricas de uso do produto | T2b | Métrica de sucesso da T1 instrumentada e visível no painel | 60 min |
-| X5 | Distribuição e primeiros usuários | T2b | Plano de aquisição dos 10 primeiros usuários + primeira ação executada | 60 min |
-| X6 | Precificação (custo por usuário + valor) | T4 | Planilha de precificação | 60 min |
-| X7 | Governança de IA em empresas | T5 | Dossiê de governança | 60 min |
-| X8 | Custo de operar sozinho | T6 | Rotina de operação | 45 min |
-| X9 | Portfólio e build documentado | Contínua | Case publicado | 60 min |
-| X10 | Pitch final (5 min) | Fim | Vídeo | 60 min |
+| X1 | Dizer em um parágrafo o que você entrega e para quem (posicionamento) | T1 | Posicionamento em 1 parágrafo | 45 min |
+| X2 | Decidir o que comprar, configurar ou construir (quando não construir) | T1 | Matriz comprar / configurar / construir | 45 min |
+| X3 | Saber quais dados seu produto trata e escrever a política de privacidade (LGPD em produtos com IA) | T2b | Mapa de dados + política de privacidade v1 | 75 min |
+| X4 | Ver no painel se o produto cumpre a promessa (métricas de uso) | T2b | Métrica de sucesso da T1 instrumentada e visível no painel | 60 min |
+| X5 | Conseguir os 10 primeiros usuários (distribuição) | T2b | Plano de aquisição dos 10 primeiros usuários + primeira ação executada | 60 min |
+| X6 | Um preço que cobre o custo e cabe no valor entregue (precificação) | T4 | Planilha de precificação | 60 min |
+| X7 | Responder à TI e ao compliance com evidências (governança de IA) | T5 | Dossiê de governança | 60 min |
+| X8 | Saber quanto custa operar sozinho (rotina de operação) | T6 | Rotina de operação | 45 min |
+| X9 | Publicar um case que prova o que você construiu (portfólio e build documentado) | Contínua | Case publicado | 60 min |
+| X10 | Apresentar o produto em 5 minutos (pitch final) | Fim | Vídeo | 60 min |
 
 **Dossiê de governança (X7):** cada pergunta da TI ou do compliance é respondida por uma evidência já produzida: isolamento (T5), auditoria (T5), evals (T4), casos maliciosos (T4 e T6), matriz de autonomia e aprovação (T6), mapa de dados (X3), interruptor de emergência (T6), rubricas de skills (T3).
 
