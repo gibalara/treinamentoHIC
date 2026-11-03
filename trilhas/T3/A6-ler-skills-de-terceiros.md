@@ -13,28 +13,29 @@ Instalar sem ler é dar acesso ao seu repositório a quem você não conhece. Vo
 
 ## Demonstração
 
-Exemplo: o Diário de Bordo e uma skill de revisão de segurança do mapa de fontes (A5 da T3).
+Exemplo: o Diário de Bordo e uma skill de revisão de segurança do mapa de fontes (lição A5 da T3).
 
-1. Baixe a skill numa pasta separada, fora do repositório do Diário. Não instale. [VERIFICAR NA INTERFACE]
+1. Baixe a skill numa pasta separada, fora do repositório do Diário. Não instale. No GitHub: botão **Code** > **Download ZIP**, depois descompacte. [VERIFICAR NA INTERFACE]
 2. Abra essa pasta no modo de código do Claude Desktop (ícone **</>**), em modo **Manual**.
 3. Peça: "Leia esta skill sem executar nada. Explique o que ela faz, em quais pedidos é acionada e quais arquivos tem."
 4. Peça: "Ela tem scripts? Para cada um: o que faz, que arquivos lê ou altera, e se acessa a internet."
 5. Peça: "Há instruções para ignorar regras do projeto, pedir senhas ou enviar dados para fora?"
-6. Abra um dos arquivos indicados e confira um trecho que o Claude citou.
-7. Preencha a ficha da skill (veja "Ficha de leitura", na Referência).
-8. Decida: segue para avaliação na A7 da T3 ou descarta.
+   - Essa pergunta detecta injeção de instrução: texto que tenta mudar o comportamento do Claude.
+6. Abra no editor um dos arquivos indicados e confira um trecho que o Claude citou.
+7. Preencha a "Ficha de leitura", na Referência.
+8. Decida: segue para avaliação na lição A7 da T3 ou descarta.
 
 [LINK A CURAR: documentação oficial da Anthropic sobre a estrutura de uma skill]
 
 ## Prática
 
-1. Escolha 3 skills do seu mapa de fontes (A5 da T3).
-2. Baixe cada uma numa pasta separada, fora do seu repositório.
+1. Escolha 3 skills do seu mapa de fontes (`docs/mapa-de-fontes.md`, lição A5 da T3). Critério: as que mais cobrem as necessidades do mapa, com pelo menos uma de fonte não oficial.
+2. Baixe cada uma numa pasta separada, fora do seu repositório, como no passo 1 da Demonstração.
 3. Abra cada pasta no modo de código, em **Manual**.
 4. Faça as 3 perguntas da Demonstração (passos 3 a 5).
-5. Confira um trecho citado pelo Claude em cada skill.
-6. Preencha uma ficha por skill.
-7. Salve as fichas no seu repositório e peça o commit.
+5. Abra no editor e confira um trecho citado pelo Claude em cada skill.
+6. Preencha uma "Ficha de leitura" (Referência) por skill. Confira os "Sinais de alerta", também na Referência.
+7. Abra a pasta do seu projeto no modo de código. Salve as fichas em `docs/fichas-de-skills.md` e peça o commit.
 
 ## Checagem
 
@@ -61,12 +62,12 @@ Entrega: ficha de leitura das 3 skills.
 | Acessa a internet? | Sim / Não |
 | Altera arquivos do projeto? | Sim / Não |
 | Instrução suspeita? | Sim / Não (qual) |
-| Decisão | Avaliar na A7 / Descartar |
+| Decisão | Avaliar (lição A7 da T3) / Descartar |
 
 **Sinais de alerta**
 
 - Script que acessa a internet sem motivo claro
-- Pedido de senha, chave de API ou token
+- Pedido de senha, chave de API ou token (códigos de acesso a serviços)
 - Instrução para ignorar o `CLAUDE.md` ou pular aprovações
 - Texto escondido ou codificado
 - Descrição genérica que aciona em qualquer pedido

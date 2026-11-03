@@ -17,24 +17,24 @@ Exemplo: o Diário de Bordo, com subagentes de revisão, comandos e hooks.
 
 1. Abra a pasta do Diário de Bordo no modo de código do Claude Desktop (ícone **</>**), em modo **Manual**.
 2. Peça: "Liste as automações deste projeto (subagentes, comandos, hooks, skills, servidores MCP) e o que cada uma pode fazer."
-3. Cole o checklist (veja "Checklist de riscos", na Referência) e peça: "Aplique este checklist a cada automação. Para cada item, atende ou não, com o motivo."
-4. Confira um item por conta própria: o subagente revisor não tem permissão de editar.
-5. Confira outro: o comando `/fechar-ciclo` para antes do commit.
-6. Simule uma falha: peça para desligar temporariamente o hook de testes e veja se algo avisa. [VERIFICAR NA INTERFACE]
-7. Religue o hook.
+3. Cole o "Checklist de riscos", na Referência, e peça: "Aplique este checklist a cada automação. Para cada item, atende ou não, com o motivo."
+4. Confira um item por conta própria: peça as ferramentas do subagente revisor e confirme que ele não edita arquivos.
+5. Confira outro: rode o comando `/fechar-ciclo` e confirme que ele para antes do commit.
+6. Simule uma falha silenciosa: peça para desligar o hook de testes e peça uma mudança que quebra um teste. Note que nada avisa. [VERIFICAR NA INTERFACE]
+7. Desfaça a mudança e religue o hook.
 8. Corrija os itens reprovados, com um commit por correção.
-9. Salve o checklist preenchido no repositório.
+9. Peça para salvar o checklist preenchido em `docs/checklist-riscos.md` e o commit.
 
 [LINK A CURAR: documentação oficial do Claude Code sobre segurança e permissões]
 
 ## Prática
 
 1. Abra a pasta do seu projeto no modo de código, em **Manual**.
-2. Peça a lista de todas as automações do projeto.
-3. Aplique o checklist a cada uma.
-4. Confira dois itens por conta própria.
+2. Peça a lista de automações, como no passo 2 da Demonstração.
+3. Cole o "Checklist de riscos" (Referência) e peça a aplicação a cada automação, como no passo 3 da Demonstração.
+4. Confira dois itens por conta própria, um de acesso e um de aprovação (passos 4 e 5 da Demonstração).
 5. Corrija os itens reprovados, com um commit por correção.
-6. Salve o checklist preenchido no repositório e peça o commit.
+6. Salve o checklist preenchido em `docs/checklist-riscos.md` e peça o commit.
 
 ## Checagem
 
@@ -44,10 +44,10 @@ Entrega: checklist de riscos preenchido para todas as automações do projeto.
 
 **Termos**
 
-- Subagente: assistente com papel e contexto próprios, chamado pelo Claude Code (C1 da T3)
-- Comando personalizado: atalho iniciado por barra com passos fixos (C2 da T3)
-- Hook: verificação automática em momentos fixos (C3 da T3)
-- Modo de permissão: regra de quando o Claude Code pede aprovação (0.4 da T0)
+- Subagente: assistente com papel e contexto próprios, chamado pelo Claude Code (lição C1 da T3)
+- Comando personalizado: atalho iniciado por barra com passos fixos (lição C2 da T3)
+- Hook: verificação automática em momentos fixos (lição C3 da T3)
+- Modo de permissão: regra de quando o Claude Code pede aprovação (lição 0.4 da T0)
 
 **Checklist de riscos**
 
@@ -56,7 +56,7 @@ Entrega: checklist de riscos preenchido para todas as automações do projeto.
 - [ ] Commit, envio ao GitHub e exclusão passam por aprovação
 - [ ] Falha de teste ou de hook aparece para você; nada falha em silêncio
 - [ ] Nenhuma automação grava ou exibe segredos
-- [ ] Peças de terceiros avaliadas (A7 da T3) e reavaliadas a cada atualização
+- [ ] Peças de terceiros avaliadas (lição A7 da T3) e reavaliadas a cada atualização
 - [ ] Modo "Ignorar permissões" nunca usado
 - [ ] Hooks testados depois de qualquer mudança
 - [ ] Cada automação tem dono e data de revisão (trimestral)

@@ -18,10 +18,10 @@ Diferença para uma skill: o comando entra quando você chama; a skill, quando o
 Exemplo: o Diário de Bordo, app de registro da jornada construído na T2a.
 
 1. Abra a pasta do Diário de Bordo no modo de código do Claude Desktop (ícone **</>**), em modo **Manual**.
-2. Peça: "Crie um comando de projeto `/fechar-ciclo` que roda os testes, lista os arquivos alterados, explica a mudança e propõe o commit. Não faz commit sem minha aprovação."
+2. Peça: "Crie o comando de projeto `/fechar-ciclo`: roda os testes, lista os arquivos alterados, explica e propõe o commit. Não faz commit sem minha aprovação."
 3. Peça: "Crie um comando de projeto `/registrar-trava` que recebe uma trava e registra causa e solução no `CLAUDE.md`."
 4. Peça: "Mostre os dois comandos e explique cada passo." [VERIFICAR NA INTERFACE: onde os comandos aparecem ao digitar /]
-5. Faça uma mudança pequena: "Mude o rótulo 'Tempo' para 'Tempo (min)' no formulário de registro."
+5. Peça uma mudança pequena: "Mude o rótulo 'Tempo' para 'Tempo (min)' no formulário de registro."
 6. Digite `/fechar-ciclo` e confira se os 4 passos rodaram na ordem.
 7. Aprove o commit.
 8. Digite `/registrar-trava` seguido de uma trava real e confira o `CLAUDE.md`.
@@ -31,10 +31,10 @@ Exemplo: o Diário de Bordo, app de registro da jornada construído na T2a.
 ## Prática
 
 1. Liste as sequências que você repete no seu projeto (veja "Escolha dos comandos", na Referência).
-2. Escolha 2 com passos fixos.
+2. Escolha 2 com passos fixos e escreva os passos de cada uma, em ordem.
 3. Abra a pasta do seu projeto no modo de código, em **Manual**.
-4. Peça os 2 comandos de projeto, com passos e ponto de aprovação.
-5. Use cada comando numa situação real.
+4. Peça os 2 comandos de projeto, como no passo 2 da Demonstração. Inclua nome, passos em ordem e ponto de aprovação.
+5. Digite cada comando numa situação real e confira se os passos rodaram na ordem.
 6. Ajuste o passo que saiu errado.
 7. Peça o commit, incluindo os arquivos dos comandos.
 

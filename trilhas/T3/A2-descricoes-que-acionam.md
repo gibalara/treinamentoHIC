@@ -19,12 +19,12 @@ Exemplo: o Diário de Bordo, app de registro da jornada construído na T2a.
 
 1. Abra a pasta do Diário de Bordo no modo de código do Claude Desktop (ícone **</>**), em modo **Manual**.
 2. Peça: "Crie uma skill de projeto chamada 'registro-de-trava' com a descrição 'Ajuda com registros'. Instrução: transformar o relato de uma trava em causa, tentativa e aprendizado."
-3. Escreva 5 pedidos de teste: 3 que devem acionar e 2 que não devem (veja "Pedidos de teste", na Referência).
-4. Rode cada pedido numa sessão nova e pergunte: "Você usou alguma skill? Qual?"
-5. Anote o resultado na tabela antes/depois: acionou certo ou errado.
+3. Copie a tabela "Pedidos de teste", na Referência: 3 pedidos que devem acionar e 2 que não devem.
+4. Rode cada pedido numa sessão nova (barra lateral, **Criar**) e pergunte: "Você usou alguma skill? Qual?"
+5. Anote na coluna "Antes" da tabela: acionou certo ou errado.
 6. Peça: "Reescreva a descrição da skill 'registro-de-trava' com: o que faz, quando usar, palavras do usuário e quando não usar."
-7. Leia a descrição nova e corte o que não ajuda a decidir.
-8. Rode os mesmos 5 pedidos em sessões novas e preencha a coluna "depois".
+7. Leia a descrição nova e corte o que não ajuda o Claude a decidir se usa a skill.
+8. Rode os mesmos 5 pedidos em sessões novas e preencha a coluna "Depois".
 9. Peça o commit.
 
 [LINK A CURAR: guia oficial da Anthropic sobre boas práticas para escrever skills]
@@ -32,12 +32,12 @@ Exemplo: o Diário de Bordo, app de registro da jornada construído na T2a.
 ## Prática
 
 1. Abra a pasta do seu projeto no modo de código, em **Manual**.
-2. Escolha uma tarefa recorrente do seu projeto que tenha regra clara.
-3. Peça uma skill de projeto mínima para essa tarefa, com descrição de uma linha genérica.
-4. Escreva 5 pedidos de teste: 3 que devem acionar, 2 que não devem.
-5. Rode os pedidos em sessões novas e registre o "antes".
-6. Reescreva a descrição com a estrutura da Referência.
-7. Rode os mesmos pedidos e registre o "depois".
+2. Escolha uma tarefa semanal, de formato fixo (veja "Escolha da tarefa", na Referência).
+3. Peça uma skill de projeto mínima para essa tarefa. Use uma descrição genérica, como no passo 2 da Demonstração.
+4. Monte 5 pedidos de teste no modelo de "Pedidos de teste", na Referência. Três devem acionar; dois, de tarefas vizinhas, não.
+5. Rode cada pedido numa sessão nova e registre a coluna "Antes".
+6. Reescreva a descrição com a "Estrutura da descrição", na Referência.
+7. Rode os mesmos pedidos em sessões novas e registre a coluna "Depois". Ajuste a descrição até acertar os 5.
 8. Peça o commit.
 
 ## Checagem
@@ -60,6 +60,12 @@ Entrega: tabela antes/depois com os 5 pedidos de teste e as duas versões da des
 - O que faz, em uma frase
 - Quando usar: situações e palavras que o usuário diria
 - Quando não usar: o vizinho mais parecido que não é dela
+
+**Escolha da tarefa**
+
+- Boa escolha: pedido semanal, com resultado de formato fixo
+- Exemplos: registro de decisão na seção 8 do `SPEC.md`; resumo de conversa com usuário; nota de versão de uma mudança
+- Evitar: tarefa que muda a cada vez ou que já tem skill instalada
 
 **Pedidos de teste (exemplo do Diário)**
 

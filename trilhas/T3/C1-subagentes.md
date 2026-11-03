@@ -16,7 +16,7 @@ Um subagente é um assistente com papel, instruções e contexto próprios, cham
 Exemplo: o Diário de Bordo, que ganha dois subagentes de revisão.
 
 1. Abra a pasta do Diário de Bordo no modo de código do Claude Desktop (ícone **</>**), em modo **Manual**.
-2. Peça: "Crie um subagente de projeto chamado 'revisor-de-seguranca'. Papel: revisar mudanças. Critérios: segredos fora do código, chave de API só no servidor, isolamento entre usuários. Só leitura: não altera arquivos."
+2. Peça: "Crie um subagente de projeto chamado 'revisor-de-seguranca'. Papel: revisar mudanças. Critérios: segredos fora do código, chave de API só no servidor, isolamento entre usuários. Só leitura: não altera arquivos." Chave de API é o código de acesso a um serviço, como a IA.
 3. Peça: "Crie um subagente de projeto chamado 'revisor-de-aceite'. Papel: comparar a funcionalidade com os critérios de aceite do `SPEC.md`. Só leitura."
 4. Peça: "Mostre os dois subagentes e as ferramentas que cada um pode usar." Confira que nenhum pode editar arquivos. [VERIFICAR NA INTERFACE: onde os subagentes aparecem]
 5. Peça uma mudança pequena: "Mostre no painel o total de horas do mês."
@@ -30,11 +30,11 @@ Exemplo: o Diário de Bordo, que ganha dois subagentes de revisão.
 
 1. Escolha 2 revisões que você repete no seu projeto (veja "Escolha dos subagentes", na Referência).
 2. Abra a pasta do seu projeto no modo de código, em **Manual**.
-3. Peça os 2 subagentes de projeto, com papel, critérios e acesso só de leitura.
-4. Confira as ferramentas de cada um.
-5. Peça uma mudança real do seu `TASKS.md` (lista de tarefas da 1.7 da T1).
-6. Peça a revisão pelos 2 subagentes.
-7. Confira um apontamento de cada um.
+3. Preencha a "Ficha do subagente" (Referência) para cada um. Peça os 2 com o pedido de criação, também na Referência.
+4. Peça: "Mostre os dois subagentes e as ferramentas que cada um pode usar." Confira que nenhum pode editar arquivos.
+5. Peça uma mudança real: um item pequeno do seu `BACKLOG.md` (lista do que ficou para depois, lição 1.7 da T1).
+6. Peça a revisão pelos 2 subagentes, citando o nome de cada um.
+7. Confira um apontamento de cada um no código ou no `SPEC.md`.
 8. Peça as correções procedentes e o commit, incluindo os arquivos dos subagentes.
 
 ## Checagem

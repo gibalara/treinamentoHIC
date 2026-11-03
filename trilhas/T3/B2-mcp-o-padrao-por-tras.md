@@ -7,7 +7,7 @@
 
 ## Por quê
 
-MCP (Model Context Protocol) é o padrão aberto que liga o Claude a outros sistemas. Os conectores que você usou são servidores MCP prontos.
+MCP (Model Context Protocol) é o padrão aberto que liga o Claude a outros sistemas. Os conectores da lição B1 da T3 são servidores MCP prontos.
 
 Um servidor MCP é o programa que expõe dados e ações de um sistema ao Claude. Dá para fazer um para o seu produto. Aí o Claude consulta seus dados sem você copiar e colar.
 
@@ -21,24 +21,24 @@ Exemplo: o Diário de Bordo, app de registro da jornada construído na T2a.
 2. Liste 2 ações que você gostaria que o Claude executasse (ex.: "Registre 45 min na lição A8 da T3").
 3. Para cada item, anote o dado necessário: tabela de registros, lições, travas.
 4. Classifique: leitura ou escrita.
-5. Classifique o risco: baixo, médio ou alto (veja "Critérios de risco", na Referência).
+5. Classifique o risco com os "Critérios de risco", na Referência: baixo, médio ou alto.
 6. Dê o ganho: quantas vezes por semana você faria isso e quanto tempo economiza.
-7. Escolha 2 ou 3 itens de leitura e baixo risco para o primeiro servidor (B3 da T3).
-8. Salve o mapa no repositório do Diário e peça o commit no Claude Code.
+7. Escolha 2 ou 3 itens de leitura e baixo risco para o primeiro servidor (lição B3 da T3).
+8. Abra a pasta do Diário no modo de código, em **Manual**. Peça para salvar o mapa em `docs/mapa-mcp.md` e o commit.
 
 [LINK A CURAR: introdução oficial ao Model Context Protocol]
 
 ## Prática
 
-1. Liste 5 perguntas sobre os dados do seu produto que você faria ao Claude.
-2. Liste até 2 ações que o Claude poderia executar no produto.
-3. Anote o dado de cada item, leitura ou escrita, risco e ganho.
+1. Liste 5 perguntas sobre os dados do seu produto que você faria ao Claude. Critério: hoje exigem abrir o app ou o Supabase e contar à mão.
+2. Liste até 2 ações que o Claude poderia executar no produto, como no passo 2 da Demonstração.
+3. Preencha o "Mapa de oportunidades", na Referência: dado, leitura ou escrita, risco e ganho.
 4. Marque 2 ou 3 itens para o seu primeiro servidor: leitura e baixo risco.
-5. Salve o mapa no repositório e peça o commit.
+5. No modo de código, salve o mapa em `docs/mapa-mcp.md` no seu repositório e peça o commit.
 
 ## Checagem
 
-Entrega: mapa de oportunidades com pelo menos 5 itens classificados e os itens escolhidos para a B3 da T3.
+Entrega: mapa de oportunidades com pelo menos 5 itens classificados e os itens escolhidos para a lição B3 da T3.
 
 ## Referência
 
@@ -67,4 +67,4 @@ Entrega: mapa de oportunidades com pelo menos 5 itens classificados e os itens e
 
 - Primeiro servidor: só leitura e risco baixo
 - Escrita entra depois, com aprovação a cada ação
-- Efeito fora do produto segue a matriz de autonomia da T6
+- Efeito fora do produto fica fora da T3 (aprovação humana de ações é tema da T6)

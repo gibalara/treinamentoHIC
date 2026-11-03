@@ -15,14 +15,14 @@ Uma skill de método (pacote de instruções com o seu jeito de executar uma tar
 
 ## Demonstração
 
-Exemplo: o Diário de Bordo e o protocolo de debugging do curso (método de resolver erros).
+Exemplo: o Diário de Bordo e o protocolo de debugging do curso (método de resolver erros, lição 2a.6 da T2).
 
-1. Escreva o método em passos: reproduzir → pedir hipóteses → testar uma → corrigir com commit isolado → registrar no `CLAUDE.md`.
-2. Para cada passo, anote o critério de "feito" (veja "Ficha do método", na Referência).
+1. Escreva o método em passos: reproduzir → hipóteses → testar uma → corrigir com commit isolado → registrar no `CLAUDE.md`. Commit isolado é um commit só com a correção.
+2. Preencha a "Ficha do método", na Referência, com um critério de "feito" por passo.
 3. Abra a pasta do Diário de Bordo no modo de código do Claude Desktop (ícone **</>**), em modo **Manual**.
-4. Peça: "Crie uma skill pessoal chamada 'protocolo-de-debugging' a partir desta ficha. Descrição: usar quando algo quebrou ou um teste falhou." Cole a ficha.
+4. Cole a ficha e peça: "Crie uma skill pessoal chamada 'protocolo-de-debugging' a partir desta ficha. Descrição: usar quando algo quebrou ou um teste falhou."
 5. Peça: "Mostre a skill criada e explique cada parte." Confira se todos os passos e critérios estão lá.
-6. Provoque um erro real: peça para mudar o formato de data dos registros e veja o painel quebrar.
+6. Provoque um erro: peça para gravar a data dos registros em outro formato. Confira que o painel deixou de mostrar as datas. [VERIFICAR NO DIÁRIO DE BORDO DE REFERÊNCIA: se o painel não quebrar, use o erro proposital da lição 2a.6 da T2]
 7. Peça: "O painel parou de mostrar as datas. Resolva."
 8. Confira se o Claude seguiu os 5 passos, na ordem, e registrou o aprendizado no `CLAUDE.md`.
 9. Ajuste a skill no ponto em que o Claude desviou e peça o commit.
@@ -32,14 +32,14 @@ Exemplo: o Diário de Bordo e o protocolo de debugging do curso (método de reso
 ## Prática
 
 1. Escolha um método seu, do seu domínio profissional (veja "Escolha do método", na Referência).
-2. Preencha a ficha do método.
+2. Preencha a "Ficha do método", na Referência.
 3. Abra a pasta do seu projeto no modo de código, em **Manual**.
-4. Peça a skill pessoal a partir da ficha, com descrição na estrutura da A2 da T3.
+4. Cole a ficha e peça a skill pessoal. Escreva a descrição com a estrutura de "Descrição", na Referência.
 5. Peça para ver a skill e confira passos e critérios.
-6. Use a skill numa tarefa real do seu trabalho, com dados reais ou anonimizados.
+6. Abra uma sessão nova e use a skill numa tarefa real do seu trabalho. Anonimize dados de clientes e pessoas.
 7. Compare o resultado com o que você entregaria e anote as diferenças.
 8. Ajuste a skill e rode de novo.
-9. Peça uma cópia da skill no repositório e o commit; ela vai para o Kit HIC na D3 da T3.
+9. Peça uma cópia da skill no repositório e o commit. Ela entra no Kit HIC na lição D3 da T3.
 
 ## Checagem
 
@@ -53,6 +53,12 @@ Entrega: a skill + o resultado da tarefa real + as diferenças anotadas no passo
 - Skill de método: skill com o seu jeito de executar uma tarefa do seu domínio
 - Skill pessoal: vale para todos os seus projetos neste computador
 - Commit isolado: um commit só com a correção, para poder voltar só ela
+
+**Descrição** (estrutura da lição A2 da T3)
+
+- O que faz, em uma frase
+- Quando usar: situações e palavras que você diria
+- Quando não usar: a tarefa vizinha mais parecida
 
 **Ficha do método**
 

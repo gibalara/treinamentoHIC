@@ -7,7 +7,7 @@
 
 ## Por quê
 
-Com skills, conectores, subagentes, comandos, hooks, n8n e código disponíveis, o erro comum é usar a peça errada. Hook onde bastava skill trava o trabalho; skill onde precisava de hook deixa a regra falhar.
+Há skills, conectores, subagentes, comandos, hooks, n8n (automação entre sistemas) e código. O erro comum é usar a peça errada. Hook onde bastava skill trava o trabalho; skill onde precisava de hook deixa a regra falhar.
 
 Orquestração aqui é decidir qual peça resolve cada necessidade. A árvore de decisão do curso responde com uma pergunta por peça.
 
@@ -21,7 +21,7 @@ Exemplo: o Diário de Bordo e cinco necessidades reais dele.
    - A revisão de segurança precisa de olhar independente.
    - Nunca gravar chave de API no código.
    - Avisar por e-mail quando alguém fica 7 dias sem registrar.
-2. Para cada uma, percorra a árvore de decisão (veja "Árvore de decisão", na Referência).
+2. Para cada uma, percorra a "Árvore de decisão", na Referência, de cima para baixo.
 3. Registre a peça escolhida e a pergunta da árvore que decidiu:
    - Padrão de tela → skill: o Claude precisa saber *como*.
    - Pergunta sobre registros → MCP: precisa *acessar* dados.
@@ -29,17 +29,17 @@ Exemplo: o Diário de Bordo e cinco necessidades reais dele.
    - Chave fora do código → hook: verificação que deve acontecer sempre.
    - Aviso por e-mail → n8n: fluxo de negócio entre sistemas.
 4. Para cada decisão, anote a alternativa descartada e por quê.
-5. Salve a tabela no repositório do Diário e peça o commit no Claude Code.
+5. Abra a pasta do Diário no modo de código, em **Manual**. Peça para salvar a tabela em `docs/decisoes-de-pecas.md` e o commit.
 
 [LINK A CURAR: visão geral oficial das formas de estender o Claude Code]
 
 ## Prática
 
-1. Liste 5 necessidades reais do seu projeto ou do seu trabalho.
-2. Percorra a árvore de decisão para cada uma.
-3. Registre a peça, a pergunta que decidiu e a alternativa descartada.
+1. Liste 5 necessidades reais do seu projeto ou do seu trabalho. Fontes: seu `BACKLOG.md`, o `docs/mapa-mcp.md` (lição B2 da T3) e as travas registradas no Diário de Bordo.
+2. Percorra a "Árvore de decisão" (Referência) para cada uma.
+3. Preencha a "Tabela de decisões" (Referência): peça, pergunta que decidiu e alternativa descartada.
 4. Marque o que já existe no seu projeto e o que falta criar.
-5. Salve a tabela no repositório e peça o commit.
+5. No modo de código, salve a tabela em `docs/decisoes-de-pecas.md` no seu repositório e peça o commit.
 
 ## Checagem
 
@@ -54,7 +54,8 @@ Entrega: tabela com 5 decisões, cada uma com peça, justificativa e alternativa
 - Subagente: assistente com papel e contexto próprios, chamado pelo Claude Code
 - Comando: atalho iniciado por barra com passos fixos
 - Hook: verificação automática em momentos fixos
-- n8n: ferramenta de automação de fluxos entre sistemas (T5)
+- n8n: ferramenta de automação de fluxos entre sistemas (usada a partir da T5)
+- Chave de API: código de acesso a um serviço, como a IA
 
 **Árvore de decisão**
 

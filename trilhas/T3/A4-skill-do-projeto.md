@@ -18,25 +18,26 @@ Exemplo: o Diário de Bordo, app de registro da jornada construído na T2a.
 1. Abra a pasta do Diário de Bordo no modo de código do Claude Desktop (ícone **</>**), em modo **Manual**.
 2. Peça: "Leia o `SPEC.md`, o `CLAUDE.md` e o código. Liste os padrões que toda funcionalidade nova deste projeto segue."
 3. Revise a lista e corte o que já está no `CLAUDE.md`.
-4. Peça: "Crie uma skill de projeto chamada 'nova-funcionalidade-diario' com estes passos." Use o roteiro da Referência.
+4. Cole o "Roteiro da skill do projeto", na Referência. Peça: "Crie uma skill de projeto chamada 'nova-funcionalidade-diario' com estes passos."
 5. Peça: "Mostre a skill e explique cada passo." Confira a descrição: deve citar "nova tela", "nova funcionalidade" e "novo campo".
 6. Em sessão nova, peça: "Quero marcar um registro como favorito."
 7. Pergunte quais skills foram usadas e confira se a 'nova-funcionalidade-diario' entrou.
 8. Confira a entrega: critério de aceite escrito, isolamento entre usuários, teste e commit.
-9. Teste com duas contas: a outra conta não vê os favoritos da primeira.
+9. Teste com duas contas, como na lição 2a.5 da T2: a outra conta não vê os favoritos da primeira.
 
 [LINK A CURAR: documentação oficial da Anthropic sobre skills de projeto no Claude Code]
 
 ## Prática
 
 1. Abra a pasta do seu projeto no modo de código, em **Manual**.
-2. Peça a lista de padrões que toda funcionalidade nova do seu projeto segue.
+2. Peça: "Leia o `SPEC.md`, o `CLAUDE.md` e o código. Liste os padrões que toda funcionalidade nova deste projeto segue."
 3. Revise e corte o que já está no seu `CLAUDE.md`.
-4. Peça a skill do projeto com o roteiro da Referência, adaptado.
-5. Escolha uma funcionalidade pequena do seu `BACKLOG.md` (lista do que ficou fora do MVP, criada na 1.7 da T1).
+4. Adapte o "Roteiro da skill do projeto", na Referência. Tire o que não se aplica e acrescente os padrões do passo 3. Peça a skill do projeto com ele.
+5. Escolha outra funcionalidade pequena do seu `BACKLOG.md` (lista do que ficou fora do MVP, criada na lição 1.7 da T1). Critério: cabe num ciclo e não usa IA.
 6. Peça a funcionalidade em sessão nova, sem citar a skill.
-7. Confira se a skill entrou e se cada passo foi cumprido.
-8. Ajuste a skill onde houve desvio e peça o commit.
+7. Pergunte quais skills foram usadas. Confira se a sua entrou e se cada passo do roteiro foi cumprido.
+8. Teste com duas contas, como no passo 9 da Demonstração.
+9. Ajuste a skill onde houve desvio e peça o commit.
 
 ## Checagem
 
@@ -48,8 +49,8 @@ Entrega: a skill do projeto + a funcionalidade gerada com ela (commit e print da
 
 - Skill: pacote de instruções que o Claude carrega quando o pedido combina com a descrição
 - Skill do projeto: skill guardada no repositório; vale só nele e vai junto no git
-- `CLAUDE.md`: regras do projeto, lidas em toda sessão (criado na 2a.2 da T2)
-- Isolamento entre usuários: um usuário não vê dados de outro (2a.5 da T2)
+- `CLAUDE.md`: regras do projeto, lidas em toda sessão (criado na lição 2a.2 da T2)
+- Isolamento entre usuários: um usuário não vê dados de outro (lição 2a.5 da T2)
 
 **Roteiro da skill do projeto**
 
@@ -74,3 +75,5 @@ Entrega: a skill do projeto + a funcionalidade gerada com ela (commit e print da
 - "Liste os padrões que toda funcionalidade nova deste projeto segue."
 - "Crie uma skill de projeto chamada [nome] com estes passos."
 - "Quais skills você usou nesta tarefa?"
+
+**Erro comum:** outra skill instalada entra no lugar da sua. Torne a descrição específica do projeto (estrutura na lição A2 da T3).
