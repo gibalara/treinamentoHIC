@@ -19,16 +19,16 @@ Aqui você monta um plano de aquisição curto e executa a primeira ação hoje.
 **Case.** Fitfolio, app de treino e nutrição. [VERIFICAR: autorização do fundador antes de publicar]
 
 1. Segundo o fundador, o app chegou a 100 mil usuários de forma orgânica, sem anúncios.
-2. O canal foi conteúdo em vídeo; nos vídeos, ele cita o Claude e o Claude Code.
-3. Orgânico quer dizer sem pagar por mídia. O custo foi o tempo dele.
+2. Segundo ele, o crescimento veio de conteúdo em vídeo, em que cita o Claude e o Claude Code. [VERIFICAR: confirmar nas fontes do case que o vídeo foi o canal de aquisição]
+3. Orgânico quer dizer sem pagar por mídia. O custo é tempo.
 
 **Exemplo resolvido.** O Diário de Bordo (app de registro da jornada do curso), já publicado.
 
-4. Abra o Claude e liste as fontes de usuários: alunos-piloto e profissionais seniores da rede do autor. [LACUNA: público-alvo de distribuição do Diário de Bordo não definido na ementa]
-5. Peça: "Monte um plano para os 10 primeiros usuários no modelo da Referência. Três canais no máximo, cada um com ação, meta e data."
+4. Numa conversa no Claude Desktop, liste as fontes de usuários: alunos-piloto e profissionais seniores da rede do autor. [LACUNA: público-alvo de distribuição do Diário de Bordo não definido na ementa]
+5. Peça: "Monte um plano para os 10 primeiros usuários em tabela: canal, ação, meta, data, executada? e resultado. Três canais no máximo."
 6. Confira cada canal com a pergunta: "eu consigo executar isso esta semana, sozinho?".
-7. Resultado: 3 da validação por mensagem; 5 da rede por convite; 2 por post do build documentado (X9 desta trilha).
-8. Peça: "Escreva a mensagem de convite para as 3 pessoas da validação. Curta, pessoal, com o link e um pedido claro."
+7. Resultado: 3 alunos-piloto por mensagem; 5 da rede por convite; 2 por post do build documentado (lição X9 desta trilha).
+8. Peça: "Escreva a mensagem de convite para os 3 alunos-piloto. Curta, pessoal, com o link e um pedido claro."
 9. Ajuste o texto com a sua voz e envie a primeira mensagem você mesmo.
 10. Registre no plano: data, para quem, resposta.
 
@@ -36,11 +36,12 @@ Aqui você monta um plano de aquisição curto e executa a primeira ação hoje.
 
 1. Liste as pessoas da validação da T1 (lição 1.2b) e do teste com usuário real (lição 2b.9 da T2).
 2. Liste mais fontes no seu nicho: grupos, eventos, colegas, clientes atuais.
-3. Peça ao Claude o plano dos 10 primeiros usuários no modelo da Referência.
+3. Numa conversa no Claude Desktop, faça o pedido do passo 5 da Demonstração desta lição. Inclua as fontes dos passos 1 e 2.
 4. Corte canais que você não consegue executar esta semana.
-5. Peça o texto da primeira ação e ajuste com a sua voz.
+5. Peça o texto da primeira ação, com os itens de "Mensagem de convite" (Referência desta lição). Ajuste com a sua voz.
 6. Execute a primeira ação você mesmo.
-7. Salve o plano em `plano-distribuicao.md`, com a ação registrada. Peça um commit (versão salva, lição 0.5 da T0).
+7. Abra a pasta do seu MVP no modo de código do Claude Desktop. Peça para salvar o plano em `plano-distribuicao.md`, com a ação registrada.
+8. Peça um commit (versão salva do projeto, lição 0.5 da T0).
 
 ## Checagem
 

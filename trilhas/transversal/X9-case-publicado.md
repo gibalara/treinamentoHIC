@@ -18,10 +18,10 @@ O case publicado é eliminatório no marco final. Ele também alimenta a distrib
 
 Exemplo: o Diário de Bordo (app de registro da jornada do curso), publicado e com login.
 
-1. Abra a pasta do Diário no Claude Code (o Claude trabalhando na pasta do projeto, lição 0.4 da T0).
+1. Abra a pasta do Diário no Claude Code, no modo de código do Claude Desktop. O Claude Code é o Claude trabalhando nos arquivos da pasta (lição 0.4 da T0).
 2. Peça: "Leia o SPEC.md, a seção 8 de decisões e o histórico de commits. Liste os 5 momentos mais importantes da construção." Commit é uma versão salva do projeto.
 3. Escolha os momentos que mostram decisão, não só tarefa.
-4. Peça: "Escreva o case no modelo da Referência. Cada afirmação aponta para uma evidência: URL, arquivo ou print."
+4. Peça: "Escreva o case nestas seções: [cole o modelo do case]. Cada afirmação aponta para uma evidência: URL, arquivo ou print. Salve em `case.md`." O modelo está no bloco Referência desta lição.
 5. Confira cada evidência: o link abre? O print mostra o que a frase diz?
 6. Retire dados pessoais de usuários reais. Use só dados fictícios ou anonimizados (sem nada que identifique a pessoa).
 7. Publique o case. [LACUNA: canal de publicação padrão do curso não definido na ementa]
@@ -29,13 +29,13 @@ Exemplo: o Diário de Bordo (app de registro da jornada do curso), publicado e c
 
 ## Prática
 
-1. Abra no Claude Code a pasta do seu projeto.
-2. Crie o `build-log.md` e registre as sessões já feitas, a partir dos commits.
-3. A cada sessão de trabalho, acrescente uma linha. Peça ao Claude Code ao final da sessão.
-4. Ao fim de cada marco, peça o case atualizado no modelo da Referência.
+1. Abra a pasta do seu projeto no modo de código do Claude Desktop, em **Manual**. Nele, o Claude Code pede aprovação antes de cada mudança.
+2. Faça o pedido do passo 8 da Demonstração desta lição. Peça também para registrar as sessões já feitas, a partir dos commits.
+3. Ao final de cada sessão de trabalho, peça: "Acrescente a sessão de hoje ao build-log.md."
+4. Ao fim de cada marco, faça o pedido do passo 4 da Demonstração desta lição para atualizar o `case.md`.
 5. Confira cada evidência e retire dados pessoais.
 6. Publique o case no canal escolhido (veja "Onde publicar", na Referência).
-7. Peça um commit com o case e o `build-log.md`.
+7. Peça um commit com o `case.md` e o `build-log.md` (versão salva do projeto, lição 0.5 da T0).
 
 ## Checagem
 

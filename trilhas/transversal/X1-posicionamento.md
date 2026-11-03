@@ -28,22 +28,23 @@ Você já tem a matéria-prima da T1: problema validado, alternativas e proposta
 
 **Exemplo resolvido.** Uma gerente de compras sênior especificou na T1 um app para comparar propostas de fornecedores.
 
-4. Ela abre, no Claude Code (o Claude trabalhando na pasta do projeto, lição 0.4 da T0), a pasta do projeto.
+4. Ela abre a pasta do projeto no Claude Code, no modo de código do Claude Desktop. O Claude Code é o Claude trabalhando nos arquivos da pasta (lição 0.4 da T0).
 5. Pede o resumo do `SPEC.md`: quem sofre, dor, alternativa atual e proposta de valor. O `SPEC.md` é a especificação do produto (lição 1.6 da T1).
-6. Pede: "Escreva 3 versões de posicionamento em um parágrafo, no modelo da Referência. Sem jargão de tecnologia."
+6. Pede: "Escreva 3 versões de posicionamento em um parágrafo, sem jargão de tecnologia. Modelo: Para [quem], que [dor], entrego [resultado]. Prova: [evidência]. Diferente de [alternativa], [o que só eu faço]."
 7. Escolhe a versão mais específica e corta o que não tem prova.
 8. Resultado: "Para gerentes de compras de indústrias médias, que perdem dias comparando propostas, entrego a comparação em minutos. Já validei com 3 compradores. Diferente do ERP, funciona com a proposta em PDF como ela chega."
 9. Lê em voz alta para alguém do nicho e anota a primeira pergunta que a pessoa faz.
 
 ## Prática
 
-1. Abra no Claude Code a pasta do seu projeto.
+1. Abra a pasta do seu projeto no modo de código do Claude Desktop, em **Manual**. Nele, o Claude Code pede aprovação antes de cada mudança.
 2. Peça o resumo do seu `SPEC.md` em tópicos: quem sofre, dor, alternativa atual, proposta de valor.
-3. Peça 3 versões de posicionamento no modelo da Referência.
+3. Peça 3 versões de posicionamento. Cole no pedido o modelo do bloco Referência, no fim desta lição.
 4. Escolha uma e corte o que não tem prova. Provas: conversas da lição 1.2b e tabela da 1.3, ambas da T1.
-5. Teste com 1 pessoa do nicho. Anote a primeira pergunta dela.
+5. Leia o parágrafo para 1 pessoa do nicho, por exemplo alguém das conversas da lição 1.2b da T1. Anote a primeira pergunta dela.
 6. Ajuste o parágrafo para responder a essa pergunta.
-7. Salve em `posicionamento.md` na pasta do projeto e peça um commit (versão salva do projeto, lição 0.5 da T0).
+7. Peça ao Claude Code para salvar o parágrafo em `posicionamento.md`, na pasta do projeto.
+8. Peça um commit (versão salva do projeto, lição 0.5 da T0).
 
 ## Checagem
 
@@ -75,7 +76,7 @@ Entrega: o parágrafo de posicionamento em `posicionamento.md`, com a pergunta d
 **Pedidos ao Claude Code**
 
 - "Leia o SPEC.md e resuma quem sofre, a dor, a alternativa atual e a proposta de valor."
-- "Escreva 3 versões de posicionamento em um parágrafo, sem jargão de tecnologia."
+- "Escreva 3 versões de posicionamento em um parágrafo, sem jargão de tecnologia. Modelo: [cole o modelo acima]."
 - "Faça um commit com a mensagem 'Adiciona posicionamento'."
 
 **Onde o posicionamento volta:** case (X9) e pitch (X10), ambas desta trilha.

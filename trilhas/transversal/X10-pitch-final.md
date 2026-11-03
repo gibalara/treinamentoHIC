@@ -18,8 +18,8 @@ O vídeo de até 5 minutos é eliminatório no marco final.
 
 Exemplo: o Diário de Bordo (app de registro da jornada do curso), com Tutor de IA, organizações e agente semanal.
 
-1. Abra a pasta do Diário no Claude Code (o Claude trabalhando na pasta do projeto, lição 0.4 da T0).
-2. Peça: "Leia posicionamento, case, dossiê de governança, planilha de precificação e rotina de operação. Escreva o roteiro do pitch nos 6 blocos da Referência, com o tempo de cada um."
+1. Abra a pasta do Diário no Claude Code, no modo de código do Claude Desktop. O Claude Code é o Claude trabalhando nos arquivos da pasta (lição 0.4 da T0).
+2. Copie a tabela "Estrutura do pitch", no bloco Referência desta lição. Peça: "Leia posicionamento.md, case.md, dossie-governanca.md, a planilha de precificação e rotina-operacao.md. Escreva o roteiro do pitch nestes blocos: [cole a tabela]."
 3. Confira se cada bloco cita uma evidência que aparece na tela.
 4. Bloco solução: escolha uma tela, como o registro de uma lição e o painel atualizando.
 5. Bloco confiabilidade: mostre o resultado dos evals (testes de qualidade da IA) e o teste de isolamento.
@@ -30,13 +30,14 @@ Exemplo: o Diário de Bordo (app de registro da jornada do curso), com Tutor de 
 
 ## Prática
 
-1. Abra no Claude Code a pasta do seu projeto.
-2. Peça o roteiro nos 6 blocos, a partir dos seus documentos da trilha transversal.
+1. Abra a pasta do seu projeto no modo de código do Claude Desktop.
+2. Faça o pedido do passo 2 da Demonstração desta lição. Use os seus arquivos das lições X1 a X9.
 3. Marque, em cada bloco, a tela ou o arquivo que aparece.
 4. Ensaie com cronômetro até caber em 4 min 40 s.
 5. Grave o vídeo com tela e voz.
 6. Assista uma vez como se fosse o cliente. Regrave se algum bloco não tiver prova na tela.
-7. Salve o roteiro em `pitch.md` e o link do vídeo no case (X9 desta trilha). Peça um commit (versão salva do projeto).
+7. Peça para salvar o roteiro em `pitch.md` e acrescentar o link do vídeo ao `case.md` (lição X9 desta trilha). [LACUNA: onde hospedar o vídeo não está definido na ementa]
+8. Peça um commit (versão salva do projeto, lição 0.5 da T0).
 
 ## Checagem
 

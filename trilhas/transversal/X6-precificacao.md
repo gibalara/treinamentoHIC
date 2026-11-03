@@ -23,7 +23,7 @@ Exemplo: o Diário de Bordo (app de registro da jornada do curso), com Tutor de 
 3. Some os custos fixos mensais da tabela de custos da lição 0.3 da T0 (banco, hospedagem). Exemplo fictício: R$ 250.
 4. Divida o fixo pelo número esperado de usuários. Com 50 usuários: R$ 5. Piso: R$ 4 + R$ 5 = R$ 9.
 5. Calcule o valor: horas que o aluno economiza por mês × valor-hora dele. Exemplo fictício: 2 h × R$ 100 = R$ 200. Teto: R$ 200.
-6. Peça ao Claude: "Piso R$ 9, teto R$ 200. Proponha 3 preços, com justificativa."
+6. Numa conversa no Claude Desktop, peça: "Piso R$ 9, teto R$ 200. Proponha 3 preços, com justificativa."
 7. Escolha um preço e registre o motivo na planilha.
 8. Confira a margem: preço menos piso, dividido pelo preço.
 9. Refaça a conta com metade dos usuários esperados. O preço ainda cobre o custo?
@@ -31,14 +31,15 @@ Exemplo: o Diário de Bordo (app de registro da jornada do curso), com Tutor de 
 ## Prática
 
 1. Abra a planilha de custo por usuário da lição D5 da T4.
-2. Monte a planilha de precificação no modelo da Referência.
+2. Na mesma ferramenta de planilha, crie a planilha de precificação com as linhas do "Modelo da planilha" (Referência desta lição).
 3. Preencha o piso: custo variável + custo fixo dividido por usuários esperados.
 4. Preencha o teto: valor por usuário, com a conta explícita (tempo ou dinheiro economizado).
 5. Use dados das conversas da T1 ou do teste da lição 2b.9 da T2 para o valor. Não invente.
-6. Peça ao Claude 3 preços entre piso e teto, com justificativa.
+6. Numa conversa no Claude Desktop, faça o pedido do passo 6 da Demonstração desta lição. Use o seu piso e o seu teto.
 7. Escolha um e registre o motivo.
 8. Faça o teste de estresse: metade dos usuários e o dobro do uso de IA.
-9. Salve a planilha no projeto e peça um commit (versão salva, lição 0.5 da T0).
+9. Salve o arquivo da planilha na pasta do projeto.
+10. Abra a pasta no modo de código do Claude Desktop. Peça um commit (versão salva do projeto, lição 0.5 da T0).
 
 ## Checagem
 
