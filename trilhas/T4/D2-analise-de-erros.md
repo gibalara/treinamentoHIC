@@ -17,26 +17,26 @@ Cada falha encontrada em uso vira um caso-ouro novo. A base cresce com o uso rea
 
 Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no conteúdo do curso, com citação.
 
-1. Rode o script de evals e separe os casos que falharam.
-2. Abra o registro de chamadas do tutor e leia as 20 chamadas mais recentes da conta de teste. Anote as respostas ruins.
-3. Para cada falha, confira no registro os documentos enviados, a versão do prompt e a resposta.
+1. Abra a pasta do Diário em **Manual** e peça: "Rode o script de evals e liste os casos que falharam."
+2. Peça: "Mostre as 20 chamadas mais recentes do registro de chamadas do tutor, de usuários reais." Anote as respostas ruins.
+3. Para cada falha, peça: "Mostre os documentos enviados, a versão do prompt e a resposta da chamada [id ou pergunta]."
 4. Dê a cada falha uma categoria da tabela "Categorias de falha", na Referência desta lição.
 5. Peça ao Claude Code: "Crie `evals/analise-de-erros.md` com a tabela de falhas e a contagem por categoria."
-6. Escolha a categoria com mais falhas e faça uma única correção para ela.
-7. Rode o script de evals completo e confira se o acerto subiu sem quebrar outros casos.
-8. Para cada falha vista no registro de chamadas, acrescente um caso-ouro com a data de entrada.
-9. Peça: "Faça um commit com a mensagem 'Adiciona análise de erros e casos novos do tutor'."
+6. Escolha a categoria com mais falhas. Peça uma única correção no lugar indicado na coluna "Onde corrigir".
+7. Peça para rodar o script de evals completo. Confira se o acerto subiu sem quebrar outros casos.
+8. Para cada falha vista no registro de chamadas, acrescente um caso-ouro a `evals/casos-ouro.csv`. Use dados fictícios e preencha a coluna nova `data_entrada`.
+9. Peça: "Faça um commit com a mensagem 'Adiciona análise de erros e casos novos do tutor' e envie ao GitHub."
 
 ## Prática
 
-1. Rode o script de evals da sua feature e separe as falhas.
-2. Leia as 20 chamadas mais recentes do registro de chamadas.
-3. Classifique cada falha numa categoria.
+1. Em **Manual**, peça para rodar o script de evals da sua feature e listar as falhas.
+2. Peça as 20 chamadas mais recentes do registro de chamadas e anote as respostas ruins.
+3. Classifique cada falha numa categoria (veja "Categorias de falha", na Referência desta lição).
 4. Peça o arquivo `evals/analise-de-erros.md` com a contagem por categoria.
 5. Corrija só a categoria mais frequente, com uma mudança.
-6. Rode os evals completos.
-7. Acrescente um caso-ouro para cada falha vista em uso.
-8. Peça o commit.
+6. Peça para rodar os evals completos.
+7. Acrescente um caso-ouro para cada falha vista em uso, com dados fictícios e `data_entrada`.
+8. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 

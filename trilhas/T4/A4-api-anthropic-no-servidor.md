@@ -15,33 +15,35 @@ Chave só no servidor é critério eliminatório do marco da T4.
 
 ## Demonstração
 
-Exemplo: a primeira versão do tutor do Diário de Bordo, que vai responder com base nos registros e no conteúdo do curso.
+Exemplo: a primeira versão do tutor do Diário de Bordo, que vai responder sobre os registros e o curso.
 
 1. No Console da Anthropic, crie a conta de API, cadastre o pagamento e defina um limite de gasto mensal. [VERIFICAR NA INTERFACE]
 2. Gere uma chave chamada `diario`. Copie e não cole em nenhuma conversa. [VERIFICAR NA INTERFACE]
 3. Peça ao Claude Code: "Crie o arquivo `.env.local` com a variável `ANTHROPIC_API_KEY` vazia e confirme que ele está no `.gitignore`."
 4. Abra o `.env.local` no editor (checklist de setup da lição 0.4 da T0), cole a chave e salve.
-5. Peça: "Crie a tela 'Pergunte ao tutor' e uma rota de servidor que exige login, chama a API Anthropic com o prompt de `prompts/tutor-v1.md` e devolve a resposta. A chave só pode ser lida no servidor. Deixe o nome do modelo numa configuração única."
+5. Peça: "Crie a tela 'Pergunte ao tutor' e uma rota de servidor com login obrigatório. A rota chama a API Anthropic com `prompts/tutor-v1.md` e devolve a resposta. A chave só pode ser lida no servidor. Deixe o nome do modelo numa configuração única."
 6. Antes de aprovar, peça: "Explique onde a chave é lida e se ela pode chegar ao navegador."
-7. Teste no seu computador com a conta de teste: "O que é um commit?". A resposta ainda não usa seus documentos; isso entra na B2 da T4.
-8. Peça: "Procure a chave nos arquivos do repositório, no histórico do git e no código enviado ao navegador. Liste onde aparece." Esperado: só no `.env.local`.
-9. Na Vercel, cadastre `ANTHROPIC_API_KEY` nas variáveis de ambiente do projeto. [VERIFICAR NA INTERFACE]
-10. Peça para publicar. Na URL pública, teste logado e deslogado: deslogado, a rota recusa.
-11. Peça: "Faça um commit com a mensagem 'Conecta tutor à API Anthropic no servidor'."
+7. Peça: "Rode o app no meu computador e me dê o endereço." Abra o endereço no navegador.
+8. Entre com a conta de teste e pergunte: "O que é um commit?". Deu certo se vier uma resposta. Ela ainda não usa seus documentos; isso entra na B2 da T4.
+9. Peça: "Procure a chave nos arquivos do repositório, no histórico do git e no código enviado ao navegador. Liste onde aparece." Esperado: só no `.env.local`.
+10. Na Vercel, cadastre `ANTHROPIC_API_KEY` nas variáveis de ambiente do projeto. [VERIFICAR NA INTERFACE]
+11. Peça: "Faça um commit com a mensagem 'Conecta tutor à API Anthropic no servidor' e envie ao GitHub."
+12. A Vercel publica a nova versão (lição 2a.8 da T2a). Na URL pública, teste logado. Depois abra a URL numa janela anônima, sem login: o tutor deve recusar.
 
 [LINK A CURAR: guia oficial da Anthropic de primeiros passos com a API]
 
 ## Prática
 
 1. Crie a conta de API no Console, com limite de gasto mensal, e gere a chave do seu projeto.
-2. Peça o `.env.local` com `ANTHROPIC_API_KEY` vazia, protegido pelo `.gitignore`.
+2. Abra a pasta do seu projeto em **Manual**. Peça o `.env.local` com `ANTHROPIC_API_KEY` vazia, protegido pelo `.gitignore`.
 3. Cole a chave no `.env.local` pelo editor.
-4. Peça a tela e a rota de servidor da sua feature, com login obrigatório e o prompt da lição A3 da T4.
-5. Peça a explicação de onde a chave é lida.
-6. Teste no seu computador com uma conta de teste e dados fictícios.
-7. Peça a busca pela chave no repositório, no histórico e no navegador.
-8. Cadastre a variável na Vercel, publique e teste logado e deslogado.
-9. Peça o commit.
+4. Peça a tela e a rota de servidor da feature, com login e o prompt da lição A3 da T4. Use o pedido do passo 5 da Demonstração desta lição.
+5. Peça a explicação de onde a chave é lida. Só aprove se a resposta disser que ela fica no servidor.
+6. Peça para rodar o app no seu computador e teste com a conta de teste e dados fictícios.
+7. Peça a busca pela chave no repositório, no histórico e no navegador. Esperado: só no `.env.local`.
+8. Cadastre a variável na Vercel.
+9. Peça o commit e o envio ao GitHub.
+10. Na URL pública, teste logado e numa janela anônima, sem login.
 
 ## Checagem
 
@@ -60,6 +62,7 @@ Entrega: feature respondendo na URL pública + resultado da busca pela chave mos
 - `.env.local`: arquivo de segredos que fica só no seu computador
 - `.gitignore`: lista do que o git não salva
 - Modelo: versão do Claude que responde; a escolha por dados é na lição D3 da T4
+- Modelo inicial: [VERIFICAR: modelo indicado hoje na documentação oficial da Anthropic para começar]
 
 **Pedidos ao Claude Code**
 

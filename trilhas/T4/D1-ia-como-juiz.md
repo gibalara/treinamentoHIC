@@ -7,7 +7,7 @@
 
 ## Por quê
 
-Conferir 20 casos à mão a cada mudança não escala. LLM como juiz é uma segunda chamada de IA que lê a resposta, compara com o critério e dá a nota.
+Conferir 20 casos à mão a cada mudança não escala. LLM como juiz é uma segunda chamada de IA. Ela compara a resposta com o critério e dá a nota.
 
 O juiz também erra. Antes de confiar nele, você o calibra: vocês dois julgam os mesmos 20 casos e você mede quanto concordam.
 
@@ -17,34 +17,40 @@ Sua nota é a referência; o juiz é que se ajusta a você. Calibrado, ele corri
 
 Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no conteúdo do curso, com citação.
 
-1. Peça ao Claude Code: "Crie o script de evals: lê `evals/casos-ouro.csv`, envia cada entrada à rota do tutor com a conta de teste e grava a resposta na coluna `resposta`."
-2. Rode o script.
-3. Antes de ver qualquer nota da IA, julgue cada resposta pelo critério de aprovação. Preencha `nota_aluno` (passou ou falhou) e o motivo em uma linha.
-4. Peça: "Crie `prompts/juiz-v1.md`. O juiz recebe entrada, critério de aprovação e resposta. Devolve `nota` (passou ou falhou) e `justificativa` curta, em saída estruturada."
-5. Revise o prompt do juiz com o template da Referência.
-6. Peça: "Acrescente o juiz ao script: para cada caso, grave `nota_juiz` e `justificativa`."
-7. Rode e conte os casos em que `nota_aluno` e `nota_juiz` são iguais. Divida por 20. Ex.: 18 iguais = 90% de concordância.
-8. Leia cada discordância e ache a causa:
+1. Abra a pasta do Diário em **Manual**. Peça: "Crie o script de evals: envia cada caso-ouro ao tutor, na conta de teste, e grava em `evals/resultados.csv`."
+   - Complete o pedido: "Colunas: id, entrada, critério e resposta."
+2. Peça: "Rode o script." Deu certo se `evals/resultados.csv` tem uma resposta por caso.
+3. Nos 20 casos-ouro originais, julgue cada resposta pelo critério. O juiz ainda não existe, então nenhuma nota da IA influencia você.
+4. Peça: "Acrescente a `evals/resultados.csv` as colunas `nota_aluno` e `motivo`."
+   - Dite suas notas: "T01 passou; T02 falhou, não citou a fonte; …".
+5. Peça: "Crie `prompts/juiz-v1.md`. O juiz recebe entrada, critério de aprovação e resposta."
+   - Complete o pedido: "Ele devolve `nota` (passou ou falhou) e `justificativa` curta, em saída estruturada."
+6. Abra o arquivo no editor e compare com o "Template do prompt do juiz", na Referência desta lição.
+7. Peça: "Crie um segundo script que só roda o juiz sobre as respostas já gravadas. Grave `nota_juiz` e `justificativa`." Assim, você e o juiz julgam as mesmas respostas.
+8. Peça: "Rode o juiz e calcule a concordância entre `nota_aluno` e `nota_juiz` nos 20 casos. Liste as discordâncias." Ex.: 18 iguais = 90%.
+9. Leia cada discordância e ache a causa:
    - Critério vago: reescreva o critério do caso
    - Juiz tolerante ou rígido demais: ajuste o prompt do juiz e salve como `juiz-v2.md`
-9. Rode de novo e recalcule a concordância. [LACUNA: taxa mínima de concordância não definida na ementa]
-10. Peça: "Para casos fora do escopo e maliciosos, use também verificação por regra: categoria `fora_do_escopo` e nenhum dado de outro usuário."
-11. Peça: "No fim do script, mostre o acerto geral, o acerto em fora do escopo e maliciosos e a lista de falhas."
-12. Peça: "Faça um commit com a mensagem 'Adiciona juiz calibrado ao script de evals'."
+10. Rode só o juiz de novo, sobre as mesmas respostas, e recalcule. [LACUNA: taxa mínima de concordância não definida na ementa]
+11. Peça: "Nos casos fora do escopo e maliciosos, some uma verificação por regra."
+    - Complete o pedido: "Categoria `fora_do_escopo` e nenhum dado de outro usuário."
+12. Peça: "Junte os dois scripts num só. No fim, mostre o acerto geral, o de fora do escopo e maliciosos e as falhas."
+13. Peça: "Faça um commit com a mensagem 'Adiciona juiz calibrado ao script de evals' e envie ao GitHub."
 
 [LINK A CURAR: documentação oficial da Anthropic sobre avaliação com modelo como juiz]
 
 ## Prática
 
-1. Peça o script de evals da sua feature, gravando a resposta de cada caso-ouro.
-2. Rode e julgue você mesmo as respostas, com motivo, antes de ver o juiz.
-3. Peça o prompt do juiz com saída estruturada e revise com o template.
-4. Acrescente o juiz ao script e rode.
-5. Calcule a taxa de concordância.
+1. Em **Manual**, peça o script de evals da sua feature, como no passo 1 da Demonstração desta lição.
+2. Peça para rodar. Julgue você mesmo os 20 casos originais e dite `nota_aluno` e `motivo`.
+3. Peça o prompt do juiz com saída estruturada e compare com o template da Referência desta lição.
+4. Peça o script que só roda o juiz sobre as respostas gravadas, e rode.
+5. Peça o cálculo da concordância e a lista de discordâncias.
 6. Corrija critérios vagos e ajuste o juiz, uma versão por vez.
-7. Recalcule até a concordância parar de subir.
+7. Rode só o juiz de novo, sobre as mesmas respostas, até a concordância parar de subir.
 8. Peça a verificação por regra nos casos fora do escopo e maliciosos.
-9. Peça o resumo no fim do script e o commit.
+9. Peça para juntar os scripts, com o resumo no fim.
+10. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 
@@ -86,12 +92,15 @@ Devolva: nota (passou ou falhou) e justificativa em uma frase.
 **Pedidos ao Claude Code**
 
 - "Crie o script de evals: lê `evals/casos-ouro.csv`, chama [feature] e grava as respostas."
-- "Acrescente o juiz com `prompts/juiz-v1.md` e grave nota e justificativa."
+- "Crie um script que só roda o juiz (`prompts/juiz-v1.md`) sobre as respostas gravadas e grava nota e justificativa."
+- "Calcule a concordância entre `nota_aluno` e `nota_juiz` e liste as discordâncias."
 - "No fim, mostre acerto geral, acerto em fora do escopo e maliciosos e a lista de falhas."
 
 **Regras**
 
 - Você julga antes de ver o juiz
+- Na calibração, você e o juiz julgam as mesmas respostas gravadas; rodar o tutor de novo muda as respostas
+- Calibração nos 20 casos-ouro originais; o script roda a base inteira
 - Chave da API do script em variável de ambiente, como na feature (lição A4 da T4)
 - Casos com dados fictícios ou anonimizados
 

@@ -17,30 +17,31 @@ Esse número define o limite de uso e alimenta a precificação (lição X6 da t
 
 Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no conteúdo do curso, com citação.
 
-1. Peça ao Claude Code: "Do registro de chamadas do tutor, mostre a média de tokens de entrada e de saída por pergunta."
-2. Na página oficial de preços, anote o preço por milhão de tokens do modelo do tutor. [VERIFICAR: preço vigente]
-3. Calcule o custo por pergunta com a fórmula da Referência.
+1. Abra a pasta do Diário em **Manual**. Peça: "Do registro de chamadas do tutor, mostre a média de tokens de entrada e de saída por pergunta."
+2. Na página oficial de preços da Anthropic, anote o preço por milhão de tokens do modelo do tutor. [VERIFICAR: preço vigente]
+3. Peça: "Calcule o custo por pergunta com estes preços: [preços]."
+   - Confira a conta à mão com a fórmula da Referência desta lição.
 4. Estime perguntas por usuário por mês no uso típico. [LACUNA: uso típico do Diário de referência, a medir com o aluno zero]
 5. Calcule o pior caso: limite diário de perguntas × 30.
 6. Some outros custos de IA por pergunta, se houver: embeddings (degrau 3 do RAG) e checagem extra de saída.
 7. Calcule o custo por usuário por mês, típico e pior caso.
 8. Separe o custo de desenvolvimento: cada rodada de evals × rodadas por mês. Ele não entra no custo por usuário.
-9. Compare o pior caso com o que o usuário vai pagar. Se não couber, use as alavancas da Referência.
-10. Peça: "Crie `docs/custo-por-usuario.csv` com estes números e faça um commit com a mensagem 'Adiciona custo por usuário do tutor'."
+9. Compare o pior caso com o que o usuário vai pagar. Se não couber, use as "Alavancas quando o custo não cabe", na Referência desta lição.
+10. Peça: "Crie `docs/custo-por-usuario.csv` com estes números, faça um commit e envie ao GitHub."
 
 [LINK A CURAR: página oficial da Anthropic de preços da API]
 
 ## Prática
 
-1. Peça a média de tokens de entrada e de saída por chamada da sua feature.
-2. Anote o preço do modelo escolhido na página oficial.
-3. Calcule o custo por chamada.
-4. Estime chamadas por usuário por mês no uso típico.
-5. Calcule o pior caso com o limite de uso da sua feature.
+1. Em **Manual**, peça a média de tokens de entrada e de saída por chamada da sua feature.
+2. Anote o preço do modelo escolhido (lição D3 da T4) na página oficial.
+3. Peça o custo por chamada com esse preço e confira à mão.
+4. Estime chamadas por usuário por mês no uso típico. Base: o registro de chamadas dos usuários reais ou a frequência da seção 6 do `SPEC.md`.
+5. Calcule o pior caso com o limite de uso da sua feature (lição C3 da T4).
 6. Some os outros custos de IA por chamada.
 7. Calcule o custo por usuário, típico e pior caso, e separe o custo de desenvolvimento.
 8. Ajuste o limite de uso se o pior caso não couber.
-9. Peça a planilha `docs/custo-por-usuario.csv` e o commit.
+9. Peça a planilha `docs/custo-por-usuario.csv` (veja "Template da planilha", na Referência desta lição), o commit e o envio ao GitHub.
 
 ## Checagem
 
@@ -60,7 +61,8 @@ Entrega: `docs/custo-por-usuario.csv` com custo por chamada, custo por usuário 
 
 **Fórmulas**
 
-- Custo por chamada = (tokens de entrada × preço de entrada + tokens de saída × preço de saída) ÷ 1.000.000
+- Custo por chamada = (E × PE + S × PS) ÷ 1.000.000
+- E e S: tokens de entrada e de saída por chamada; PE e PS: preço por milhão de tokens
 - Custo por usuário = chamadas por mês × (custo por chamada + outros custos por chamada)
 - Pior caso = limite diário × 30 × custo por chamada
 

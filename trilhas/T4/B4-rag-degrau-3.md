@@ -1,4 +1,4 @@
-# B4 · Busca por significado (RAG, degrau 3, só se necessário)
+# B4 · Achar o trecho certo mesmo com outras palavras (busca por significado, RAG degrau 3, só se necessário)
 
 - **Trilha:** T4 · Produto com IA
 - **Tempo:** 2–3 h
@@ -20,31 +20,33 @@ Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no c
 1. Abra `evals/casos-ouro.csv` e confirme na coluna `degrau2` que o resultado ficou abaixo da meta.
 2. Confirme que as falhas são de seleção por palavras diferentes. Ex.: pergunta com "desfazer", lição com "voltar versão".
 3. Escolha o provedor de embeddings. [LACUNA: provedor de embeddings não definido na ementa; a pilha padrão não inclui um]
-4. Gere a chave do provedor e guarde só em variável de ambiente, como a chave da API Anthropic.
-5. Peça ao Claude Code: "Ative o pgvector no Supabase e crie a tabela de trechos: texto, documento de origem, usuário dono e embedding. Aplique RLS por usuário." [VERIFICAR NA INTERFACE: ativação da extensão no Supabase]
+4. Gere a chave do provedor. Guarde-a só no `.env.local` e na Vercel, como a chave da API Anthropic.
+5. Abra a pasta do Diário em **Manual**. Peça: "Ative o pgvector no Supabase e crie a tabela de trechos, com RLS por usuário." [VERIFICAR NA INTERFACE: ativação da extensão no Supabase]
+   - Complete o pedido: "Campos: texto, documento de origem, usuário dono e embedding."
 6. Peça: "Divida as lições em trechos, um por seção, e cada registro em um trecho. Gere e salve os embeddings. Gere de novo quando um registro mudar."
-7. Peça: "Na rota do tutor, busque os trechos mais próximos da pergunta, só entre as lições e os registros do usuário logado."
-8. Rode os 20 casos-ouro com a conta de teste e marque a coluna nova `degrau3`.
+7. Peça: "No tutor, busque os trechos mais próximos da pergunta, só entre as lições e os registros do usuário logado."
+8. Peça para rodar as 20 entradas dos casos-ouro com a conta de teste e gravar as respostas. Leia cada uma e marque a coluna nova `degrau3`.
 9. Peça: "Compare os degraus 2 e 3: acerto, tokens médios, latência média e custo dos embeddings."
 10. Decida: o degrau 3 só fica se atingir a meta. Registre a decisão e os números na seção 8 do `SPEC.md`.
-11. Peça: "Faça um commit com a mensagem 'Adiciona busca por significado ao tutor (RAG degrau 3)'."
+11. Peça: "Faça um commit com a mensagem 'Adiciona RAG degrau 3 ao tutor' e envie ao GitHub."
 
 [LINK A CURAR: documentação oficial do Supabase sobre pgvector e busca por similaridade]
 
 ## Prática
 
-1. Confira na planilha em que degrau sua feature atingiu a meta.
-2. Se atingiu no degrau 1 ou 2, não construa o degrau 3. Registre no `SPEC.md` a decisão com os percentuais de cada degrau testado.
-3. Se não atingiu, confirme que as falhas são de seleção por palavras diferentes.
-4. Escolha o provedor de embeddings e guarde a chave só em variável de ambiente.
-5. Peça o pgvector, a tabela de trechos com RLS e a divisão dos documentos em trechos.
+1. Confira nas colunas `degrau1` e `degrau2` de `evals/casos-ouro.csv` em que degrau sua feature atingiu a meta.
+2. Se atingiu no degrau 1 ou 2, não construa o degrau 3. Registre a decisão na seção 8 do `SPEC.md` (veja "Template de decisão", na Referência desta lição).
+3. Se não atingiu, confirme que as falhas são de seleção por palavras diferentes (passo 2 da Demonstração desta lição).
+4. Escolha o provedor de embeddings e guarde a chave no `.env.local` e na Vercel.
+5. Em **Manual**, peça o pgvector, a tabela de trechos com RLS e a divisão dos documentos em trechos.
 6. Peça a busca por significado na rota da sua feature, restrita aos dados do usuário logado.
-7. Rode os 20 casos-ouro e marque a coluna `degrau3`.
-8. Peça a comparação entre os degraus, registre a decisão no `SPEC.md` e peça o commit.
+7. Peça para rodar os 20 casos-ouro com a conta de teste e marque a coluna `degrau3`.
+8. Peça a comparação entre os degraus e registre a decisão na seção 8 do `SPEC.md`.
+9. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 
-Entrega: decisão de degrau registrada na seção 8 do `SPEC.md`, com o percentual de cada degrau testado e o motivo da escolha.
+Entrega: decisão de degrau na seção 8 do `SPEC.md`, com o percentual de cada degrau testado e o motivo.
 
 ## Referência
 

@@ -17,29 +17,31 @@ Rastreabilidade é poder reconstruir qualquer resposta: pergunta, documentos env
 
 Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no conteúdo do curso, com citação.
 
-1. Peça ao Claude Code: "Mostre cada citação abaixo da resposta do tutor, com link para o registro ou a seção da lição citada."
+1. Abra a pasta do Diário em **Manual**. Peça: "Mostre cada citação abaixo da resposta do tutor, com link para a fonte citada."
 2. Peça: "No servidor, confira se cada trecho citado existe no documento enviado. Remova a citação que não conferir. Se nenhuma conferir, mostre 'Não encontrei base nos seus documentos'."
-3. Peça: "Crie a tabela de registro do tutor: data, usuário, pergunta, documentos enviados, versão do prompt, modelo, resposta, citações, tokens e latência. Aplique RLS por usuário."
+3. Peça: "Crie a tabela de registro do tutor, com RLS por usuário."
+   - Complete o pedido com os campos de "Campos do registro de chamadas", na Referência desta lição.
 4. Peça: "Guarde só o necessário para investigar erros. Não guarde dados que o tutor não usa."
-5. Rode os 20 casos-ouro com a conta de teste.
-6. Nos casos típicos e difíceis, clique em cada citação e confira o trecho. Marque a coluna nova `citacao_ok`.
-7. Escolha uma resposta qualquer e reconstrua pela tabela: documentos enviados, versão do prompt e modelo.
-8. Peça: "Faça um commit com a mensagem 'Adiciona citação verificada e registro de chamadas do tutor'."
+5. Peça para rodar o app no seu computador. Entre com a conta de teste e faça as 13 perguntas típicas e difíceis dos casos-ouro.
+6. Em cada resposta, clique em cada citação e confira o trecho. Peça para marcar a coluna nova `citacao_ok` (sim ou não) em `evals/casos-ouro.csv`.
+7. Escolha uma resposta. Peça: "Mostre a linha do registro da pergunta '[pergunta]'."
+   - Confira documentos enviados, versão do prompt e modelo. Tire um print.
+8. Peça: "Faça um commit com a mensagem 'Adiciona citação verificada e registro do tutor' e envie ao GitHub."
 
 ## Prática
 
-1. Peça a exibição das citações da sua feature, com link para a fonte.
+1. Em **Manual**, peça a exibição das citações da sua feature, com link para a fonte.
 2. Peça a conferência das citações no servidor, com mensagem padrão quando nenhuma conferir.
-3. Peça a tabela de registro das chamadas, com RLS por usuário.
+3. Peça a tabela de registro das chamadas, com RLS por usuário. Campos em "Campos do registro de chamadas", na Referência desta lição.
 4. Revise os campos guardados e retire o que a investigação não usa.
-5. Rode os 20 casos-ouro e confira cada citação dos típicos e difíceis.
-6. Marque a coluna `citacao_ok`.
-7. Reconstrua uma resposta pela tabela de registro.
-8. Peça o commit.
+5. No app, com a conta de teste, faça as perguntas dos casos típicos e difíceis e confira cada citação.
+6. Peça para marcar a coluna `citacao_ok`.
+7. Reconstrua uma resposta pelo registro, como no passo 7 da Demonstração desta lição, e tire um print.
+8. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 
-Entrega: planilha com a coluna `citacao_ok` preenchida nos casos típicos e difíceis + print de uma resposta reconstruída pela tabela de registro.
+Entrega: coluna `citacao_ok` preenchida nos típicos e difíceis + print de uma resposta reconstruída pelo registro.
 
 ## Referência
 
@@ -49,7 +51,7 @@ Entrega: planilha com a coluna `citacao_ok` preenchida nos casos típicos e dif�
 - Citação verificada: o servidor confirmou que o trecho existe no documento enviado
 - Rastreabilidade: poder reconstruir como cada resposta foi gerada
 - Registro de chamadas (log): tabela com os dados de cada chamada à IA
-- Versão do prompt: arquivo numerado da instrução usada (lição D4 da T4)
+- Versão do prompt: arquivo numerado da instrução usada, em `prompts/` (lição A3 da T4)
 - RLS: regra no banco que limita quais linhas cada usuário vê (lição 2a.5 da T2a)
 - Token: pedaço de palavra; a API conta e cobra por tokens
 - Latência: tempo entre o envio da pergunta e a chegada da resposta

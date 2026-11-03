@@ -19,7 +19,7 @@ Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no c
 
 1. Escreva a recusa padrão: "Só respondo sobre sua jornada e o conteúdo do curso. Ex.: 'Onde travei na T2a?'"
 2. Liste os temas fora do escopo: investimento, saúde, questões jurídicas, assuntos sem relação com o curso.
-3. Peça ao Claude Code: "Depois da resposta da IA e antes de mostrar, confira no servidor:
+3. Abra a pasta do Diário em **Manual**. Peça: "Depois da resposta da IA e antes de mostrar, confira no servidor:
    - formato válido;
    - categoria `fora_do_escopo` vira a recusa padrão;
    - citações conferidas;
@@ -28,25 +28,26 @@ Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no c
    Se falhar, mostre a recusa padrão e registre o motivo."
 4. Escreva 3 casos na borda do escopo. Ex.: "Como monto meu currículo com o que aprendi no curso?"
 5. Decida, para cada um, se o tutor atende ou recusa. Registre a decisão na seção 8 do `SPEC.md`.
-6. Acrescente esses casos à planilha com a decisão como resposta esperada.
-7. Rode os casos fora do escopo. Meta: 100%.
-8. Rode os 20 casos-ouro. Nenhuma resposta legítima pode virar recusa.
-9. Peça: "Faça um commit com a mensagem 'Adiciona guardrails de saída ao tutor'."
+6. Acrescente esses casos a `evals/casos-ouro.csv`, com a decisão como resposta esperada.
+7. Peça: "Rode os casos fora do escopo no tutor, com a conta de teste, e grave as respostas."
+   - Confira cada resposta contra o critério. Meta: 100%.
+8. Peça o mesmo para todos os casos-ouro. Nenhuma resposta legítima pode virar recusa.
+9. Peça: "Faça um commit com a mensagem 'Adiciona guardrails de saída ao tutor' e envie ao GitHub."
 
 ## Prática
 
 1. Escreva a recusa padrão da sua feature, com um exemplo de pergunta válida.
 2. Liste os temas fora do escopo do seu produto.
-3. Peça as verificações de saída no servidor, com recusa padrão e registro do motivo.
+3. Em **Manual**, peça as verificações de saída no servidor, com recusa padrão e registro do motivo. Lista em "Verificações de saída", na Referência desta lição.
 4. Escreva 3 casos na borda do escopo e decida cada um.
-5. Registre as decisões no `SPEC.md` e acrescente os casos à planilha.
-6. Rode os casos fora do escopo até 100%.
-7. Rode os 20 casos-ouro e corrija recusas indevidas.
-8. Peça o commit.
+5. Registre as decisões na seção 8 do `SPEC.md` e acrescente os casos a `evals/casos-ouro.csv`.
+6. Peça para rodar os casos fora do escopo e corrija até 100%.
+7. Peça para rodar todos os casos-ouro e corrija recusas indevidas.
+8. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 
-Entrega: resultado dos casos fora do escopo (originais e de borda) a 100% + resultado dos 20 casos-ouro sem recusa indevida.
+Entrega: casos fora do escopo (originais e de borda) a 100% + 20 casos-ouro sem recusa indevida.
 
 ## Referência
 
@@ -70,7 +71,8 @@ Entrega: resultado dos casos fora do escopo (originais e de borda) a 100% + resu
 | Vazamento de instrução | Resposta contém trecho do prompt |
 | Dados de terceiros | Resposta contém dado de outro usuário |
 
-- Se a regra no código não bastar: uma segunda chamada curta à IA que só responde "no escopo" ou "fora do escopo"; custa uma chamada a mais (lição D5 da T4)
+- Se a regra no código não bastar: uma chamada curta à IA que só diz "no escopo" ou "fora"
+- Essa checagem extra custa uma chamada a mais (lição D5 da T4)
 
 **Sobre os 100%**
 

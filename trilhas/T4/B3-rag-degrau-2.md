@@ -7,7 +7,7 @@
 
 ## Por quê
 
-Quando todos os documentos vão em toda chamada, a IA se perde no excesso, e cada pergunta fica cara e lenta.
+Com todos os documentos em toda chamada, a IA se perde no excesso. Cada pergunta fica cara e lenta.
 
 No degrau 2 do RAG, o servidor escolhe antes os documentos que importam. Usa filtros (lição, data, tipo) e busca por palavra-chave.
 
@@ -18,28 +18,30 @@ Você só sobe para cá se o degrau 1 não atingiu a meta. A comparação nos ca
 Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no conteúdo do curso, com citação.
 
 1. Abra `evals/casos-ouro.csv` e confirme na coluna `degrau1` que o resultado ficou abaixo da meta.
-2. Peça ao Claude Code: "Antes de chamar a IA, selecione os documentos do tutor. Filtre pela lição citada na pergunta e pelo período citado. Complete com busca por palavra-chave nas lições e nos registros do usuário logado. Envie no máximo 5 documentos."
+2. Abra a pasta do Diário em **Manual** e peça: "Antes de chamar a IA, selecione os documentos do tutor. Filtre pela lição citada na pergunta e pelo período citado. Complete com busca por palavra-chave nas lições e nos registros do usuário logado. Envie no máximo 5 documentos."
 3. Peça: "Registre em cada chamada os identificadores dos documentos enviados, os tokens e a latência."
-4. Rode os 20 casos-ouro com a conta de teste e marque a coluna nova `degrau2`.
-5. Para cada falha, confira no registro se o documento esperado foi enviado.
+4. Peça: "Rode as 20 entradas de `evals/casos-ouro.csv` no tutor, com a conta de teste, e grave as respostas."
+   - Leia cada resposta contra o critério e peça para marcar a coluna nova `degrau2`.
+5. Para cada falha, peça: "Mostre os documentos enviados no caso [id]." Compare com a fonte esperada do caso.
    - Não foi: falha de seleção (ajuste filtro ou palavra-chave)
    - Foi: falha de resposta (ajuste o prompt)
 6. Ajuste uma coisa por vez e rode os 20 casos de novo.
 7. Peça: "Monte a comparação degrau 1 × degrau 2: acerto, tokens médios de entrada e latência média."
 8. Decida: degrau 2 atingiu a meta, fique nele; não atingiu, siga para a lição B4 da T4.
 9. Registre a comparação e a decisão na seção 8 do `SPEC.md`.
-10. Peça: "Faça um commit com a mensagem 'Adiciona seleção de documentos ao tutor (RAG degrau 2)'."
+10. Peça: "Faça um commit com a mensagem 'Adiciona RAG degrau 2 ao tutor' e envie ao GitHub."
 
 ## Prática
 
-1. Confira o resultado do degrau 1 na planilha.
-2. Se o degrau 1 atingiu a meta, não construa o degrau 2. Registre no `SPEC.md`: "degrau 1 atinge [X]%; degrau 2 desnecessário". Siga para a lição B5 da T4.
-3. Se não atingiu, defina os filtros do seu produto (veja "Filtros possíveis", na Referência).
-4. Peça a seleção com filtros, palavra-chave e número máximo de documentos.
+1. Confira o resultado do degrau 1 na coluna `degrau1` de `evals/casos-ouro.csv` (lição B2 da T4).
+2. Se o degrau 1 atingiu a meta, não construa o degrau 2. Registre na seção 8 do `SPEC.md`: "degrau 1 atinge [X]%; degrau 2 desnecessário". Siga para a lição B5 da T4.
+3. Se não atingiu, defina os filtros do seu produto (veja "Filtros possíveis", na Referência desta lição).
+4. Em **Manual**, peça a seleção com filtros, palavra-chave e no máximo 5 documentos.
 5. Peça o registro dos documentos enviados, dos tokens e da latência.
-6. Rode os 20 casos-ouro e marque a coluna `degrau2`.
-7. Classifique cada falha em seleção ou resposta e ajuste uma coisa por vez.
-8. Peça a comparação entre os degraus, registre a decisão no `SPEC.md` e peça o commit.
+6. Peça para rodar os 20 casos-ouro com a conta de teste e marque a coluna `degrau2`.
+7. Classifique cada falha em seleção ou resposta (passo 5 da Demonstração desta lição) e ajuste uma coisa por vez.
+8. Peça a comparação entre os degraus e registre a decisão na seção 8 do `SPEC.md`.
+9. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 

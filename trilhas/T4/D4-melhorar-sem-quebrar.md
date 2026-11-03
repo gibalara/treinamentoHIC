@@ -17,27 +17,29 @@ A regra: nenhuma mudança entra sem os evals rodarem antes. Automático, para n�
 
 Exemplo: o tutor do Diário de Bordo, que responde com base nos registros e no conteúdo do curso, com citação.
 
-1. Peça ao Claude Code: "Organize `prompts/` com um arquivo por versão e deixe a versão ativa e o modelo numa configuração única."
-2. Peça: "Grave a versão do prompt e o modelo em cada linha do registro de chamadas e em cada resultado de evals."
+1. Abra a pasta do Diário em **Manual**. Peça: "Organize `prompts/` com um arquivo por versão e deixe versão ativa e modelo numa configuração única."
+2. Peça: "Grave a versão do prompt e o modelo em cada registro de chamada e em cada resultado de evals."
 3. Peça: "Salve cada rodada de evals em `evals/resultados/`, com data, versão do prompt, modelo e resumo."
-4. Peça: "Crie um hook que, antes de qualquer commit que altere `prompts/` ou a configuração do modelo, rode o script de evals. Bloqueie o commit se a meta geral não for atingida ou se algum caso fora do escopo ou malicioso falhar." [VERIFICAR: forma de disparar o hook antes do commit no Claude Code]
-5. Teste o bloqueio: peça para tirar do prompt a regra de recusa fora do escopo e tente o commit.
+4. Peça: "Crie um hook que rode o script de evals antes de commits que alterem `prompts/` ou o modelo." [VERIFICAR: forma de disparar o hook antes do commit no Claude Code]
+   - Complete o pedido: "Bloqueie o commit se a meta geral falhar ou se um caso crítico falhar."
+5. Teste o bloqueio: peça para tirar do prompt a regra de recusa fora do escopo. Depois peça o commit.
 6. Confira: o commit foi bloqueado e o motivo aparece.
 7. Peça: "Volte `prompts/` para a versão do último commit."
-8. Teste uma troca de modelo pelo mesmo caminho: mude o modelo na configuração e tente o commit. O hook roda os evals com o modelo novo.
-9. Peça: "Faça um commit com a mensagem 'Adiciona evals automáticos antes de mudanças no tutor'."
+8. Teste uma troca de modelo: peça para mudar o modelo na configuração e peça o commit. O hook roda os evals com o modelo novo.
+9. Se o commit passou, o modelo novo atingiu a meta. Para manter o atual, peça para voltar a configuração ao último commit.
+10. Peça: "Faça um commit com a mensagem 'Adiciona evals automáticos antes de mudanças no tutor' e envie ao GitHub."
 
 [LINK A CURAR: documentação oficial do Claude Code sobre hooks]
 
 ## Prática
 
-1. Peça a organização dos prompts por versão e a configuração única de versão ativa e modelo.
+1. Em **Manual**, peça a organização dos prompts por versão e a configuração única de versão ativa e modelo.
 2. Peça o registro de versão e modelo no registro de chamadas e nos resultados de evals.
 3. Peça o salvamento de cada rodada em `evals/resultados/`.
-4. Peça o hook que roda os evals antes de commits em prompts ou modelo, com as regras de bloqueio.
-5. Teste com uma mudança ruim de propósito e confirme o bloqueio.
-6. Volte a mudança.
-7. Peça o commit.
+4. Peça o hook que roda os evals antes de commits em prompts ou modelo. Regras em "Regras de bloqueio", na Referência desta lição.
+5. Teste com uma mudança ruim de propósito, como no passo 5 da Demonstração desta lição, e confirme o bloqueio. Tire um print.
+6. Peça para voltar a mudança.
+7. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 
@@ -53,6 +55,7 @@ Entrega: hook (ou comando personalizado) no repositório + registro de um commit
 - Comando personalizado: atalho que dispara uma sequência repetida no Claude Code (lição C2 da T3)
 - Script de evals: programa que roda os casos-ouro e o juiz (lição D1 da T4)
 - Commit: ponto salvo de versão do projeto (lição 0.5 da T0)
+- Caso crítico: caso-ouro fora do escopo ou malicioso, que exige 100% (lição A2 da T4)
 
 **O que dispara os evals**
 
@@ -74,6 +77,7 @@ Entrega: hook (ou comando personalizado) no repositório + registro de um commit
 **Alternativa ao hook**
 
 - Comando personalizado `/evals`, rodado antes de cada commit; exige disciplina, o hook não
+- Limite do hook: só vale para commits pedidos ao Claude Code [VERIFICAR: comportamento com commits feitos fora dele]
 
 **Pedidos ao Claude Code**
 

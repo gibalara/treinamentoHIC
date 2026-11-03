@@ -1,4 +1,4 @@
-# A1 · Onde a IA agrega valor
+# A1 · A tarefa de IA certa para o seu produto (onde a IA agrega valor)
 
 - **Trilha:** T4 · Produto com IA
 - **Tempo:** 45 min
@@ -24,24 +24,25 @@ Exemplo: o Diário de Bordo (app de registro da jornada, construído na T2a) vai
    - Tutor que responde dúvidas com base nos registros e no conteúdo do curso, com citação
    - Classificação de cada trava registrada por tipo
    - Resumo semanal da jornada
-5. Aplique a cada candidata os critérios de "Onde a IA agrega valor", na Referência desta lição.
+5. Aplique a cada candidata os 5 critérios de "Onde a IA agrega valor", na Referência desta lição.
 6. Escolha o tutor: usa texto livre, depende dos documentos do produto e o erro é conferível pela citação.
 7. Preencha a seção 6 do `SPEC.md`:
    - Tarefa de IA: tutor que responde dúvidas sobre a jornada e o curso, com citação
    - Base de conhecimento (RAG): registros do próprio usuário e lições do curso
    - Ação candidata a agente: análise semanal de travas com alerta ao gestor, com aprovação (T6)
 8. Registre na seção 8: "[data] Tarefa de IA: tutor com citação. Motivo: atende os 5 critérios."
-9. Peça: "Faça um commit com a mensagem 'Define tarefa de IA no SPEC.md'."
+9. Peça: "Faça um commit com a mensagem 'Define tarefa de IA no SPEC.md' e envie ao GitHub."
 
 ## Prática
 
 1. Abra a pasta do seu projeto (o MVP da T2b) no modo de código, no modo **Manual**.
-2. Faça a pergunta com citação sobre os documentos do projeto (veja "Pedidos ao Claude Code", na Referência).
-3. Confira duas citações nos arquivos.
-4. Liste três candidatas a tarefa de IA no seu produto.
-5. Aplique os critérios e escolha uma.
-6. Preencha a seção 6 do `SPEC.md` e registre a decisão na seção 8.
-7. Peça o commit.
+2. Faça a pergunta da vitória de abertura (veja "Pedidos ao Claude Code", na Referência desta lição). Exemplo: "quais regras de negócio o produto tem?".
+3. Abra dois arquivos citados. Deu certo se o trecho citado está lá.
+4. Liste três candidatas a tarefa de IA no seu produto. Use os "Exemplos de tarefa de IA por nicho", na Referência desta lição.
+5. Pontue cada candidata nos 5 critérios da tabela "Onde a IA agrega valor" (sim ou não). Escolha a que tiver mais "sim".
+6. Preencha a seção 6 do `SPEC.md` com a tarefa, a base de conhecimento e uma ação candidata a agente.
+7. Registre a decisão e o motivo na seção 8.
+8. Peça o commit e o envio ao GitHub.
 
 ## Checagem
 
@@ -52,10 +53,11 @@ Entrega: `SPEC.md` com a seção 6 preenchida e a decisão registrada na seção
 **Termos**
 
 - Feature: funcionalidade do produto
-- RAG: a IA recebe trechos dos seus documentos e responde com base neles; tem três degraus (lições B2 a B4 da T4)
+- RAG: a IA recebe trechos dos seus documentos e responde com base neles (lições B2 a B4 da T4)
 - `SPEC.md`: especificação do produto, criada na lição 1.6 da T1
 - Commit: ponto salvo de versão do projeto (lição 0.5 da T0)
 - Modo Manual: o Claude Code pede aprovação antes de cada alteração (lição 0.4 da T0)
+- Ação candidata a agente: tarefa que a IA poderia executar sozinha, com aprovação humana (tratada na T6)
 
 **Onde a IA agrega valor (5 critérios)**
 
@@ -80,7 +82,7 @@ Entrega: `SPEC.md` com a seção 6 preenchida e a decisão registrada na seção
 **Pedidos ao Claude Code**
 
 - Vitória de abertura: "Usando só os arquivos desta pasta, responda: [pergunta]. Cite arquivo e seção de cada informação."
-- Salvar: "Faça um commit com a mensagem '[o que mudou]'."
+- Salvar: "Faça um commit com a mensagem '[o que mudou]' e envie ao GitHub."
 
 **Seção 6 do `SPEC.md`**
 
