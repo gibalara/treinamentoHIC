@@ -22,22 +22,22 @@ Exemplo: um fluxo de teste que avisa por e-mail quando um aluno do Diário de Bo
 3. Adicione um gatilho manual (gatilho é o bloco que inicia o fluxo). [VERIFICAR NA INTERFACE: nome do gatilho manual]
 4. Adicione um bloco com dados de exemplo: aluno "Aluno Teste", lição "2a.3", turma "Turma A". [VERIFICAR NA INTERFACE]
 5. Adicione um bloco de envio de e-mail (nó: cada bloco do fluxo). [VERIFICAR NA INTERFACE: nome do nó de e-mail]
-6. Cadastre o acesso ao e-mail como credencial (segredo guardado no n8n, fora dos blocos). [VERIFICAR NA INTERFACE]
-7. Monte o texto: "Aluno Teste concluiu a lição 2a.3." usando os campos do bloco anterior.
+6. Cadastre o acesso ao e-mail como credencial (segredo guardado no n8n, fora dos blocos). [VERIFICAR NA INTERFACE: tipos de credencial aceitos para o seu provedor de e-mail]
+7. Monte o texto "Aluno Teste concluiu a lição 2a.3." com os campos do bloco anterior, não digitados à mão. [VERIFICAR NA INTERFACE: como inserir um campo do bloco anterior no texto]
 8. Envie o e-mail para você mesmo.
-9. Execute o fluxo e confira o e-mail recebido.
+9. Execute o fluxo e confira o e-mail recebido. [VERIFICAR NA INTERFACE: botão de execução]
 10. Abra o histórico de execuções e confira o que cada bloco recebeu e enviou. [VERIFICAR NA INTERFACE]
 
 [LINK A CURAR: documentação oficial do n8n, guia de primeiro fluxo]
 
 ## Prática
 
-1. Acesse o n8n e crie um fluxo novo.
-2. Escolha um aviso útil do seu produto (veja "Escolha do fluxo", na Referência).
+1. Acesse o n8n e crie um fluxo novo, como no passo 2 da Demonstração desta lição.
+2. Escolha um aviso útil do seu produto (veja "Escolha do fluxo", na Referência desta lição).
 3. Monte gatilho manual, dados de exemplo e envio por e-mail ou Slack.
 4. Cadastre o acesso como credencial, nunca no texto do bloco.
 5. Use dados fictícios.
-6. Execute, confira a mensagem recebida e o histórico de execuções.
+6. Execute, confira a mensagem recebida e abra o histórico de execuções.
 
 ## Checagem
 

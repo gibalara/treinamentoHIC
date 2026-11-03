@@ -15,35 +15,37 @@ Webhook autenticado exige um segredo compartilhado em cada chamada. Sem o segred
 
 ## Demonstração
 
-Exemplo: quando um aluno do Diário de Bordo registra uma trava, o gestor da turma recebe aviso no Slack.
+Exemplo: um aluno do Diário de Bordo registra uma trava; o gestor recebe aviso num canal de teste do Slack.
 
-1. No n8n, crie um fluxo com gatilho de webhook (bloco que recebe a chamada do produto). [VERIFICAR NA INTERFACE: nome do nó de webhook]
-2. Ative a autenticação do webhook por segredo no cabeçalho. Cabeçalho é a parte da chamada com dados de controle. [VERIFICAR NA INTERFACE: opções de autenticação do nó]
-3. Gere um segredo longo e aleatório e cadastre como credencial no n8n (segredo guardado fora dos blocos). [VERIFICAR NA INTERFACE]
-4. Abra a pasta do Diário no modo de código, no modo **Plano** (cria um plano antes de alterar arquivos). [VERIFICAR NA INTERFACE]
-5. Peça: "Quando um registro de trava for criado, o servidor chama o webhook do n8n com o segredo no cabeçalho."
-6. Peça: "Endereço e segredo do webhook vêm de variáveis de ambiente." Variável de ambiente é um valor guardado fora do código, no servidor.
-7. Peça: "Envie só o mínimo: turma, lição e tipo do evento. Sem o texto do registro."
-8. Peça: "Se o n8n falhar, o registro é salvo mesmo assim e o erro é anotado."
-9. Cadastre as duas variáveis na Vercel (onde o app está publicado). [VERIFICAR NA INTERFACE]
-10. No n8n, acrescente o envio ao Slack do gestor e ative o fluxo. [VERIFICAR NA INTERFACE]
-11. Registre uma trava com conta de teste e confira o aviso no Slack.
-12. Peça: "Chame o webhook sem o segredo e com um segredo errado." Confira: as duas chamadas são recusadas.
-13. Desative o fluxo no n8n e registre outra trava. Confira: o Diário continua funcionando.
-14. Peça um commit.
+1. Abra a pasta do Diário no modo de código, no modo **Manual** (pede aprovação antes de cada mudança). [VERIFICAR NA INTERFACE]
+2. Peça: "Crie no .env.local as variáveis N8N_WEBHOOK_URL, vazia, e N8N_WEBHOOK_SEGREDO, com 40 caracteres aleatórios. Não mostre o valor na conversa." Variável de ambiente é um valor guardado fora do código.
+3. No n8n, crie um fluxo com gatilho de webhook (bloco que recebe a chamada do produto). [VERIFICAR NA INTERFACE: nome do nó de webhook]
+4. No nó, ative a autenticação por cabeçalho. Cabeçalho é a parte da chamada com dados de controle. [VERIFICAR NA INTERFACE: opções de autenticação do nó]
+5. Crie a credencial do cabeçalho: nome `X-Webhook-Segredo`; valor copiado do `.env.local`, pelo editor. Credencial é o segredo guardado no n8n, fora dos blocos. [VERIFICAR NA INTERFACE]
+6. Copie o endereço de produção do webhook e cole em `N8N_WEBHOOK_URL`, no `.env.local`. [VERIFICAR NA INTERFACE: endereço de teste × de produção]
+7. Acrescente o envio ao Slack, com o texto "Trava registrada na turma [turma], lição [lição]". Ative o fluxo. [VERIFICAR NA INTERFACE: nó e credencial do Slack]
+8. Peça: "Ao criar um registro de trava, o servidor chama N8N_WEBHOOK_URL com o cabeçalho X-Webhook-Segredo."
+   Servidor é a parte do app que roda fora do navegador.
+9. Acrescente: "Envie só turma, lição e tipo do evento, sem o texto do registro. Se o n8n falhar, o registro é salvo e o erro é anotado."
+10. Peça: "Rode o app no meu computador." Registre uma trava com conta de teste e confira o aviso no Slack.
+11. Peça: "Chame o webhook sem o segredo e com um segredo errado e mostre as respostas."
+   Confira: as duas são recusadas com erro de autorização.
+12. Desative o fluxo no n8n e registre outra trava. Confira: o registro é salvo.
+   Peça: "Mostre onde o erro do n8n foi anotado." Depois, reative o fluxo.
+13. Cadastre as duas variáveis na Vercel, copiando os valores do `.env.local`. [VERIFICAR NA INTERFACE]
+14. Peça um commit e o envio ao GitHub. A Vercel publica a nova versão; repita o passo 10 na URL pública.
 
 [LINK A CURAR: documentação oficial do n8n sobre autenticação no nó de webhook]
 
 ## Prática
 
-1. Escolha um evento do seu produto que mereça aviso externo (veja "Escolha do evento", na Referência).
-2. No n8n, crie o fluxo com webhook autenticado e o segredo como credencial.
-3. Peça a chamada ao webhook pelo servidor, com dados mínimos e segredo em variável de ambiente.
-4. Cadastre as variáveis na Vercel.
-5. Monte a ação externa (Slack ou e-mail) e ative o fluxo.
-6. Dispare o evento e confira o aviso.
-7. Teste sem segredo, com segredo errado e com o n8n desativado.
-8. Peça um commit.
+1. Escolha um evento do seu produto que mereça aviso externo (veja "Escolha do evento", na Referência desta lição).
+2. Peça as duas variáveis no `.env.local`, com o segredo aleatório gerado sem aparecer na conversa.
+3. No n8n, crie o fluxo com webhook, autenticação por cabeçalho e o segredo como credencial.
+4. Monte a ação externa (Slack ou e-mail) e ative o fluxo.
+5. Peça a chamada ao webhook pelo servidor, com dados mínimos. A ação do produto não espera o n8n.
+6. Rode os quatro testes de "Testes obrigatórios", na Referência desta lição.
+7. Cadastre as variáveis na Vercel, peça commit e envio, e repita o teste com o segredo certo na URL pública.
 
 ## Checagem
 
@@ -60,6 +62,8 @@ Entrega: print do fluxo com autenticação ativa + resultado das chamadas sem se
 - Credencial: segredo guardado no n8n, fora dos blocos
 - Variável de ambiente: valor guardado fora do código, no servidor
 - Servidor: parte do app que roda fora do navegador
+- `.env.local`: arquivo local com as variáveis de ambiente; fica fora do GitHub
+- Endereço de produção do webhook: só responde com o fluxo ativo [VERIFICAR NA INTERFACE]
 
 **Escolha do evento**
 
@@ -74,13 +78,14 @@ Entrega: print do fluxo com autenticação ativa + resultado das chamadas sem se
 | Chamada | Resultado esperado |
 | --- | --- |
 | Com o segredo certo | Fluxo roda |
-| Sem segredo | Recusada |
-| Com segredo errado | Recusada |
+| Sem segredo | Recusada (erro de autorização) |
+| Com segredo errado | Recusada (erro de autorização) |
 | n8n desativado | Produto funciona; erro anotado |
 
 **Pedidos ao Claude Code**
 
 - "Quando [evento], o servidor chama o webhook do n8n com o segredo no cabeçalho."
+- "Crie no .env.local o segredo do webhook com 40 caracteres aleatórios, sem mostrar o valor."
 - "Endereço e segredo do webhook vêm de variáveis de ambiente."
 - "Se o n8n falhar, a ação do produto conclui e o erro é anotado."
 - "Chame o webhook sem o segredo e com um segredo errado e mostre as respostas."

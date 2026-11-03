@@ -17,33 +17,37 @@ Organização é o grupo que contrata ou usa o produto: cliente, área ou depart
 
 Exemplo: o Diário de Bordo, com login, registros, painel e tutor de IA, vai passar a atender turmas.
 
-1. Abra a pasta do Diário no modo de código do Claude Desktop, no modo **Plano** (cria um plano antes de alterar arquivos). [VERIFICAR NA INTERFACE]
-2. Peça: "Liste as tabelas do banco e diga se cada dado é do usuário, da organização ou de todos."
+1. Abra a pasta do Diário no modo de código, em **Plano** (cria um plano antes de alterar arquivos). [VERIFICAR NA INTERFACE]
+2. Peça: "Liste as tabelas do banco e diga se cada dado é do usuário, da turma ou de todos."
 3. Confira a resposta: registros são do aluno e da turma; o conteúdo do curso é de todos.
 4. Defina a organização do Diário: a turma (ou a empresa que contrata a formação).
 5. Peça: "Proponha o modelo multi-organização: banco compartilhado, identificador da organização em cada tabela e RLS."
 6. Confira na proposta o papel da RLS (regra no banco que limita quais linhas cada usuário vê).
 7. Peça: "Desenhe o diagrama das tabelas em Mermaid." Mermaid é um texto que o GitHub desenha como diagrama.
 8. Confira no diagrama: toda tabela com dado de turma tem o campo da organização.
-9. Responda às decisões abertas (veja "Decisões do modelo", na Referência). No Diário: o aluno pertence a uma turma; o gestor pode ter várias.
-10. Peça: "Registre o modelo e as decisões na seção 8 do SPEC.md, com data e motivo." O `SPEC.md` é a especificação do produto.
-11. Peça um commit (ponto salvo de versão no git).
+9. Responda às decisões abertas (veja "Decisões do modelo", na Referência desta lição). No Diário: o aluno pertence a uma turma; o gestor pode ter várias; só o admin cria turmas.
+10. Peça: "Grave o diagrama em docs/modelo-multi-org.md."
+11. Peça: "Registre modelo e decisões na seção 8 do SPEC.md, com data e motivo."
+   O `SPEC.md` é a especificação do produto.
+12. Aprove o plano para o Claude Code gravar os dois arquivos.
+13. Peça um commit (ponto salvo de versão no git) e o envio ao GitHub.
+14. Abra `docs/modelo-multi-org.md` no GitHub e confira o diagrama desenhado.
 
 [LINK A CURAR: documentação oficial do Supabase sobre RLS (Row Level Security)]
 
 ## Prática
 
 1. Abra a pasta do seu projeto no modo **Plano**.
-2. Defina o que é organização no seu produto (veja "Escolha da organização", na Referência).
+2. Defina o que é organização no seu produto (veja "Escolha da organização", na Referência desta lição).
 3. Peça a classificação das tabelas: usuário, organização ou todos.
 4. Peça a proposta do modelo multi-organização e o diagrama em Mermaid.
-5. Responda às decisões do modelo, uma por uma.
-6. Registre modelo e decisões na seção 8 do seu `SPEC.md`.
-7. Peça um commit com o diagrama e o `SPEC.md`. Não altere o banco ainda: isso é a lição A2 da T5.
+5. Responda às cinco perguntas de "Decisões do modelo", na Referência desta lição, uma por uma.
+6. Peça para gravar o diagrama em `docs/modelo-multi-org.md` e as decisões na seção 8 do seu `SPEC.md`. Aprove o plano.
+7. Peça um commit e confira o diagrama desenhado no GitHub. Não altere o banco ainda: isso é a lição A2 da T5.
 
 ## Checagem
 
-Entrega: diagrama das tabelas + decisão registrada na seção 8 do `SPEC.md`.
+Entrega: `docs/modelo-multi-org.md` com o diagrama + decisões registradas na seção 8 do `SPEC.md`.
 
 ## Referência
 
@@ -53,6 +57,7 @@ Entrega: diagrama das tabelas + decisão registrada na seção 8 do `SPEC.md`.
 - Multi-organização: um produto atendendo várias organizações com dados separados
 - RLS (Row Level Security): regra no banco que limita quais linhas cada usuário vê
 - Mermaid: texto que vira diagrama no GitHub
+- Modo **Plano**: o Claude Code propõe um plano e só altera arquivos depois da sua aprovação
 - `SPEC.md`: especificação do projeto, criada na lição 1.6 da T1
 
 **Escolha da organização**
@@ -82,7 +87,7 @@ Entrega: diagrama das tabelas + decisão registrada na seção 8 do `SPEC.md`.
 
 - "Liste as tabelas e classifique cada dado: usuário, organização ou todos."
 - "Proponha o modelo multi-organização com identificador da organização e RLS."
-- "Desenhe o diagrama das tabelas em Mermaid."
+- "Desenhe o diagrama das tabelas em Mermaid e grave em docs/modelo-multi-org.md."
 - "Registre a decisão na seção 8 do SPEC.md, com data e motivo."
 
 **Erros comuns (Tutor HIC)**

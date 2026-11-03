@@ -18,15 +18,16 @@ Com organizações, todo log precisa dizer de qual organização é. Sem isso, v
 Exemplo: o Diário de Bordo publicado na Vercel, com várias turmas.
 
 1. Abra a pasta do Diário no modo de código, no modo **Plano** (cria um plano antes de alterar arquivos). [VERIFICAR NA INTERFACE]
-2. Peça: "Mostre o que o servidor registra hoje quando ocorre um erro ou uma chamada de IA." Servidor é a parte do app fora do navegador.
+2. Peça: "Mostre o que o servidor registra hoje quando ocorre um erro ou uma chamada de IA."
+   Servidor é a parte do app fora do navegador.
 3. Peça: "Padronize os logs com os campos de 'Campos do log', na Referência desta lição."
-4. Peça: "Nunca registre senha, chave, texto de registro ou resposta da IA."
-5. Peça: "Crie uma rota de teste, só para admin, que gera um erro proposital." Rota é um endereço que o servidor atende.
-6. Publique a mudança e chame a rota de teste como admin.
-7. Abra os registros do projeto na Vercel e filtre pelo erro. [VERIFICAR NA INTERFACE]
-8. Confira: data, rota, turma, código de rastreio e mensagem do erro aparecem. Código de rastreio é o identificador único de cada requisição.
-9. Faça uma pergunta ao tutor de IA e encontre a chamada nos logs, com tokens e tempo de resposta.
-10. Peça um commit.
+4. Acrescente: "Nunca registre senha, chave, texto de registro ou resposta da IA."
+5. Acrescente: "Crie uma rota de teste, só para admin, que gera um erro proposital. Diga o endereço dela." Rota é um endereço que o servidor atende. Aprove o plano.
+6. Peça um commit e o envio ao GitHub; a Vercel publica a nova versão.
+7. Logado como admin no app publicado, abra o endereço da rota de teste no navegador.
+8. Abra os registros do projeto na Vercel e filtre pelo erro. [VERIFICAR NA INTERFACE]
+9. Confira: data, rota, turma, código de rastreio e mensagem do erro aparecem. Código de rastreio é o identificador único de cada requisição.
+10. Faça uma pergunta ao tutor de IA e encontre a chamada nos logs, com tokens e tempo de resposta.
 
 [LINK A CURAR: documentação oficial da Vercel sobre registros (logs) em produção]
 
@@ -35,10 +36,10 @@ Exemplo: o Diário de Bordo publicado na Vercel, com várias turmas.
 1. Abra a pasta do seu projeto no modo **Plano**.
 2. Peça o diagnóstico do que o servidor registra hoje.
 3. Peça os logs padronizados, com organização e sem dados sensíveis.
-4. Peça a rota de teste de erro, só para admin.
-5. Publique, provoque o erro e encontre-o nos registros.
-6. Use a feature de IA e encontre a chamada nos registros.
-7. Peça um commit.
+4. Peça a rota de teste de erro, só para admin, e o endereço dela.
+5. Peça commit e envio ao GitHub para a Vercel publicar.
+6. Abra a rota como admin e encontre o erro nos registros da Vercel.
+7. Use a feature de IA e encontre a chamada nos registros.
 
 ## Checagem
 

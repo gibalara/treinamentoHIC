@@ -20,21 +20,26 @@ Exemplo: os dois fluxos do Diário de Bordo, aviso de trava e relatório semanal
 1. Abra o n8n e liste os fluxos ativos. [VERIFICAR NA INTERFACE]
 2. Para cada fluxo, anote o gatilho: webhook, agendado ou manual.
 3. Abra cada webhook e confira a autenticação ativa. [VERIFICAR NA INTERFACE]
-4. Abra a pasta do Diário no modo de código e peça: "Chame cada webhook do n8n sem segredo e mostre as respostas." Confira: todas recusadas.
-5. Abra cada bloco e procure senha, chave ou segredo escrito no texto. Todos devem estar em credenciais (segredos guardados fora dos blocos). [VERIFICAR NA INTERFACE]
-6. Abra o histórico de execuções e confira se há dado sensível nele. [VERIFICAR NA INTERFACE]
-7. Confira a retenção do histórico, isto é, por quanto tempo ele é guardado. [VERIFICAR NA INTERFACE]
-8. Confira quem tem acesso à conta do n8n e se o login exige segundo fator. [VERIFICAR NA INTERFACE]
-9. Desative todos os fluxos e use o Diário: ele deve funcionar normalmente. Reative os fluxos.
-10. Preencha o checklist (veja "Checklist de segurança no n8n", na Referência) e salve em `docs/checklist-n8n.md`.
-11. Peça um commit.
+4. Abra a pasta do Diário no modo de código, em **Manual** (pede aprovação antes de cada mudança).
+   Peça: "Chame cada webhook do n8n do .env.local sem segredo e com segredo errado."
+   Confira: todas as respostas são recusas.
+5. Peça: "Chame a rota de relatório publicada sem segredo." Confira: recusada.
+6. Abra cada bloco e procure senha, chave ou segredo escrito no texto. Todos devem estar em credenciais (segredos guardados fora dos blocos). [VERIFICAR NA INTERFACE]
+7. Abra o histórico de execuções e confira se há dado sensível nele. [VERIFICAR NA INTERFACE]
+8. Confira a retenção do histórico, isto é, por quanto tempo ele é guardado. [VERIFICAR NA INTERFACE]
+9. Confira quem tem acesso à conta do n8n e se o login exige segundo fator. [VERIFICAR NA INTERFACE]
+10. Desative todos os fluxos, registre uma trava e abra o painel: o Diário deve funcionar normalmente. Reative os fluxos.
+11. Peça: "Crie docs/checklist-n8n.md com o checklist da Referência desta lição."
+   Marque cada item e cole as respostas dos passos 4 e 5.
+12. Peça um commit (ponto salvo de versão no git).
 
 [LINK A CURAR: documentação oficial do n8n sobre segurança]
 
 ## Prática
 
 1. Liste os fluxos ativos do seu n8n e o gatilho de cada um.
-2. Percorra o checklist item por item.
+2. Percorra item por item o "Checklist de segurança no n8n", na Referência desta lição.
+   Siga os passos 3 a 10 da Demonstração desta lição.
 3. Para cada item reprovado, corrija e teste de novo.
 4. Salve o checklist preenchido em `docs/checklist-n8n.md`.
 5. Peça um commit.
@@ -53,6 +58,7 @@ Entrega: `docs/checklist-n8n.md` com todos os itens marcados, inclusive o teste 
 - Histórico de execuções: registro do que cada fluxo recebeu e enviou
 - Retenção: por quanto tempo o histórico é guardado
 - Segundo fator: confirmação extra no login, além da senha
+- Exportar fluxo: baixar o fluxo como arquivo, para backup [VERIFICAR NA INTERFACE]
 
 **Checklist de segurança no n8n**
 
@@ -63,6 +69,7 @@ Entrega: `docs/checklist-n8n.md` com todos os itens marcados, inclusive o teste 
 - [ ] Todo webhook exige segredo
 - [ ] Chamada sem segredo é recusada (teste anexado)
 - [ ] Chamada com segredo errado é recusada (teste anexado)
+- [ ] Rotas do produto chamadas pelo n8n exigem segredo (lição C3 da T5)
 
 ## Segredos
 - [ ] Nenhum segredo escrito no texto dos blocos; todos em credenciais

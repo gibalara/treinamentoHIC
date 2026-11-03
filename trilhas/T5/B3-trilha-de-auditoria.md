@@ -19,24 +19,28 @@ Exemplo: o Diário de Bordo registra as ações sensíveis de gestores e admins.
 
 1. Abra a pasta do Diário no modo de código, no modo **Plano** (cria um plano antes de alterar arquivos). [VERIFICAR NA INTERFACE]
 2. Liste as ações sensíveis do Diário: convite, remoção de membro, troca de papel, exportação e exclusão de dados.
-3. Peça: "Crie a tabela de auditoria com os campos de 'Campos do registro', na Referência desta lição."
+3. Peça: "Crie a tabela de auditoria com os campos de 'Campos do registro', na Referência desta lição. Gere o SQL num arquivo."
 4. Peça: "Grave um registro, pelo servidor, a cada ação desta lista." Servidor é a parte do app fora do navegador.
-5. Peça: "Pela RLS, ninguém altera nem apaga registros de auditoria, nem o admin." RLS é a regra no banco que limita o que cada usuário vê ou altera.
-6. Peça: "O gestor consulta só os registros da própria turma; o admin consulta todos."
-7. Como gestor, convide e remova uma conta de teste.
-8. Abra a consulta de auditoria e confira os dois registros: quem, o quê, quando, qual turma.
-9. Peça um teste automatizado que tente apagar um registro de auditoria. Confira: recusado.
-10. Peça um commit.
+5. Peça: "Pela RLS, ninguém altera nem apaga registros de auditoria, nem o admin."
+   RLS é a regra no banco que limita o que cada usuário vê ou altera.
+6. Peça: "Crie a tela de auditoria: o gestor vê só a própria turma; o admin vê todas."
+   Aprove o plano.
+7. Rode o SQL no SQL Editor do Supabase, na ordem da lição A2 da T5 (backup → teste → produção). [VERIFICAR NA INTERFACE]
+8. Peça: "Rode o app no meu computador." Como gestor, convide e remova uma conta de teste.
+9. Abra a tela de auditoria e confira os dois registros: quem, o quê, quando, qual turma.
+10. Peça: "Escreva e rode um teste que tente alterar e apagar um registro de auditoria."
+   Peça que rode como gestor e como admin. Confira: recusado.
+11. Peça um commit (ponto salvo de versão no git).
 
 [LINK A CURAR: guia oficial do OWASP sobre registro de eventos de segurança]
 
 ## Prática
 
 1. Abra a pasta do seu projeto no modo **Plano**.
-2. Liste as ações sensíveis do seu produto (veja "Ações sensíveis", na Referência).
-3. Peça a tabela de auditoria e o registro de cada ação pelo servidor.
+2. Liste as ações sensíveis do seu produto (veja "Ações sensíveis", na Referência desta lição).
+3. Peça a tabela de auditoria e o registro de cada ação pelo servidor. Rode o SQL na ordem da lição A2 da T5.
 4. Peça o bloqueio de alteração e exclusão pela RLS.
-5. Peça a consulta por organização, respeitando os papéis da lição B1 da T5.
+5. Peça a tela de auditoria por organização, respeitando a matriz de papéis da lição B1 da T5.
 6. Execute duas ações sensíveis e confira os registros.
 7. Peça o teste de exclusão recusada, rode e peça um commit.
 
@@ -53,6 +57,7 @@ Entrega: print da consulta de auditoria com duas ações registradas + resultado
 - Servidor: parte do app que roda fora do navegador
 - RLS (Row Level Security): regra no banco que limita o que cada usuário vê ou altera
 - Organização: cliente, área ou departamento que agrupa usuários
+- SQL Editor: tela do Supabase onde se roda o SQL gerado pelo Claude Code
 
 **Campos do registro**
 
@@ -66,6 +71,7 @@ Entrega: print da consulta de auditoria com duas ações registradas + resultado
 | Alvo | Usuário removido |
 
 - Nunca gravar senha, chave ou conteúdo do cliente no registro
+- A RLS barra o app; o dono do projeto ainda consegue apagar pelo SQL Editor do Supabase. Restrinja quem tem acesso ao painel do Supabase
 
 **Ações sensíveis**
 

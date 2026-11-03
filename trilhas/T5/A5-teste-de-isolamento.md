@@ -15,29 +15,35 @@ Isolamento é a garantia de que nada da Org A aparece para a Org B. O teste de i
 
 ## Demonstração
 
-Exemplo: o Diário de Bordo com duas turmas, a Turma A e a Turma B.
+Exemplo: o Diário de Bordo publicado, com duas turmas de teste, a Turma A e a Turma B.
 
-1. No app publicado, crie a Turma A e a Turma B com dados fictícios. Na Turma B, use a palavra-marca "ABACAXI-B".
-2. Crie três contas de teste: aluno da A, aluno da B e um segundo aluno da A, que será removido.
-3. Abra a pasta do Diário no modo de código, no modo **Manual** (pede aprovação antes de cada mudança). [VERIFICAR NA INTERFACE]
-4. Peça: "Liste todas as telas, rotas, arquivos, exportações e relatórios do produto." Rota é um endereço que o servidor atende.
-5. Logado como aluno da A, abra cada tela e procure "ABACAXI-B". Anote no relatório.
-6. Peça: "Escreva um script que chame cada rota como aluno da A, trocando o identificador da turma pelo da B." Isso é a requisição alterada: um pedido ao servidor com dado trocado à mão.
-7. Rode o script e confira: toda chamada com a turma B é recusada.
-8. Pergunte ao tutor de IA, como aluno da A, sobre a Turma B. Confira: nenhuma resposta cita "ABACAXI-B".
-9. Exporte os dados e gere os relatórios como aluno da A. Procure "ABACAXI-B" em cada arquivo.
-10. Logado como o segundo aluno da A, mantenha a sessão aberta. Em outro navegador, o gestor o remove.
-11. Na sessão do removido, recarregue a página e tente cada rota. Confira: acesso negado na hora.
-12. Preencha o relatório (veja "Relatório do teste de isolamento", na Referência) e peça um commit.
+1. Abra a pasta do Diário no modo de código, no modo **Manual** (pede aprovação antes de cada mudança). [VERIFICAR NA INTERFACE]
+2. Crie três contas de teste no app publicado: aluno da A, aluno da B e um segundo aluno da A.
+   O segundo aluno da A será removido. Veja "Contas de teste", na Referência desta lição.
+3. Peça: "Gere o SQL das turmas TESTE Turma A e TESTE Turma B, com as três contas e registros fictícios.
+   Na B, use a palavra-marca ABACAXI-B."
+4. Rode o SQL no SQL Editor do projeto de produção do Supabase. [VERIFICAR NA INTERFACE]
+5. Peça: "Liste todas as telas, rotas, arquivos, exportações e relatórios do produto." Rota é um endereço que o servidor atende.
+6. Logado como aluno da A, abra cada tela e procure "ABACAXI-B" (Ctrl+F no navegador). Anote no relatório.
+7. Peça: "Crie no .env.local as variáveis de e-mail e senha das três contas de teste, sem valores."
+   Cole os valores pelo editor.
+8. Peça: "Rode um script que chame cada rota publicada como aluno da A, com a turma trocada pela B."
+   Isso é a requisição alterada.
+9. Confira na saída: toda chamada com a Turma B é recusada.
+10. Pergunte ao tutor de IA, como aluno da A, sobre a Turma B. Confira: nenhuma resposta cita "ABACAXI-B". Junte o resultado dos evals da lição A4 da T5.
+11. Como aluno da A, exporte os dados e gere os relatórios. Procure "ABACAXI-B" em cada arquivo.
+12. Entre como o segundo aluno da A numa janela anônima (não compartilha login). Na janela do gestor, remova-o.
+13. Na janela anônima, recarregue a página e peça ao script que tente cada rota com essa conta. Confira: acesso negado na hora.
+14. Preencha `docs/teste-isolamento.md` (veja "Relatório do teste de isolamento", na Referência desta lição) e peça um commit.
 
 [LINK A CURAR: guia oficial do OWASP sobre testes de controle de acesso]
 
 ## Prática
 
-1. Crie duas organizações de teste com dados fictícios e uma palavra-marca na segunda.
-2. Crie as três contas de teste.
+1. Crie as três contas de teste no seu app publicado.
+2. Peça o SQL de duas organizações de teste, com dados fictícios e uma palavra-marca na segunda. Rode em produção.
 3. Peça a lista de telas, rotas, arquivos, exportações e relatórios do seu produto.
-4. Percorra cada item do roteiro, na ordem da Referência.
+4. Percorra os itens na ordem da tabela de "Relatório do teste de isolamento", na Referência desta lição.
 5. Marque "não se aplica" só quando o produto não tiver aquela saída, com o motivo.
 6. Corrija cada vazamento, faça um commit por correção e repita o item.
 7. Salve o relatório em `docs/teste-isolamento.md` e peça um commit.
@@ -56,6 +62,15 @@ Entrega: `docs/teste-isolamento.md` com todos os itens do roteiro aprovados ou "
 - Requisição alterada: pedido ao servidor com identificador trocado à mão
 - Palavra-marca: termo único plantado numa organização para detectar vazamento
 - Sessão: login ativo num navegador
+- Arquivos: anexos enviados ao produto pelos usuários
+- Script: programa curto que executa uma sequência de passos sozinho
+- Janela anônima: janela do navegador que não compartilha login com as outras
+
+**Contas de teste**
+
+- Três e-mails que você controla; alguns provedores aceitam variações (ex.: nome+a@gmail.com) [VERIFICAR NA INTERFACE: se o seu provedor aceita]
+- Organizações de teste com nome iniciado por "TESTE", para não confundir no painel administrativo
+- Senhas das contas de teste só no `.env.local`, nunca na conversa
 
 **Roteiro (da ementa)**
 
@@ -84,7 +99,7 @@ Nenhuma tela, requisição alterada, resposta de IA, arquivo, exportação ou re
 **Pedidos ao Claude Code**
 
 - "Liste todas as telas, rotas, arquivos, exportações e relatórios do produto."
-- "Escreva um script que chame cada rota como [conta], trocando a organização pela da [outra]."
+- "Escreva e rode um script que chame cada rota como [conta], trocando a organização pela da [outra]."
 - "Procure [palavra-marca] nos arquivos exportados."
 
 **Erros comuns (Tutor HIC)**

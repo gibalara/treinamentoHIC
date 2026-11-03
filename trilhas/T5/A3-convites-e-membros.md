@@ -18,26 +18,37 @@ Entrar e sair precisa ser exato. Convite reaproveitado ou membro removido com ac
 Exemplo: o gestor de uma turma do Diário de Bordo convida alunos e remove um que saiu.
 
 1. Abra a pasta do Diário no modo de código, no modo **Plano** (cria um plano antes de alterar arquivos). [VERIFICAR NA INTERFACE]
-2. Peça: "Crie o fluxo de convite: o gestor informa o e-mail, o sistema gera um link de uso único com validade."
-3. Peça: "Ao aceitar, a pessoa vira membro da turma com papel aluno. Valide tudo no servidor." Servidor é a parte do app que roda fora do navegador.
-4. Peça: "Crie a remoção de membro: o acesso termina na hora, inclusive em sessões abertas." Sessão é o login ativo num navegador.
-5. Peça: "Escreva testes automatizados para cada caso de 'Casos de teste', na Referência desta lição." Teste automatizado é um script que confere o comportamento sozinho.
-6. Rode os testes e confira que todos passam.
-7. Teste à mão com duas contas: convide a segunda, aceite e confira a turma no painel.
-8. Remova a segunda conta e, na janela onde ela está logada, recarregue a página. Ela não pode ver nada da turma.
-9. Peça um commit.
+2. Peça: "Crie o convite: o gestor informa o e-mail e copia um link de uso único, válido por 7 dias."
+   O prazo é exemplo.
+3. Acrescente: "Ao aceitar, a pessoa vira membro da turma com papel aluno. Valide tudo no servidor." Servidor é a parte do app que roda fora do navegador.
+4. Acrescente: "Crie a remoção de membro: o acesso termina na hora, inclusive em sessões abertas."
+   Sessão é o login ativo num navegador.
+5. Acrescente: "Gere num arquivo o SQL das mudanças no banco e o que me torna gestor da Turma piloto."
+   Aprove o plano.
+6. Rode o SQL no SQL Editor do Supabase, na ordem da lição A2 da T5.
+   A ordem é backup, teste e produção. [VERIFICAR NA INTERFACE]
+7. Peça: "Escreva e rode testes automatizados para cada caso de 'Casos de teste', na Referência desta lição."
+   Teste automatizado é um script que confere o comportamento sozinho.
+8. Confira na resposta: 6 casos, todos passando.
+9. Peça: "Rode o app no meu computador."
+   Entre como gestor, convide o e-mail da conta B e copie o link.
+10. Abra o link numa janela anônima (não compartilha login com a outra) e entre com a conta B. Confira a turma no painel.
+11. Na janela do gestor, remova a conta B. Na janela anônima, recarregue a página: ela não pode ver nada da turma.
+12. Abra o mesmo link de novo na janela anônima: o convite deve ser recusado.
+13. Peça um commit (ponto salvo de versão no git).
 
 [LINK A CURAR: documentação oficial do Supabase sobre convites e gestão de usuários]
 
 ## Prática
 
 1. Abra a pasta do seu projeto no modo **Plano**.
-2. Peça o fluxo de convite com link de uso único e validade.
-3. Defina quem pode convidar e com qual papel a pessoa entra.
-4. Peça a remoção de membro com fim imediato do acesso.
-5. Peça os testes automatizados dos casos de teste e rode.
-6. Teste à mão com duas contas: convite, aceite e remoção.
-7. Peça um commit.
+2. Responda às decisões (veja "Decisões", na Referência desta lição).
+3. Peça o fluxo de convite com link de uso único e validade, validado no servidor.
+4. Peça a remoção de membro com fim imediato do acesso e o SQL das mudanças no banco. Aprove o plano.
+5. Rode o SQL seguindo a ordem da lição A2 da T5.
+6. Peça os testes automatizados dos 6 casos de teste e a execução deles.
+7. Teste à mão com duas contas, uma em janela anônima: convite, aceite, remoção e link reaproveitado.
+8. Peça um commit.
 
 ## Checagem
 
@@ -54,6 +65,8 @@ Entrega: resultado dos testes automatizados dos 6 casos de teste + print da cont
 - Servidor: parte do app que roda fora do navegador
 - Sessão: login ativo num navegador
 - Teste automatizado: script que confere o comportamento sozinho
+- Janela anônima: janela do navegador que não compartilha login com as outras
+- SQL Editor: tela do Supabase onde se roda o SQL gerado pelo Claude Code
 
 **Casos de teste**
 
@@ -69,6 +82,7 @@ Entrega: resultado dos testes automatizados dos 6 casos de teste + print da cont
 **Decisões**
 
 - Quem convida: gestor, admin ou ambos
+- Com qual papel a pessoa entra: fixo (ex.: aluno) ou escolhido por quem convida, gravado no convite
 - Validade do convite [LACUNA: prazo de validade de referência não definido na ementa]
 - Como o convite chega: e-mail enviado pelo app ou link copiado pelo gestor [LACUNA: serviço de envio de e-mail não definido na pilha]
 - O que acontece com os dados de quem sai: ficam com a organização ou são apagados
@@ -77,7 +91,7 @@ Entrega: resultado dos testes automatizados dos 6 casos de teste + print da cont
 
 - "Crie o fluxo de convite com link de uso único e validade, validado no servidor."
 - "Crie a remoção de membro com fim imediato do acesso."
-- "Escreva testes automatizados para os casos de convite e remoção."
+- "Escreva testes automatizados para os casos de convite e remoção, e rode."
 
 **Erros comuns (Tutor HIC)**
 

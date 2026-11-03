@@ -9,7 +9,7 @@
 
 Com várias organizações, você precisa saber quem usa, quanto usa e quanto cada uma custa. Sem isso, um cliente pode dar prejuízo sem você perceber.
 
-Painel administrativo é a tela restrita ao admin do produto, com organizações, usuários, uso e custo de IA. Custo de IA é o valor pago à API (serviço externo de IA) por organização, calculado pelos tokens (unidades de texto cobradas).
+Painel administrativo é a tela restrita ao admin do produto, com organizações, usuários, uso e custo de IA. Custo de IA é o valor pago à API (serviço externo de IA) por organização. É calculado pelos tokens, unidades de texto cobradas.
 
 O painel mostra números agregados, não o conteúdo dos clientes. Ele alimenta o preço da lição X6 da trilha transversal.
 
@@ -19,14 +19,20 @@ Exemplo: o Diário de Bordo com várias turmas usando o tutor de IA.
 
 1. Abra a pasta do Diário no modo de código, no modo **Plano** (cria um plano antes de alterar arquivos). [VERIFICAR NA INTERFACE]
 2. Peça: "Mostre se cada chamada à API de IA é registrada com organização, usuário, tokens e custo."
-3. Se não for, peça: "Registre cada chamada de IA com data, organização, usuário, modelo, tokens e custo calculado."
+3. Se não for, peça: "Registre cada chamada de IA com os campos de 'Registro de chamada de IA'.
+   Gere o SQL num arquivo." Os campos estão na Referência desta lição.
 4. Peça: "Crie o painel administrativo com os indicadores de 'Indicadores do painel', na Referência desta lição."
-5. Peça: "Só o papel admin acessa o painel, conferido no servidor e no banco."
-6. Confira no plano: o painel mostra contagens e somas, nunca o texto dos registros.
-7. Gere uso fictício em duas turmas de teste e abra o painel como admin.
-8. Confira o custo de uma turma à mão: some os custos das chamadas dela no banco. [VERIFICAR NA INTERFACE]
-9. Entre como gestor e tente abrir o painel pelo endereço direto. Confira: acesso negado.
-10. Peça um commit.
+5. Acrescente: "Só o papel admin acessa o painel, conferido no servidor e no banco."
+6. Confira no plano: o painel mostra contagens e somas, nunca o texto dos registros. Aprove.
+7. Rode o SQL no SQL Editor do Supabase, na ordem da lição A2 da T5 (backup → teste → produção). [VERIFICAR NA INTERFACE]
+8. Peça: "Escreva e rode um script que faça 5 perguntas ao tutor como aluno de cada turma de teste."
+   Use as contas de teste da lição A5 da T5.
+9. Entre como admin (papel dado por SQL, lição B1 da T5) e abra o painel. Copie o endereço da página.
+10. Peça: "Gere o SQL que soma tokens e custo da TESTE Turma A no período."
+   Rode no SQL Editor e compare com o painel.
+11. Confira uma chamada à mão: tokens × preço do modelo na página oficial de preços.
+12. Numa janela anônima, entre como gestor e cole o endereço do painel. Confira: acesso negado.
+13. Peça um commit (ponto salvo de versão no git).
 
 [LINK A CURAR: página oficial da Anthropic com preços por modelo da API]
 
@@ -34,11 +40,12 @@ Exemplo: o Diário de Bordo com várias turmas usando o tutor de IA.
 
 1. Abra a pasta do seu projeto no modo **Plano**.
 2. Confira se as chamadas de IA são registradas com organização e custo; se não, peça o registro.
-3. Escolha os indicadores do seu painel (veja "Indicadores do painel", na Referência).
-4. Peça o painel restrito ao admin, no servidor e no banco.
-5. Gere uso fictício em duas organizações e confira o custo de uma à mão.
-6. Tente abrir o painel com outro papel e confirme a recusa.
-7. Peça um commit.
+3. Escolha os indicadores do seu painel (veja "Indicadores do painel", na Referência desta lição).
+4. Peça o painel restrito ao admin, no servidor e no banco. Rode o SQL na ordem da lição A2 da T5.
+5. Gere uso fictício em duas organizações de teste com um script.
+6. Compare o custo de uma organização no painel com a soma pelo SQL e com uma conta à mão.
+7. Abra o endereço do painel com outro papel e confirme a recusa.
+8. Peça um commit.
 
 ## Checagem
 
@@ -54,6 +61,8 @@ Entrega: print do painel com uso e custo de IA por organização + conferência 
 - Token: unidade de texto pela qual a API cobra
 - Custo de IA: tokens × preço do modelo, somado por organização
 - Agregado: contagem ou soma, sem o conteúdo de cada registro
+- SQL Editor: tela do Supabase onde se roda o SQL gerado pelo Claude Code
+- Janela anônima: janela do navegador que não compartilha login com as outras
 
 **Indicadores do painel**
 
