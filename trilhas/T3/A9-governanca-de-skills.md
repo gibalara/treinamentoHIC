@@ -29,10 +29,10 @@ Exemplo: o Diário de Bordo usado por uma empresa que forma seus profissionais.
 ## Prática
 
 1. Escolha o contexto: sua empresa, um cliente ou sua própria operação. Critério: onde você pretende usar o Kit HIC primeiro.
-2. Numa conversa no Claude, cole o "Modelo de política" (Referência) e a rubrica da lição A7 da T3. Cole também o seu `docs/mapa-de-fontes.md` (lição A5 da T3).
+2. Numa conversa no Claude, cole o "Modelo de política", na Referência desta lição, e a rubrica da lição A7 da T3. Cole também o seu `docs/mapa-de-fontes.md` (lição A5 da T3).
 3. Peça a política preenchida para esse contexto, em até 1 página.
 4. Confira os 4 pontos dos passos 4 a 6 da Demonstração.
-5. Monte o "Inventário" (Referência) com as skills em uso. Inclua a coleção da lição A1 e as skills das lições A3, A4 e A8, todas da T3.
+5. Monte o "Inventário", na Referência desta lição, com as skills em uso. Inclua a coleção da lição A1 e as skills das lições A3, A4 e A8, todas da T3.
 6. No modo de código, salve política e inventário em `docs/politica-de-skills.md` no seu repositório e peça o commit.
 
 ## Checagem

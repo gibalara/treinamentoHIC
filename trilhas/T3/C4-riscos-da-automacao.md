@@ -31,7 +31,7 @@ Exemplo: o Diário de Bordo, com subagentes de revisão, comandos e hooks.
 
 1. Abra a pasta do seu projeto no modo de código, em **Manual**.
 2. Peça a lista de automações, como no passo 2 da Demonstração.
-3. Cole o "Checklist de riscos" (Referência) e peça a aplicação a cada automação, como no passo 3 da Demonstração.
+3. Cole o "Checklist de riscos", na Referência desta lição, e peça a aplicação a cada automação, como no passo 3 da Demonstração.
 4. Confira dois itens por conta própria, um de acesso e um de aprovação (passos 4 e 5 da Demonstração).
 5. Corrija os itens reprovados, com um commit por correção.
 6. Salve o checklist preenchido em `docs/checklist-riscos.md` e peça o commit.

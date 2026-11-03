@@ -30,7 +30,7 @@ Exemplo: o Diário de Bordo e o servidor MCP só leitura que consulta os registr
 ## Prática
 
 1. Abra a pasta do seu projeto no modo de código, em **Manual**.
-2. Cole o "Checklist B4" (Referência) e peça a auditoria, como no passo 2 da Demonstração.
+2. Cole o "Checklist B4", na Referência desta lição, e peça a auditoria, como no passo 2 da Demonstração.
 3. Confira por conta própria a ausência de segredos no GitHub, como no passo 3 da Demonstração.
 4. Faça o teste com duas contas, como nos passos 4 e 5 da Demonstração.
 5. Faça o teste de injeção num campo de texto livre, como nos passos 6 e 7 da Demonstração.

@@ -36,8 +36,8 @@ Exemplo: o Diário de Bordo e cinco necessidades reais dele.
 ## Prática
 
 1. Liste 5 necessidades reais do seu projeto ou do seu trabalho. Fontes: seu `BACKLOG.md`, o `docs/mapa-mcp.md` (lição B2 da T3) e as travas registradas no Diário de Bordo.
-2. Percorra a "Árvore de decisão" (Referência) para cada uma.
-3. Preencha a "Tabela de decisões" (Referência): peça, pergunta que decidiu e alternativa descartada.
+2. Percorra a "Árvore de decisão", na Referência desta lição, para cada uma.
+3. Preencha a "Tabela de decisões", na Referência desta lição: peça, pergunta que decidiu e alternativa descartada.
 4. Marque o que já existe no seu projeto e o que falta criar.
 5. No modo de código, salve a tabela em `docs/decisoes-de-pecas.md` no seu repositório e peça o commit.
 

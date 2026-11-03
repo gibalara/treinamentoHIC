@@ -40,7 +40,7 @@ Exemplo: o Diário de Bordo e suas peças de revisão.
 6. Troque para **Manual** e peça a criação.
 7. Crie uma pasta vazia, abra no modo de código e instale o plugin, como no passo 7 da Demonstração. [VERIFICAR NA INTERFACE]
 8. Peça a lista do passo 8 da Demonstração. Confira se todas as peças aparecem e teste duas delas.
-9. Preencha o "Registro do teste" (Referência) e salve como `TESTE-INSTALACAO.md` na pasta do plugin.
+9. Preencha o "Registro do teste", na Referência desta lição, e salve como `TESTE-INSTALACAO.md` na pasta do plugin.
 10. Peça para iniciar um repositório git na pasta do plugin e fazer o commit.
 
 ## Checagem

@@ -35,7 +35,7 @@ Exemplo: o Diário de Bordo e os dois casos do curso, Claude Octopus e Multi-Age
 2. Para cada uma, levante os dados de procedência com o "Pedido ao Claude", na Referência, e confira na fonte.
 3. Aplique a "Rubrica de skills de terceiros", na Referência, começando por segurança.
 4. Deixe "ganho medido" como pendente.
-5. Preencha uma "Ficha de avaliação" (Referência) por skill, com a decisão.
+5. Preencha uma "Ficha de avaliação", na Referência desta lição, por skill, com a decisão.
 6. Desinstale qualquer skill em uso que tenha reprovado em segurança. [VERIFICAR NA INTERFACE]
 7. No modo de código, na pasta do seu projeto, salve as avaliações em `docs/avaliacoes-de-skills.md` e peça o commit.
 

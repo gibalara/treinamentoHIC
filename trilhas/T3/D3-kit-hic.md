@@ -32,7 +32,7 @@ Exemplo: o plugin de revisão nascido do Diário de Bordo.
 
 1. Abra a pasta do seu plugin (lição D1 da T3) no modo de código, em **Manual**.
 2. Confira as peças do plugin contra a lista "Conteúdo mínimo do kit", na Referência. Se faltar peça, generalize-a, acrescente como na lição D1 da T3 e repita o teste em projeto vazio.
-3. Cole o "Modelo do README" (Referência) e peça o README, como no passo 2 da Demonstração.
+3. Cole o "Modelo do README", na Referência desta lição, e peça o README, como no passo 2 da Demonstração.
 4. Confira peças, avaliações e instalação contra os arquivos e o `TESTE-INSTALACAO.md`, como nos passos 3 a 5 da Demonstração.
 5. Copie o `docs/politica-de-skills.md` (lição A9 da T3) para a pasta do plugin e aponte para ele no README.
 6. Peça a busca por segredos e dados pessoais, como no passo 6 da Demonstração, e corrija.

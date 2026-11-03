@@ -33,7 +33,7 @@ Exemplo: o Diário de Bordo e duas ferramentas da pilha do curso: GitHub e um dr
 
 1. Escolha duas ferramentas que você usa na construção ou na gestão do seu projeto. Exemplos: GitHub (código), drive (documentos do projeto), agenda (testes com usuários).
 2. Conecte as duas, limitando o acesso ao que o projeto precisa. [VERIFICAR NA INTERFACE]
-3. Anote na "Tabela de permissões" (Referência) o que cada uma pode ler e alterar.
+3. Anote na "Tabela de permissões", na Referência desta lição, o que cada uma pode ler e alterar.
 4. Desative a escrita onde a tarefa não exige. [VERIFICAR NA INTERFACE]
 5. Execute uma tarefa real que use as duas ferramentas, como nos passos 6 a 8 da Demonstração. Aprove cada ação de escrita.
 6. Confira o resultado na fonte.

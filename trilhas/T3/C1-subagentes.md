@@ -30,7 +30,7 @@ Exemplo: o Diário de Bordo, que ganha dois subagentes de revisão.
 
 1. Escolha 2 revisões que você repete no seu projeto (veja "Escolha dos subagentes", na Referência).
 2. Abra a pasta do seu projeto no modo de código, em **Manual**.
-3. Preencha a "Ficha do subagente" (Referência) para cada um. Peça os 2 com o pedido de criação, também na Referência.
+3. Preencha a "Ficha do subagente", na Referência desta lição, para cada um. Peça os 2 com o pedido de criação, também na Referência.
 4. Peça: "Mostre os dois subagentes e as ferramentas que cada um pode usar." Confira que nenhum pode editar arquivos.
 5. Peça uma mudança real: um item pequeno do seu `BACKLOG.md` (lista do que ficou para depois, lição 1.7 da T1).
 6. Peça a revisão pelos 2 subagentes, citando o nome de cada um.

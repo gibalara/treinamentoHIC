@@ -34,7 +34,7 @@ Exemplo: o Diário de Bordo e uma skill de revisão de segurança do mapa de fon
 3. Abra cada pasta no modo de código, em **Manual**.
 4. Faça as 3 perguntas da Demonstração (passos 3 a 5).
 5. Abra no editor e confira um trecho citado pelo Claude em cada skill.
-6. Preencha uma "Ficha de leitura" (Referência) por skill. Confira os "Sinais de alerta", também na Referência.
+6. Preencha uma "Ficha de leitura", na Referência desta lição, por skill. Confira os "Sinais de alerta", também na Referência.
 7. Abra a pasta do seu projeto no modo de código. Salve as fichas em `docs/fichas-de-skills.md` e peça o commit.
 
 ## Checagem

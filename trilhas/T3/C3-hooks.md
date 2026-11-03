@@ -34,7 +34,7 @@ Exemplo: o Diário de Bordo, app de registro da jornada construído na T2a.
 
 1. Escolha 2 verificações que devem acontecer sempre no seu projeto (veja "Escolha dos hooks", na Referência).
 2. Abra a pasta do seu projeto no modo de código, em **Manual**.
-3. Preencha a "Ficha do hook" (Referência) para cada um. Peça os 2 hooks de projeto no modelo dos passos 2 e 3 da Demonstração.
+3. Preencha a "Ficha do hook", na Referência desta lição, para cada um. Peça os 2 hooks de projeto no modelo dos passos 2 e 3 da Demonstração.
 4. Peça a explicação dos dois, como no passo 4 da Demonstração, e abra uma sessão nova.
 5. Faça o teste de bloqueio do hook que bloqueia, com o pedido da linha "Teste" da ficha.
 6. Faça o teste do segundo hook e desfaça a mudança de teste.
